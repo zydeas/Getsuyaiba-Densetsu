@@ -13,6 +13,7 @@
     </sounds>
     <sounds name="grp_music">
       <sound>sound\mus_intro</sound>
+      <sound>sound\mus_overworld</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
@@ -32,8 +33,20 @@
       <sprite>sprites\s_intro4</sprite>
       <sprite>sprites\s_title</sprite>
     </sprites>
+    <sprites name="grp_continents">
+      <sprite>sprites\s_albard</sprite>
+      <sprite>sprites\s_bilai</sprite>
+      <sprite>sprites\s_verdt</sprite>
+    </sprites>
+    <sprites name="grp_effects">
+      <sprite>sprites\s_ocean_battle_top</sprite>
+      <sprite>sprites\s_spray</sprite>
+      <sprite>sprites\s_ocean_battle_middle</sprite>
+      <sprite>sprites\sprite17</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
+    <background>background\bck_ocean</background>
     <background>background\background</background>
   </backgrounds>
   <paths name="paths"/>
@@ -41,16 +54,27 @@
     <font>fonts\font</font>
   </fonts>
   <objects name="objects">
+    <object>objects\o_encounter</object>
     <object>objects\o_overworld_plr</object>
     <object>objects\o_plr</object>
     <objects name="grp_intro_cutscene">
       <object>objects\o_title</object>
       <object>objects\o_intro1</object>
     </objects>
+    <objects name="grp_continents">
+      <object>objects\o_albard</object>
+      <object>objects\o_bilai</object>
+      <object>objects\o_verdt</object>
+    </objects>
+    <objects name="grp_systems">
+      <object>objects\o_music_overworld</object>
+      <object>objects\o_effect_water</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\random_encounter</room>
     <room>rooms\overworld_main</room>
+    <room>rooms\room0</room>
     <room>rooms\intro_cutscene</room>
     <room>rooms\title</room>
   </rooms>
