@@ -60,8 +60,8 @@ show_swing=false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>ver=keyboard_check(vk_up)-keyboard_check(vk_down);
-hor=keyboard_check(vk_right)-keyboard_check(vk_left);
+            <string>ver=get_input(INPUT_DOWN)-get_input(INPUT_UP);
+hor=get_input(INPUT_RIGHT)-get_input(INPUT_LEFT);
 
 
 if x &lt; view_xview[0]+border {x=view_xview[0]+border};

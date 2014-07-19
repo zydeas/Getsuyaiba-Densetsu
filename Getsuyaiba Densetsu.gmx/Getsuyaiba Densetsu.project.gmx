@@ -37,8 +37,27 @@
     <background>background\background</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\input_init.gml</script>
+    <scripts name="input_scripts">
+      <script>scripts\get_input.gml</script>
+      <script>scripts\get_input_pressed.gml</script>
+      <script>scripts\input_pad_init.gml</script>
+      <script>scripts\input_vibrate.gml</script>
+      <script>scripts\input_vibrate_step.gml</script>
+      <script>scripts\input_is_locked.gml</script>
+      <script>scripts\input_stick_get.gml</script>
+      <script>scripts\input_pad_update.gml</script>
+    </scripts>
+    <script>scripts\init_stats.gml</script>
+    <script>scripts\menu_init.gml</script>
+    <script>scripts\menu_draw_stats.gml</script>
+    <script>scripts\draw_text_shadow.gml</script>
+    <script>scripts\menu_draw_main.gml</script>
+  </scripts>
   <fonts name="fonts">
     <font>fonts\font</font>
+    <font>fonts\menu_font</font>
   </fonts>
   <objects name="objects">
     <object>objects\o_overworld_plr</object>
@@ -47,13 +66,35 @@
       <object>objects\o_title</object>
       <object>objects\o_intro1</object>
     </objects>
+    <objects name="controllers">
+      <object>objects\o_stats</object>
+      <object>objects\o_input</object>
+      <object>objects\o_menu</object>
+    </objects>
+    <object>objects\o_window_size</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
-    <room>rooms\overworld_main</room>
-    <room>rooms\intro_cutscene</room>
-    <room>rooms\title</room>
+    <room>rooms\initialization_room</room>
+    <rooms name="Game">
+      <room>rooms\menu_room</room>
+      <room>rooms\overworld_main</room>
+      <room>rooms\intro_cutscene</room>
+      <room>rooms\title</room>
+      <room>rooms\room0</room>
+    </rooms>
   </rooms>
+  <constants number="10">
+    <constant name="DEVICE_KEYBOARD">0</constant>
+    <constant name="DEVICE_PAD">1</constant>
+    <constant name="INPUT_LEFT">0</constant>
+    <constant name="INPUT_RIGHT">1</constant>
+    <constant name="INPUT_UP">2</constant>
+    <constant name="INPUT_DOWN">3</constant>
+    <constant name="INPUT_MENU">4</constant>
+    <constant name="INPUT_ATTACK">5</constant>
+    <constant name="INPUT_SPECIAL">6</constant>
+    <constant name="INPUT_OPTION">7</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
