@@ -13,6 +13,10 @@
     </sounds>
     <sounds name="grp_music">
       <sound>sound\mus_intro</sound>
+      <sound>sound\mus_overworld</sound>
+      <sound>sound\mus_overworld_verdt</sound>
+      <sound>sound\mus_overworld_albard</sound>
+      <sound>sound\mus_overworld_bilai</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
@@ -32,8 +36,36 @@
       <sprite>sprites\s_intro4</sprite>
       <sprite>sprites\s_title</sprite>
     </sprites>
+    <sprites name="grp_continents">
+      <sprite>sprites\s_albard</sprite>
+      <sprite>sprites\s_bilai</sprite>
+      <sprite>sprites\s_verdt</sprite>
+    </sprites>
+    <sprites name="grp_effects">
+      <sprite>sprites\s_ocean_battle_top</sprite>
+      <sprite>sprites\s_spray</sprite>
+      <sprite>sprites\s_ocean_battle_middle</sprite>
+      <sprite>sprites\sprite17</sprite>
+    </sprites>
+    <sprites name="grp_enemies">
+      <sprites name="grp_overworld_enemies">
+        <sprite>sprites\s_watercreep</sprite>
+        <sprite>sprites\s_flying_fish</sprite>
+        <sprite>sprites\s_fisherknife</sprite>
+        <sprite>sprites\s_fisher</sprite>
+        <sprite>sprites\s_dustdevil</sprite>
+        <sprite>sprites\s_blottler</sprite>
+        <sprite>sprites\s_squid</sprite>
+        <sprite>sprites\s_flying_fish_splash</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="grp_companions">
+      <sprite>sprites\s_kasi</sprite>
+      <sprite>sprites\s_dido</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
+    <background>background\bck_ocean</background>
     <background>background\background</background>
   </backgrounds>
   <paths name="paths"/>
@@ -54,14 +86,20 @@
     <script>scripts\menu_draw_stats.gml</script>
     <script>scripts\draw_text_shadow.gml</script>
     <script>scripts\menu_draw_main.gml</script>
+    <scripts name="enemy_scripts">
+      <script>scripts\enemy_init.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font</font>
     <font>fonts\menu_font</font>
   </fonts>
   <objects name="objects">
+    <object>objects\o_encounter</object>
     <object>objects\o_overworld_plr</object>
     <object>objects\o_plr</object>
+    <object>objects\o_dido</object>
+    <object>objects\o_kasi</object>
     <objects name="grp_intro_cutscene">
       <object>objects\o_title</object>
       <object>objects\o_intro1</object>
@@ -71,13 +109,36 @@
       <object>objects\o_input</object>
       <object>objects\o_menu</object>
     </objects>
+    <objects name="grp_continents">
+      <object>objects\o_albard</object>
+      <object>objects\o_bilai</object>
+      <object>objects\o_verdt</object>
+    </objects>
     <object>objects\o_window_size</object>
+    <objects name="grp_systems">
+      <object>objects\o_music</object>
+      <object>objects\o_effect_water</object>
+    </objects>
+    <objects name="grp_enemies">
+      <objects name="grp_overworld_enemies">
+        <object>objects\o_fish_splash</object>
+        <object>objects\o_flyingfish</object>
+        <object>objects\o_fisher</object>
+        <object>objects\o_squid</object>
+        <object>objects\o_fisherknife</object>
+        <object>objects\o_dustdevil</object>
+        <object>objects\o_watercreep</object>
+        <object>objects\o_blottler</object>
+      </objects>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\initialization_room</room>
+    <room>rooms\random_encounter</room>
+    <room>rooms\overworld_main</room>
     <rooms name="Game">
       <room>rooms\menu_room</room>
-      <room>rooms\overworld_main</room>
+      <room>rooms\room0</room>
       <room>rooms\intro_cutscene</room>
       <room>rooms\title</room>
       <room>rooms\room0</room>

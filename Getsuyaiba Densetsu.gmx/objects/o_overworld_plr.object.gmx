@@ -45,6 +45,10 @@ dive=0;
 
 dive_rate=0;
 scale=1;
+diving=0;
+
+
+
 </string>
           </argument>
         </arguments>
@@ -96,18 +100,22 @@ if y &lt; view_hview {y=room_height-view_hview;}
 else if y &gt; room_height-view_hview {y=view_hview;}
 
 
-if (keyboard_check_pressed(ord('X')) &amp;&amp; dive==0 ) {dive=1;}
+if (keyboard_check_pressed(ord('X')) &amp;&amp; diving==0 ) {diving=1;}
 
-if (dive==1)
+if (diving!=0)
     {
-    if altitude &gt;0 {altitude -=dive_rate; dive_rate+=0.1;;}
-    else {dive=2; altitude = 0; dive_rate=0;}
+    if dive &gt;-3
+        {
+        dive -=0.05;
+        }
+    else {dive=0; diving=0;}
     }
-else if (dive==2)
-    {
-    if altitude &lt;32 {altitude +=dive_rate; dive_rate+=0.1;}
-    else {dive=0; altitude = 32; dive_rate=0;}
-    }
+    altitude = sin(dive)*32+32;
+    
+scale = 1+(sin(dive)*0.75);
+
+audio_listener_position(x, y, 0);
+audio_listener_orientation(x, y, 100,0,0,1);
 </string>
           </argument>
         </arguments>
@@ -130,7 +138,14 @@ else if (dive==2)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (ver ==0 &amp;&amp; hor ==0)
+            <string>draw_line_colour(x,y,(o_albard.x+(o_albard.sprite_width*0.5+128)),(o_albard.y+(o_albard.sprite_height*0.5-128)),c_white,c_white);
+
+draw_line_colour(x,y,(o_verdt.x+(o_verdt.sprite_width*0.5)),(o_verdt.y+(o_verdt.sprite_height*0.5-240)),c_white,c_white);
+
+draw_line_colour(x,y,(o_bilai.x+(o_bilai.sprite_width*0.5)),(o_bilai.y+(o_bilai.sprite_height*0.5-160)),c_white,c_white);
+
+
+if (ver ==0 &amp;&amp; hor ==0)
     {
     anim_offset=0;
     }
@@ -141,7 +156,9 @@ else if (dive==2)
     if ver ==1 {anim=0;} else if ver ==-1 {anim=2;}
     if hor ==1 {anim=1;} else if hor ==-1 {anim=3;}
 draw_sprite_ext(s_shadow,0,x,y,scale,scale,0,c_white,1);
-draw_sprite(s_overworld,anim+anim_offset,x,y-altitude-hover);
+draw_sprite_ext(s_overworld,anim+anim_offset,x,y-altitude-hover,scale,scale,0,c_white,1);
+
+
 </string>
           </argument>
         </arguments>
