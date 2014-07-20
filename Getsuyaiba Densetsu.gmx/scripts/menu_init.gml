@@ -1,5 +1,16 @@
 ///menu_init()
 
+equipLineSelect = 0;
+equipSelect = 0; 
+
+armorList = ds_list_create();
+bracerList = ds_list_create();
+relicList = ds_list_create();
+
+ds_list_add(armorList,"royal_cloak","gladiator_armour","training_chest","nomad_vest","warrior_garb","meteor_plate");
+ds_list_add(bracerList,"royal_bracer","guardian_glove","twin_bracelet","leaf_wrap","berserker_pauldron","meteor_gauntlet");
+ds_list_add(relicList,"fireball","discus","wave","spread","beam","rebound");
+
 //Selected Screen
 // 0: Equip menu
 // 1: Stats menu

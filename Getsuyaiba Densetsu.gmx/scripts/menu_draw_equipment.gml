@@ -18,28 +18,23 @@ draw_text_shadow(xx+16,yy+96,1,1,"Trinket",col1,col2,-1);
 
 
 //Draw Armours
-if global.royal_cloak==1 {draw_sprite(s_armour,2,xx+16,yy+16)}
-if global.gladiator_armour==1 {draw_sprite(s_armour,3,xx+32,yy+16)}
-if global.training_chest==1 {draw_sprite(s_armour,4,xx+48,yy+16)}
-if global.nomad_vest==1 {draw_sprite(s_armour,5,xx+64,yy+16)}
-if global.warrior_garb==1 {draw_sprite(s_armour,6,xx+80,yy+16)}
-if global.meteor_plate==1 {draw_sprite(s_armour,7,xx+96,yy+16)}
+for(var i = 0;i<6;i++)
+{
+    draw_sprite(s_armour,i+2,xx+16+(16*i),yy+16);
+}
 
 //Draw Bracers
-if global.royal_bracer==1 {draw_sprite(s_bracer,2,xx+16,yy+48)}
-if global.guardian_glove==1 {draw_sprite(s_bracer,3,xx+32,yy+48)}
-if global.twin_bracelet==1 {draw_sprite(s_bracer,4,xx+48,yy+48)}
-if global.leaf_wrap==1 {draw_sprite(s_bracer,5,xx+64,yy+48)}
-if global.berserker_pauldron==1 {draw_sprite(s_bracer,6,xx+80,yy+48)}
-if global.meteor_gauntlet==1 {draw_sprite(s_bracer,7,xx+96,yy+48)}
+for(var i = 0;i<6;i++)
+{
+    draw_sprite(s_bracer,i+2,xx+16+(16*i),yy+48);
+}
 
 //Draw Relics
-if global.fireball==1 {draw_sprite(s_relic,2,xx+16,yy+80)}
-if global.discus==1 {draw_sprite(s_relic,3,xx+32,yy+80)}
-if global.wave==1 {draw_sprite(s_relic,4,xx+48,yy+80)}
-if global.spread==1 {draw_sprite(s_relic,5,xx+64,yy+80)}
-if global.beam==1 {draw_sprite(s_relic,6,xx+80,yy+80)}
-if global.rebound==1 {draw_sprite(s_relic,7,xx+96,yy+80)}
+for(var i = 0;i<6;i++)
+{
+    draw_sprite(s_relic,i+2,xx+16+(16*i),yy+80);
+}
+
 
 draw_set_halign(fa_right);
 //Values

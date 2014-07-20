@@ -102,17 +102,25 @@
       <script>scripts\input_pad_update.gml</script>
     </scripts>
     <script>scripts\init_stats.gml</script>
-    <script>scripts\menu_init.gml</script>
-    <script>scripts\menu_draw_stats.gml</script>
-    <script>scripts\menu_draw_equipment.gml</script>
-    <script>scripts\menu_draw_save.gml</script>
-    <script>scripts\menu_draw_companion.gml</script>
     <script>scripts\draw_text_shadow.gml</script>
     <script>scripts\menu_draw_main.gml</script>
     <scripts name="enemy_scripts">
       <script>scripts\enemy_init.gml</script>
     </scripts>
     <script>scripts\menu_box_draw.gml</script>
+    <scripts name="menu_scripts">
+      <script>scripts\menu_init.gml</script>
+      <script>scripts\menu_draw_stats.gml</script>
+      <script>scripts\menu_draw_equipment.gml</script>
+      <script>scripts\menu_draw_save.gml</script>
+      <script>scripts\menu_draw_companion.gml</script>
+    </scripts>
+    <scripts name="Inventory">
+      <script>scripts\inventory_set_item.gml</script>
+      <script>scripts\item.gml</script>
+      <script>scripts\init_inventory.gml</script>
+    </scripts>
+    <script>scripts\have_item.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font</font>

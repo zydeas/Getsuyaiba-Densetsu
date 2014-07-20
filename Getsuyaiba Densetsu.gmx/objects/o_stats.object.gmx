@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>init_stats();
+init_inventory();
 alarm[0] = 2;
 previousRoom = -1;
 
