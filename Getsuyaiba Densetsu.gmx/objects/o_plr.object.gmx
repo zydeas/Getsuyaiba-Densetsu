@@ -25,8 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-ver=0;
+            <string>ver=0;
 hor=0;
 use_attack = get_input(INPUT_ATTACK);
 state=0; //Attacking or no Attacking
@@ -70,6 +69,7 @@ spray_frame=0;
             <string>ver=get_input(INPUT_DOWN)-get_input(INPUT_UP);
 hor=get_input(INPUT_RIGHT)-get_input(INPUT_LEFT);
 
+use_attack = get_input(INPUT_ATTACK);
 
 if x &lt; view_xview[0]+border {x=view_xview[0]+border};
 else if x &gt; view_xview[0]+view_wview[0]-border {x=view_xview[0]+view_wview[0]-border};

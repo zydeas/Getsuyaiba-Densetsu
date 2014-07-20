@@ -73,7 +73,9 @@ use_attack = get_input(INPUT_ATTACK);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = view_xview;
+            <string>use_attack = get_input(INPUT_ATTACK);
+
+x = view_xview;
 
 y = view_yview+view_hview-sprite_height+bob+4;
 
