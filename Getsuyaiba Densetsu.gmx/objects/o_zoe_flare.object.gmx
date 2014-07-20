@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index=3;
+            <string>image_index=2;
 image_speed=0;
 
-tick = 15;
+tick = 30;
 </string>
           </argument>
         </arguments>
@@ -51,14 +51,14 @@ tick = 15;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if visible==true {visible=true;}else visible=false;
+            <string>if visible==true {visible=false;}else visible=true;
 
 
 if tick &gt;0
     {
     tick--;
     }
-    else {instance_destroy();}
+    else {instance_destroy(); o_zoe.flare_count--; with(o_zoe) {event_user(0);}}
 </string>
           </argument>
         </arguments>

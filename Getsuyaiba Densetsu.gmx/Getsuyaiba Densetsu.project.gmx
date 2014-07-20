@@ -70,6 +70,7 @@
         <sprite>sprites\s_zoe</sprite>
         <sprite>sprites\s_zoe_lift</sprite>
         <sprite>sprites\s_zoe_slip</sprite>
+        <sprite>sprites\s_cannon_fire</sprite>
       </sprites>
     </sprites>
   </sprites>
@@ -110,6 +111,7 @@
       <object>objects\o_zoe</object>
       <object>objects\o_zoe_flare</object>
       <object>objects\o_zoe_ball</object>
+      <object>objects\o_zoe_blast</object>
     </objects>
     <object>objects\o_encounter</object>
     <object>objects\o_overworld_plr</object>

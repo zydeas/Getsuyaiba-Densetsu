@@ -51,6 +51,8 @@ cursor_x=0;
 flare_count=0;
 
 use_attack = get_input(INPUT_ATTACK);
+
+blast = 0;
 </string>
           </argument>
         </arguments>
@@ -85,10 +87,6 @@ rate+=0.025;
 
 if cannon ==3
     {
-    if delay &gt;0
-        {
-        delay -=1;
-        }
     if abs(zoe_x-target_zoe_x) &gt;2 &amp;&amp; delay ==0
         {
         zoe_sprite=s_zoe;
@@ -144,10 +142,53 @@ if cursor_x &gt; view_xview+view_wview-32 {cursor_x=view_xview+view_wview-32;}
 
 if (count &gt;0 &amp;&amp; use_attack &amp;&amp; flare_count &lt;3)
     {
-    flare_count+=1;
-    instance_create(cursor_x,o_plr.y,o_zoe_flare);
+    if (delay==0)
+        {
+        flare_count+=1;
+        instance_create(cursor_x,o_plr.y,o_zoe_flare);
+        delay =25;
+        }
     }
+if delay &gt;0 {delay -=1;}
 
+
+if blast ==1
+    {
+    rate+=0.25;
+    zoe_sprite=s_zoe_slip;
+    if delay ==0 {blast=0; zoe_frame=0;}
+    }
+if cannon &lt;0 {cannon=0;}
+if count &lt;0 {count=0;}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>blast=1;
+if cannon ==3 {instance_create(x+192,y,o_zoe_blast);}
+else if cannon ==2 {instance_create(x+128,y,o_zoe_blast);}
+else if cannon ==1 {instance_create(x+64,y,o_zoe_blast);}
+cannon-=1;
+count -=1;
+delay = 15;
 </string>
           </argument>
         </arguments>
@@ -181,6 +222,9 @@ draw_sprite(s_zoe_cannonballs,0,x+160,y);
 
 
 if count &gt;0 {draw_sprite(s_zoe_cursor,flicker,cursor_x,o_plr.y)}
+
+
+
 </string>
           </argument>
         </arguments>
