@@ -26,6 +26,59 @@
           <argument>
             <kind>1</kind>
             <string>encounter = irandom_range(480,600);
+encounter_time=0;
+frame=0;
+scale=1;
+scale_up=0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>scale_up=1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>    room_goto(random_encounter);
+    encounter = irandom_range(480,600);
+    encounter_time=0;
+    scale_up=0;
 </string>
           </argument>
         </arguments>
@@ -50,9 +103,77 @@
             <kind>1</kind>
             <string>if encounter &lt;=0
 {
-    room_goto(random_encounter);
-    encounter = irandom_range(480,600);
+    if encounter_time==0 {frame=0; scale=1; encounter_time=1; event_user(0);}
 }
+
+encounter -=(abs(o_overworld_plr.dx)+abs(o_overworld_plr.dy))*0.25;
+
+if encounter_time==1
+    {
+    if frame &lt; 5 {frame+=0.5;}
+    }
+    
+if visible==true then visible=false; else visible=true;
+
+if scale_up==1
+    {
+    scale*=1.25;
+    }
+    else
+    {
+    scale=1;
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>alarm[0]=40;
+
+alarm[1]=25;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if encounter_time==1
+    {
+    draw_sprite_ext(s_encounter,frame,view_xview+128,view_yview+120,scale,scale,0,c_white,1);
+    }
 </string>
           </argument>
         </arguments>

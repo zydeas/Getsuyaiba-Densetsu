@@ -33,7 +33,7 @@ rate=2;
 border=24;
 
 attack=false;
-cooldown=15;
+cooldown=30;
 current_cooldown=0;
 target_frame=0;
 current_frame=0;
@@ -71,6 +71,8 @@ hor=get_input(INPUT_RIGHT)-get_input(INPUT_LEFT);
 
 use_attack = get_input(INPUT_ATTACK);
 
+cooldown=30-(global.agility*2);
+
 if x &lt; view_xview[0]+border {x=view_xview[0]+border};
 else if x &gt; view_xview[0]+view_wview[0]-border {x=view_xview[0]+view_wview[0]-border};
 
@@ -95,7 +97,7 @@ if hor !=0
 if attack==false
     {
     if use_attack {
-        attack=true; state=1; show_swing=true; current_frame++; if target_frame==0 {target_frame=2;} else target_frame=0;
+        attack=true; instance_create(x,y,o_plr_swing); state=1; show_swing=true; current_frame++; if target_frame==0 {target_frame=2;} else target_frame=0;
         
         if (!audio_is_playing(snd_player_grunt04) &amp;&amp; !audio_is_playing(snd_player_grunt03) &amp;&amp; !audio_is_playing(snd_player_grunt02) &amp;&amp; !audio_is_playing(snd_player_grunt01))
             {

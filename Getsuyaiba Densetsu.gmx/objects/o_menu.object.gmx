@@ -71,7 +71,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if get_input_pressed(INPUT_SPECIAL)
+            <string>if get_input_pressed(INPUT_ATTACK)
 {
     if canOpenScreen
     {
@@ -94,6 +94,7 @@ if screenOpen
     {
         script_execute(screenScript[screen,ev_step])
     }
+    if screen==6 {room_goto(o_stats.previousRoom);}
 }
 else
 {

@@ -116,6 +116,13 @@ scale = 1+(sin(dive)*0.75);
 
 audio_listener_position(x, y, 0);
 audio_listener_orientation(x, y, 100,0,0,1);
+
+
+if o_encounter.encounter_time==1
+    {
+    dx=0;
+    dy=0;
+    }
 </string>
           </argument>
         </arguments>
@@ -138,13 +145,15 @@ audio_listener_orientation(x, y, 100,0,0,1);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_line_colour(x,y,(o_albard.x+(o_albard.sprite_width*0.5+128)),(o_albard.y+(o_albard.sprite_height*0.5-128)),c_white,c_white);
+            <string>
+draw_line_colour(x,y,(o_albard.x+(o_albard.sprite_width*0.5+128)),(o_albard.y+(o_albard.sprite_height*0.5-128)),c_white,c_white);
 
 draw_line_colour(x,y,(o_verdt.x+(o_verdt.sprite_width*0.5)),(o_verdt.y+(o_verdt.sprite_height*0.5-240)),c_white,c_white);
 
 draw_line_colour(x,y,(o_bilai.x+(o_bilai.sprite_width*0.5)),(o_bilai.y+(o_bilai.sprite_height*0.5-160)),c_white,c_white);
 
-
+if o_encounter.encounter_time==0
+{
 if (ver ==0 &amp;&amp; hor ==0)
     {
     anim_offset=0;
@@ -157,6 +166,7 @@ if (ver ==0 &amp;&amp; hor ==0)
     if hor ==1 {anim=1;} else if hor ==-1 {anim=3;}
 draw_sprite_ext(s_shadow,0,x,y,scale,scale,0,c_white,1);
 draw_sprite_ext(s_overworld,anim+anim_offset,x,y-altitude-hover,scale,scale,0,c_white,1);
+}
 
 
 </string>

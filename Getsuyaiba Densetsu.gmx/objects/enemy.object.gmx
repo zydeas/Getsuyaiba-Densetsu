@@ -26,6 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited();
+
+enemy_init(2,2,1,2);
+
+invuln =false;
+invuln_time = 0;
 </string>
           </argument>
         </arguments>
@@ -49,6 +54,62 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited();
+
+if hp &lt;=0
+    {
+    a=instance_create(x,y,o_enemy_death);
+    a.sprite=sprite_index;
+    a.image=image_index;
+    a.image_speed=0;
+    global.xp+=xp;
+    instance_destroy();
+    }
+    
+    
+if invuln==true {if visible==true {visible=false;} else visible = true;}
+else {visible=true}
+
+if (invuln_time==0 &amp;&amp; invuln ==true)
+    {
+    invuln=false;
+    invuln_time=0;
+    }
+if invuln_time &gt;0
+    {
+    invuln_time--;
+    }
+    else
+    {
+    invuln_time=0;
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="player_projectiles">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if invuln ==false
+{
+invuln=true;
+hp -= other.damage;
+invuln_time = 10;
+}
 </string>
           </argument>
         </arguments>

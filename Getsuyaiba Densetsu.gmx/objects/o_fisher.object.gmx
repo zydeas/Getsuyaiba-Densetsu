@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>enemy_init(5,2,1,2);
+            <string>event_inherited();
+
+enemy_init(5,2,1,2);
 
 vspeed = -random_range(3,4);
 gravity = 0.065;
@@ -58,10 +60,7 @@ image_speed=0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if hp &lt;=0
-    {
-    instance_destroy();
-    }
+            <string>event_inherited();
     
 if vspeed &gt;0 {if image_index==0 { image_index=1; instance_create(x-16,y-8,o_fisherknife);}}
 else image_index=0;

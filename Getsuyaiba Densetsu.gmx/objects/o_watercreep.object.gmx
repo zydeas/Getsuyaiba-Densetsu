@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>enemy_init(5,2,1,2);
+            <string>event_inherited();
+
+enemy_init(5,2,1,2);
 
 hspeed = -2;
 
@@ -55,10 +57,7 @@ rate=0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if hp &lt;=0
-    {
-    instance_destroy();
-    }
+            <string>event_inherited();
  
 if x &lt; -32   
 {

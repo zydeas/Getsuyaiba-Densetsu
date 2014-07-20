@@ -17,6 +17,7 @@
       <sound>sound\mus_overworld_verdt</sound>
       <sound>sound\mus_intro</sound>
       <sound>sound\mus_overworld</sound>
+      <sound>sound\mus_battle1</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
@@ -24,7 +25,9 @@
       <sprite>sprites\s_player</sprite>
       <sprite>sprites\s_player_swing</sprite>
       <sprite>sprites\s_player_attack</sprite>
+      <sprite>sprites\s_player_sword_hitbox</sprite>
       <sprite>sprites\s_shadow</sprite>
+      <sprite>sprites\s_encounter</sprite>
       <sprite>sprites\s_overworld</sprite>
     </sprites>
     <sprites name="grp_cutscenes">
@@ -75,6 +78,11 @@
     </sprites>
     <sprite>sprites\s_menu_hand</sprite>
     <sprite>sprites\s_menu_box_corner</sprite>
+    <sprites name="grp_inventory">
+      <sprite>sprites\s_armour</sprite>
+      <sprite>sprites\s_bracer</sprite>
+      <sprite>sprites\s_relic</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bck_ocean</background>
@@ -96,6 +104,9 @@
     <script>scripts\init_stats.gml</script>
     <script>scripts\menu_init.gml</script>
     <script>scripts\menu_draw_stats.gml</script>
+    <script>scripts\menu_draw_equipment.gml</script>
+    <script>scripts\menu_draw_save.gml</script>
+    <script>scripts\menu_draw_companion.gml</script>
     <script>scripts\draw_text_shadow.gml</script>
     <script>scripts\menu_draw_main.gml</script>
     <scripts name="enemy_scripts">
@@ -118,6 +129,7 @@
     </objects>
     <object>objects\o_encounter</object>
     <object>objects\o_overworld_plr</object>
+    <object>objects\o_plr_swing</object>
     <object>objects\o_plr</object>
     <objects name="grp_intro_cutscene">
       <object>objects\o_title</object>
@@ -140,6 +152,7 @@
     </objects>
     <objects name="grp_enemies">
       <objects name="grp_overworld_enemies">
+        <object>objects\o_enemy_death</object>
         <object>objects\o_fish_splash</object>
         <object>objects\o_flyingfish</object>
         <object>objects\o_fisher</object>
@@ -151,6 +164,7 @@
       </objects>
     </objects>
     <objects name="grp_parents">
+      <object>objects\player_projectiles</object>
       <object>objects\enemy</object>
       <object>objects\scroll</object>
     </objects>
@@ -158,9 +172,9 @@
   <rooms name="rooms">
     <room>rooms\initialization_room</room>
     <room>rooms\overworld_main</room>
+    <room>rooms\menu_room</room>
     <room>rooms\random_encounter</room>
     <rooms name="Game">
-      <room>rooms\menu_room</room>
       <room>rooms\room0</room>
       <room>rooms\intro_cutscene</room>
       <room>rooms\title</room>

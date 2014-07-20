@@ -28,13 +28,39 @@
             <string>//The list of rooms where the music will be fully paused.
 pauseMusicRooms = ds_list_create();
 ds_list_add(pauseMusicRooms,menu_room);
-
+ds_list_add(pauseMusicRooms,random_encounter);
 musicOverworld = audio_play_sound(mus_overworld,1,true);
 musicOverworldAlbard = audio_play_sound_at(mus_overworld_albard,(o_albard.x+(o_albard.sprite_width*0.5+128)),(o_albard.y+(o_albard.sprite_height*0.5-128)),0,160,160,1,true,1);
 musicOverworldVerdt = audio_play_sound_at(mus_overworld_verdt,(o_verdt.x+(o_verdt.sprite_width*0.5)),(o_verdt.y+(o_verdt.sprite_height*0.5-240)),0,160,160,1,true,1);
 musicOverworldBilai = audio_play_sound_at(mus_overworld_bilai,(o_bilai.x+(o_bilai.sprite_width*0.5)),(o_bilai.y+(o_bilai.sprite_height*0.5-160)),0,160,160,1,true,1);
 
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if audio_is_playing(mus_battle1)
+    {
+    audio_stop_sound(mus_battle1);
+    }
 </string>
           </argument>
         </arguments>
@@ -73,6 +99,8 @@ else
     audio_resume_sound(musicOverworldVerdt);
     audio_resume_sound(musicOverworldBilai);
 }
+
+if room == random_encounter {audio_play_sound(mus_battle1,1,true);}
 </string>
           </argument>
         </arguments>
