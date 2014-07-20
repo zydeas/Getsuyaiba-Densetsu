@@ -49,10 +49,10 @@
           <argument>
             <kind>1</kind>
             <string>if encounter &lt;=0
-    {
+{
     room_goto(random_encounter);
     encounter = irandom_range(480,600);
-    }
+}
 </string>
           </argument>
         </arguments>

@@ -99,12 +99,13 @@ else
 {
     if get_input_pressed(INPUT_UP)
     {
-        if screen = 0 screen = array_height_2d(screenScript)-1
+        if screen &lt; 1 screen = array_height_2d(screenScript)-1
         else screen -= 1;
     }
     else if get_input_pressed(INPUT_DOWN)
     {
-        if screen = array_height_2d(screenScript)-1
+        
+        if screen &gt;= array_height_2d(screenScript)-1
         {
             screen = 0;
         }

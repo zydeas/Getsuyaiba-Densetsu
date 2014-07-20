@@ -76,7 +76,7 @@ previous_room=overworld_main;
           <argument>
             <kind>1</kind>
             <string>
-var menu_check = get_input(INPUT_MENU)
+var menu_check = get_input_pressed(INPUT_MENU)
 
 if(menu_check &amp;&amp; room != menu_room)
     {

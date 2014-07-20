@@ -12,11 +12,11 @@
       <sound>sound\snd_player_grunt04</sound>
     </sounds>
     <sounds name="grp_music">
-      <sound>sound\mus_intro</sound>
-      <sound>sound\mus_overworld</sound>
-      <sound>sound\mus_overworld_verdt</sound>
       <sound>sound\mus_overworld_albard</sound>
       <sound>sound\mus_overworld_bilai</sound>
+      <sound>sound\mus_overworld_verdt</sound>
+      <sound>sound\mus_intro</sound>
+      <sound>sound\mus_overworld</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
@@ -63,6 +63,8 @@
       <sprite>sprites\s_kasi</sprite>
       <sprite>sprites\s_dido</sprite>
     </sprites>
+    <sprite>sprites\s_menu_hand</sprite>
+    <sprite>sprites\s_menu_box_corner</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bck_ocean</background>
@@ -89,6 +91,7 @@
     <scripts name="enemy_scripts">
       <script>scripts\enemy_init.gml</script>
     </scripts>
+    <script>scripts\menu_box_draw.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font</font>
@@ -134,8 +137,8 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\initialization_room</room>
-    <room>rooms\random_encounter</room>
     <room>rooms\overworld_main</room>
+    <room>rooms\random_encounter</room>
     <rooms name="Game">
       <room>rooms\menu_room</room>
       <room>rooms\room0</room>
