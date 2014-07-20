@@ -29,7 +29,7 @@
 hor=0;
 use_attack = get_input(INPUT_ATTACK);
 state=0; //Attacking or no Attacking
-rate=2;
+rate=1+(global.spd*0.3);
 border=24;
 
 attack=false;

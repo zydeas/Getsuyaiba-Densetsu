@@ -100,9 +100,11 @@ if room == random_encounter
         }
     }
 
-
-
-
+    
+global.pow =global.basepow+ global.bonuspow;
+global.agility =global.baseagility+ global.bonusagility;
+global.defence = global.basedefence+ global.bonusdefence;
+global.spd = global.basespd+ global.bonusspd;
 //Stat Calculations
 
 if global.xp &lt;10
