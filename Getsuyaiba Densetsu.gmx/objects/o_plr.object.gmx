@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>scroll</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-ver=0;
+            <string>ver=0;
 hor=0;
+use_attack = get_input(INPUT_ATTACK);
 state=0; //Attacking or no Attacking
 rate=2;
 border=24;
@@ -41,6 +41,9 @@ show_swing=false;
 
 show_spray=false;
 spray_frame=0;
+
+
+
 </string>
           </argument>
         </arguments>
@@ -66,6 +69,7 @@ spray_frame=0;
             <string>ver=get_input(INPUT_DOWN)-get_input(INPUT_UP);
 hor=get_input(INPUT_RIGHT)-get_input(INPUT_LEFT);
 
+use_attack = get_input(INPUT_ATTACK);
 
 if x &lt; view_xview[0]+border {x=view_xview[0]+border};
 else if x &gt; view_xview[0]+view_wview[0]-border {x=view_xview[0]+view_wview[0]-border};
@@ -87,9 +91,10 @@ if hor !=0
     x+=hor*rate;
     }
     
+
 if attack==false
     {
-    if keyboard_check(ord('X')) {
+    if use_attack {
         attack=true; state=1; show_swing=true; current_frame++; if target_frame==0 {target_frame=2;} else target_frame=0;
         
         if (!audio_is_playing(snd_player_grunt04) &amp;&amp; !audio_is_playing(snd_player_grunt03) &amp;&amp; !audio_is_playing(snd_player_grunt02) &amp;&amp; !audio_is_playing(snd_player_grunt01))

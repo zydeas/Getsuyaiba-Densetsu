@@ -27,9 +27,7 @@
             <kind>1</kind>
             <string>init_stats();
 alarm[0] = 2;
-
-previous_room=overworld_main;
-
+previousRoom = -1;
 </string>
           </argument>
         </arguments>
@@ -75,44 +73,19 @@ previous_room=overworld_main;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>if get_input_pressed(INPUT_MENU)
 var menu_check = get_input_pressed(INPUT_MENU)
-
-if(menu_check &amp;&amp; room != menu_room)
+{
+    if room = menu_room
     {
-    room_goto(menu_room);
-
+        room_goto(previousRoom);
     }
-else if(menu_check &amp;&amp; room == menu_room)
+    else if room = overworld_main
     {
-    room_goto(previous_room);
+        previousRoom = room;
+        room_goto(menu_room);
     }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="4">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if room ==overworld_main
-    {
-    previous_room=room;
-    }
+}
 </string>
           </argument>
         </arguments>
