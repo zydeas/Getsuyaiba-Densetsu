@@ -122,7 +122,8 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\input_init.gml</script>
+    <script>scripts\draw_text_shadow.gml</script>
+    <script>scripts\init_stats.gml</script>
     <scripts name="input_scripts">
       <script>scripts\get_input.gml</script>
       <script>scripts\get_input_pressed.gml</script>
@@ -132,14 +133,11 @@
       <script>scripts\input_is_locked.gml</script>
       <script>scripts\input_stick_get.gml</script>
       <script>scripts\input_pad_update.gml</script>
+      <script>scripts\input_init.gml</script>
     </scripts>
-    <script>scripts\init_stats.gml</script>
-    <script>scripts\draw_text_shadow.gml</script>
-    <script>scripts\menu_draw_main.gml</script>
     <scripts name="enemy_scripts">
       <script>scripts\enemy_init.gml</script>
     </scripts>
-    <script>scripts\menu_box_draw.gml</script>
     <scripts name="menu_scripts">
       <script>scripts\menu_init.gml</script>
       <script>scripts\menu_draw_stats.gml</script>
@@ -147,6 +145,8 @@
       <script>scripts\menu_draw_save.gml</script>
       <script>scripts\menu_draw_companion.gml</script>
       <script>scripts\menu_step_equipment.gml</script>
+      <script>scripts\menu_draw_main.gml</script>
+      <script>scripts\menu_box_draw.gml</script>
     </scripts>
     <scripts name="Inventory">
       <script>scripts\inventory_set_item.gml</script>
@@ -184,20 +184,18 @@
       <object>objects\o_title</object>
       <object>objects\o_intro1</object>
     </objects>
-    <objects name="controllers">
+    <objects name="grp_controllers">
       <object>objects\o_stats</object>
       <object>objects\o_input</object>
       <object>objects\o_menu</object>
+      <object>objects\o_music</object>
+      <object>objects\o_effect_water</object>
+      <object>objects\o_window_size</object>
     </objects>
     <objects name="grp_continents">
       <object>objects\o_albard</object>
       <object>objects\o_bilai</object>
       <object>objects\o_verdt</object>
-    </objects>
-    <object>objects\o_window_size</object>
-    <objects name="grp_systems">
-      <object>objects\o_music</object>
-      <object>objects\o_effect_water</object>
     </objects>
     <objects name="grp_enemies">
       <objects name="grp_overworld_enemies">
@@ -217,14 +215,14 @@
       <object>objects\enemy</object>
       <object>objects\scroll</object>
     </objects>
+    <object>objects\text_ticker_obj</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\initialization_room</room>
-    <room>rooms\overworld_main</room>
-    <room>rooms\menu_room</room>
-    <room>rooms\random_encounter</room>
     <rooms name="Game">
-      <room>rooms\room0</room>
+      <room>rooms\overworld_main</room>
+      <room>rooms\menu_room</room>
+      <room>rooms\random_encounter</room>
       <room>rooms\intro_cutscene</room>
       <room>rooms\title</room>
     </rooms>
