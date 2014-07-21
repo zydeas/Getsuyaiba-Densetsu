@@ -227,7 +227,6 @@
       <room>rooms\room0</room>
       <room>rooms\intro_cutscene</room>
       <room>rooms\title</room>
-      <room>rooms\room0</room>
     </rooms>
   </rooms>
   <constants number="10">
