@@ -96,8 +96,7 @@ if room == random_encounter
     {
     if !instance_exists(enemy)
         {
-        if previousRoom!=-1{room_goto(previousRoom);}
-        else room_goto(overworld_main);
+        if o_plr.warp==false {o_plr.warp=true; o_plr.alarm[0]=120; with(o_plr) {event_user(4);}}
         }
     }
 

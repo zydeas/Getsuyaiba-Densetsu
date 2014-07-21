@@ -10,6 +10,16 @@
       <sound>sound\snd_player_grunt02</sound>
       <sound>sound\snd_player_grunt03</sound>
       <sound>sound\snd_player_grunt04</sound>
+      <sound>sound\snd_player_death</sound>
+      <sound>sound\snd_player_slash</sound>
+      <sounds name="grp_enemies">
+        <sound>sound\snd_enemy_death</sound>
+        <sound>sound\snd_enemy_hurt_01</sound>
+        <sound>sound\snd_enemy_hurt_02</sound>
+        <sound>sound\snd_enemy_hurt_03</sound>
+        <sound>sound\snd_enemy_hurt_04</sound>
+        <sound>sound\snd_fish_leap</sound>
+      </sounds>
     </sounds>
     <sounds name="grp_music">
       <sound>sound\mus_overworld_albard</sound>
@@ -29,6 +39,9 @@
       <sprite>sprites\s_shadow</sprite>
       <sprite>sprites\s_encounter</sprite>
       <sprite>sprites\s_overworld</sprite>
+      <sprites name="grp_projectiles">
+        <sprite>sprites\s_fireball</sprite>
+      </sprites>
     </sprites>
     <sprites name="grp_cutscenes">
       <sprite>sprites\s_intro0</sprite>
@@ -138,6 +151,7 @@
     </objects>
     <object>objects\o_encounter</object>
     <object>objects\o_overworld_plr</object>
+    <object>objects\o_plr_fireball</object>
     <object>objects\o_plr_swing</object>
     <object>objects\o_plr</object>
     <objects name="grp_intro_cutscene">

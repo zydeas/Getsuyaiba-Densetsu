@@ -3,6 +3,7 @@
 
 global.lvl = 1;
 global.xp = 0;
+global.gold = 0;
 
 
 global.hp = 10;

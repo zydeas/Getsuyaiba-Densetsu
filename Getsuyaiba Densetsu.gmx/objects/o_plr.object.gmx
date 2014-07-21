@@ -32,6 +32,8 @@ state=0; //Attacking or no Attacking
 rate=1+(global.spd*0.3);
 border=24;
 
+
+warp=false;
 attack=false;
 cooldown=30;
 current_cooldown=0;
@@ -42,7 +44,71 @@ show_swing=false;
 show_spray=false;
 spray_frame=0;
 
+myhp = global.hp;
+invuln =false;
+invuln_tick =0;
+invuln_duration=20;
 
+gained_xp=0;
+gained_gold=0;
+
+death =false;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+global.gold=round(global.gold*0.5);
+if o_stats.previousRoom != -1 {room_goto(o_stats.previousRoom);}
+else room_goto(overworld_main);
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if o_stats.previousRoom != -1 {room_goto(o_stats.previousRoom);}
+else room_goto(overworld_main);
+
+global.gold+=gained_gold;
+global.xp+=gained_xp;
+global.hp=myhp;
 
 </string>
           </argument>
@@ -71,6 +137,7 @@ hor=get_input(INPUT_RIGHT)-get_input(INPUT_LEFT);
 
 use_attack = get_input(INPUT_ATTACK);
 
+
 cooldown=30-(global.agility*2);
 
 if x &lt; view_xview[0]+border {x=view_xview[0]+border};
@@ -82,10 +149,13 @@ if y &lt; view_yview[0]+border {y=view_yview[0]+border};
 else if y &gt; view_yview[0]+view_hview[0]-border-32 {y=view_yview[0]+view_hview[0]-border-32};
 
 
+if myhp &gt;0
+{
 if ver !=0
     {
     y+=ver*rate;
     }
+    
     
 
 if hor !=0
@@ -134,6 +204,86 @@ if attack==false
         if y &gt;view_yview[0]+view_hview[0]-border-34 {show_spray=true; spray_frame+=1;}
         else {show_spray=false; spray_frame=0;}
         }
+        
+if invuln==false
+    {
+    visible=true;
+    invuln_tick=0;
+    }
+else
+    {
+    if visible==true {visible=false;} else visible=true;
+    if invuln_tick&lt;=0
+        {
+        invuln=0;
+        }
+        else {invuln_tick-=1;}
+    }
+}
+else
+    {
+    visible=false;
+    if death ==false {death=true; alarm[1]=120;
+    
+        a=instance_create(x,y,o_enemy_death);
+        a.sprite=sprite_index;
+        a.image=image_index;
+        a.image_speed=0;
+        event_user(4);
+        audio_play_sound(snd_player_death,1,false);
+    }
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="enemy">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if invuln ==false
+    {
+    invuln =true;
+    myhp -=other.dmg;
+    invuln_tick =invuln_duration;
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="14">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if audio_is_playing(mus_battle1) {audio_stop_sound(mus_battle1);}
 </string>
           </argument>
         </arguments>

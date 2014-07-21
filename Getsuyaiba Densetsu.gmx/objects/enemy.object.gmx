@@ -61,8 +61,10 @@ if hp &lt;=0
     a.sprite=sprite_index;
     a.image=image_index;
     a.image_speed=0;
-    global.xp+=xp;
+    o_plr.gained_xp+=xp;
+    o_plr.gained_gold+=gold;
     instance_destroy();
+    audio_play_sound(snd_enemy_death,1,false);
     }
     
     
@@ -109,6 +111,9 @@ if invuln_time &gt;0
 invuln=true;
 hp -= other.damage;
 invuln_time = 10;
+
+var sound = choose(snd_enemy_hurt_01,snd_enemy_hurt_02,snd_enemy_hurt_03,snd_enemy_hurt_04);
+audio_play_sound(sound,2,false);
 }
 </string>
           </argument>
