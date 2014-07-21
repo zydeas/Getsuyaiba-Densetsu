@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>event_inherited();
 
-enemy_init(15,4,5,5);
+enemy_init(10,4,5,5);
 
 x= view_xview+(view_wview*0.5);
 y= view_yview-16;
