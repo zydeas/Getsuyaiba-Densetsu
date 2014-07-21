@@ -145,8 +145,8 @@ if scale_up==1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0]=40;
-
+            <string>alarm[0]=60;
+audio_play_sound(snd_combat_transition,1,false);
 alarm[1]=25;
 </string>
           </argument>

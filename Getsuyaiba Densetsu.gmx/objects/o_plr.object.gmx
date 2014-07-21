@@ -6,7 +6,7 @@
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>scroll</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <maskName>s_plr_hitbox</maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -78,6 +78,7 @@ death =false;
             <kind>1</kind>
             <string>
 global.gold=round(global.gold*0.5);
+global.hp=global.maxhp;
 if o_stats.previousRoom != -1 {room_goto(o_stats.previousRoom);}
 else room_goto(overworld_main);
 
@@ -109,7 +110,7 @@ else room_goto(overworld_main);
 global.gold+=gained_gold;
 global.xp+=gained_xp;
 global.hp=myhp;
-
+o_stats.enemy_timer=30;
 </string>
           </argument>
         </arguments>
@@ -284,6 +285,11 @@ else
           <argument>
             <kind>1</kind>
             <string>if audio_is_playing(mus_battle1) {audio_stop_sound(mus_battle1);}
+
+if myhp &gt;0
+    {
+    audio_play_sound(mus_fanfare,1,false);
+    }
 </string>
           </argument>
         </arguments>

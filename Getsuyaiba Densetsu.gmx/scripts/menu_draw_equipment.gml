@@ -9,6 +9,9 @@ col2 = c_blue;
 
 
 draw_set_halign(fa_left);
+//Cursor
+draw_sprite(s_menu_hand,0,xx+16,yy+16+8+(32*equipLineSelected));
+
 //Names
 
 draw_text_shadow(xx+16,yy,1,1,"Armour",col1,col2,-1);
@@ -70,3 +73,6 @@ draw_set_halign(fa_right);
 menu_box_draw(128,16,248-16,144,false,c_black);
 
 menu_box_draw(16,172,room_width-16,room_height-20,false,c_black);
+
+
+global.relicSelected= equipSelected[2];

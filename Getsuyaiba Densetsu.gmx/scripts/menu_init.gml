@@ -59,7 +59,7 @@ screenScript[2,ev_step] = -1;
 screenScript[2,ev_draw] = menu_draw_companion;
 
 screenScript[3,ev_step] = -1;
-screenScript[3,ev_draw] = -1;
+screenScript[3,ev_draw] =  menu_draw_companion;
 
 screenScript[4,ev_step] = -1;
 screenScript[4,ev_draw] =  menu_draw_save;

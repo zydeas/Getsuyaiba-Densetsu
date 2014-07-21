@@ -73,8 +73,8 @@ if phase ==0
     }
 if phase ==1
     {
-    speed +=0.15;
-    direction = lerp(direction, point_direction(x,y,o_plr.x,o_plr.y,),0.025);
+    speed +=0.1;
+    direction = lerp(direction, point_direction(x,y,o_plr.x,o_plr.y,),0.01);
     }
 if phase ==1
     {

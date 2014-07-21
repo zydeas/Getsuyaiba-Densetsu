@@ -12,6 +12,7 @@
       <sound>sound\snd_player_grunt04</sound>
       <sound>sound\snd_player_death</sound>
       <sound>sound\snd_player_slash</sound>
+      <sound>sound\snd_combat_transition</sound>
       <sounds name="grp_enemies">
         <sound>sound\snd_enemy_death</sound>
         <sound>sound\snd_enemy_hurt_01</sound>
@@ -19,6 +20,10 @@
         <sound>sound\snd_enemy_hurt_03</sound>
         <sound>sound\snd_enemy_hurt_04</sound>
         <sound>sound\snd_fish_leap</sound>
+      </sounds>
+      <sounds name="grp_companions">
+        <sound>sound\snd_zoe_load</sound>
+        <sound>sound\snd_zoe_fire</sound>
       </sounds>
     </sounds>
     <sounds name="grp_music">
@@ -28,11 +33,13 @@
       <sound>sound\mus_intro</sound>
       <sound>sound\mus_overworld</sound>
       <sound>sound\mus_battle1</sound>
+      <sound>sound\mus_fanfare</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
     <sprites name="grp_player">
       <sprite>sprites\s_player</sprite>
+      <sprite>sprites\s_plr_hitbox</sprite>
       <sprite>sprites\s_player_swing</sprite>
       <sprite>sprites\s_player_attack</sprite>
       <sprite>sprites\s_player_sword_hitbox</sprite>
@@ -41,6 +48,11 @@
       <sprite>sprites\s_overworld</sprite>
       <sprites name="grp_projectiles">
         <sprite>sprites\s_fireball</sprite>
+        <sprite>sprites\s_discus</sprite>
+        <sprite>sprites\s_spread</sprite>
+        <sprite>sprites\s_wave</sprite>
+        <sprite>sprites\s_beam</sprite>
+        <sprite>sprites\s_rebound</sprite>
       </sprites>
     </sprites>
     <sprites name="grp_cutscenes">
@@ -87,6 +99,13 @@
         <sprite>sprites\s_zoe_lift</sprite>
         <sprite>sprites\s_zoe_slip</sprite>
         <sprite>sprites\s_cannon_fire</sprite>
+      </sprites>
+      <sprites name="grp_companion_portraits">
+        <sprites name="grp_zoe_portraits">
+          <sprite>sprites\s_zoe_default</sprite>
+          <sprite>sprites\s_zoe_talk</sprite>
+          <sprite>sprites\s_zoe_blink</sprite>
+        </sprites>
       </sprites>
     </sprites>
     <sprite>sprites\s_menu_hand</sprite>
@@ -142,6 +161,7 @@
   </fonts>
   <objects name="objects">
     <objects name="grp_companion_objects">
+      <object>objects\o_menu_companion</object>
       <object>objects\o_dido</object>
       <object>objects\o_kasi</object>
       <object>objects\o_zoe</object>
@@ -152,6 +172,12 @@
     <object>objects\o_encounter</object>
     <object>objects\o_overworld_plr</object>
     <object>objects\o_plr_fireball</object>
+    <object>objects\o_plr_rebound</object>
+    <object>objects\o_plr_beam</object>
+    <object>objects\o_beam_trail</object>
+    <object>objects\o_plr_spread</object>
+    <object>objects\o_plr_wave</object>
+    <object>objects\o_plr_discus</object>
     <object>objects\o_plr_swing</object>
     <object>objects\o_plr</object>
     <objects name="grp_intro_cutscene">

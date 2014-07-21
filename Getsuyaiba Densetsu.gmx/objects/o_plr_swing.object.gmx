@@ -33,6 +33,44 @@ damage=1+round(global.pow*0.5);
 if global.relicSelected==0 {a=instance_create(x+24,y,o_plr_fireball);
 a.damage=ceil(damage*0.5);
 }
+else if global.relicSelected==1 {a=instance_create(x+24,y,o_plr_discus);
+a.damage=ceil(damage*0.25);
+}
+else if global.relicSelected==2 {a=instance_create(x+24,y,o_plr_wave);
+a.damage=ceil(damage*0.25);
+}
+else if global.relicSelected==3 {a=instance_create(x+24,y,o_plr_spread);
+a.damage=ceil(damage*0.25);
+a.direction = 22;
+
+a=instance_create(x+24,y,o_plr_spread);
+a.damage=ceil(damage*0.25);
+a.direction = -22;
+
+a=instance_create(x+24,y,o_plr_spread);
+a.damage=ceil(damage*0.25);
+a.direction = -45;
+
+a=instance_create(x+24,y,o_plr_spread);
+a.damage=ceil(damage*0.25);
+a.direction = 45;
+audio_play_sound(snd_player_slash,2,false);
+}
+else if global.relicSelected==4 {a=instance_create(x+24,y,o_plr_beam);
+a.damage=ceil(damage*0.2);
+}
+else if global.relicSelected==5 {
+if !instance_exists(o_plr_rebound){
+a=instance_create(x+24,y,o_plr_rebound);
+a.damage=ceil(damage*0.2);
+}
+else if instance_number(o_plr_rebound) &lt; 4
+    {
+    a=instance_create(x+24,y,o_plr_rebound);
+a.damage=ceil(damage*0.2);
+    }
+
+}
 </string>
           </argument>
         </arguments>

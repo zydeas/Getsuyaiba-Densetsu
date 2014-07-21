@@ -31,7 +31,7 @@ alarm[0] = 2;
 previousRoom = -1;
 
 
-
+enemy_timer=30;
 </string>
           </argument>
         </arguments>
@@ -94,9 +94,11 @@ if get_input_pressed(INPUT_MENU)
 
 if room == random_encounter
     {
-    if !instance_exists(enemy)
+    if (instance_exists(enemy)) {enemy_timer=30;}
+    if (!instance_exists(enemy) &amp;&amp; enemy_timer &gt;0) {enemy_timer --;}
+    if (!instance_exists(enemy) &amp;&amp; enemy_timer ==0)
         {
-        if o_plr.warp==false {o_plr.warp=true; o_plr.alarm[0]=120; with(o_plr) {event_user(4);}}
+        if o_plr.warp==false {o_plr.warp=true; o_plr.alarm[0]=420; with(o_plr) {event_user(4);}}
         }
     }
 
@@ -278,6 +280,44 @@ else
     if global.current_companion==3 {instance_create(0,0,o_zoe);}
     else if global.current_companion==2 {instance_create(0,0,o_kasi);}
     else if global.current_companion==1 {instance_create(0,0,o_dido);}
+    
+    
+    
+    
+    
+var seed = irandom_range(0,5);
+
+    if seed ==0
+        {
+        instance_create(0,0,o_flyingfish);
+        instance_create(0,0,o_flyingfish);
+        instance_create(0,0,o_flyingfish);
+        }
+    else if seed ==1
+        {
+        instance_create(0,0,o_flyingfish);
+        instance_create(0,0,o_fisher);
+        }
+    else if seed ==2
+        {
+        instance_create(0,0,o_fisher);
+        instance_create(0,0,o_dustdevil);
+        }
+    else if seed ==3
+        {
+        instance_create(0,0,o_dustdevil);
+        instance_create(0,0,o_dustdevil);
+        }
+    else if seed ==4
+        {
+        instance_create(0,0,o_blottler);
+        instance_create(0,0,o_watercreep);
+        }
+    else if seed ==5
+        {
+        instance_create(0,0,o_watercreep);
+        instance_create(0,0,o_watercreep);
+        }
     }
 </string>
           </argument>

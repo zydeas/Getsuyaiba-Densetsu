@@ -51,12 +51,12 @@ ds_map_add(global.itemMap,"spread",16);
 ds_map_add(global.itemMap,"beam",17);
 ds_map_add(global.itemMap,"rebound",18);
 
-inventory_set_item("fireball",false);
+inventory_set_item("fireball",true);
 inventory_set_item("discus",true);
-inventory_set_item("wave",false);
-inventory_set_item("spread",false);
+inventory_set_item("wave",true);
+inventory_set_item("spread",true);
 inventory_set_item("beam",true);
-inventory_set_item("rebound",false);
+inventory_set_item("rebound",true);
 
 
 //Trinkets - Dido

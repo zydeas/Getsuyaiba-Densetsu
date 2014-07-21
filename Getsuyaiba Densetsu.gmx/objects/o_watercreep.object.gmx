@@ -32,6 +32,7 @@ enemy_init(5,2,1,2);
 hspeed = -2;
 
 origin_y = irandom_range(32,room_height-80);
+x= view_xview+view_wview +irandom_range(16,64);
 
 image_speed=0.1;
 rate=0;
@@ -62,7 +63,7 @@ rate=0;
 if x &lt; -32   
 {
 origin_y = irandom_range(32,room_height-80);
-x= view_xview+view_wview;
+x= view_xview+view_wview+irandom_range(16,64);
 }
 
 y = origin_y+(sin(rate)*32);

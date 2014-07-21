@@ -186,6 +186,7 @@ if count &lt;0 {count=0;}
 if cannon ==3 {instance_create(x+192,y,o_zoe_blast);}
 else if cannon ==2 {instance_create(x+128,y,o_zoe_blast);}
 else if cannon ==1 {instance_create(x+64,y,o_zoe_blast);}
+audio_play_sound(snd_zoe_fire,1,false);
 cannon-=1;
 count -=1;
 delay = 15;
