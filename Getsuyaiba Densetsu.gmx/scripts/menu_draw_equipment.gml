@@ -20,19 +20,47 @@ draw_text_shadow(xx+16,yy+96,1,1,"Trinket",col1,col2,-1);
 //Draw Armours
 for(var i = 0;i<6;i++)
 {
-    draw_sprite(s_armour,i+2,xx+16+(16*i),yy+16);
+    if have_item(ds_list_find_value(armorList,i))
+    {
+        draw_sprite(s_armour,i+2,xx+16+(16*i),yy+16);
+    }
 }
 
 //Draw Bracers
 for(var i = 0;i<6;i++)
 {
-    draw_sprite(s_bracer,i+2,xx+16+(16*i),yy+48);
+    if have_item(ds_list_find_value(bracerList,i))
+    {
+        draw_sprite(s_bracer,i+2,xx+16+(16*i),yy+48);
+    }
 }
 
 //Draw Relics
 for(var i = 0;i<6;i++)
 {
-    draw_sprite(s_relic,i+2,xx+16+(16*i),yy+80);
+    if have_item(ds_list_find_value(relicList,i))
+    {
+        draw_sprite(s_relic,i+2,xx+16+(16*i),yy+80);
+    }
+}
+
+if global.current_companion != 0
+{
+    for(var i = 0;i<6;i++)
+    {
+        if have_item(ds_list_find_value(relicList,i))
+        {
+            draw_sprite(s_relic,i+2,xx+16+(16*i),yy+80);
+        }
+    }
+}
+
+draw_sprite(s_armour,0,xx+16+equipSelected[0]*16,yy+16);
+draw_sprite(s_armour,0,xx+16+equipSelected[1]*16,yy+48);
+draw_sprite(s_armour,0,xx+16+equipSelected[2]*16,yy+80);
+if global.current_companion != 0
+{
+    draw_sprite(s_armour,0,xx+16+equipSelected[3]*16,yy+112);
 }
 
 

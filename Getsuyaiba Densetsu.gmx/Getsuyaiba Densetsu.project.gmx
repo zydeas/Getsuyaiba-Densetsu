@@ -114,13 +114,14 @@
       <script>scripts\menu_draw_equipment.gml</script>
       <script>scripts\menu_draw_save.gml</script>
       <script>scripts\menu_draw_companion.gml</script>
+      <script>scripts\menu_step_equipment.gml</script>
     </scripts>
     <scripts name="Inventory">
       <script>scripts\inventory_set_item.gml</script>
       <script>scripts\item.gml</script>
       <script>scripts\init_inventory.gml</script>
+      <script>scripts\have_item.gml</script>
     </scripts>
-    <script>scripts\have_item.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font</font>

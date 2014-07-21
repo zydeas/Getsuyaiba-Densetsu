@@ -1,0 +1,96 @@
+var selectEnd = 2;
+if global.current_companion != 0
+{
+    selectEnd = 3;
+}
+
+if get_input_pressed(INPUT_UP)
+{
+    if equipLineSelected > 0
+    {
+        equipLineSelected--;
+    }
+    else
+    {
+        equipLineSelected = selectEnd;
+    }
+}
+if get_input_pressed(INPUT_DOWN)
+{
+    if global.current_companion != 0
+    {
+        if equipLineSelected < selectEnd
+        {
+            equipLineSelected++;
+        }
+        else
+        { 
+            equipLineSelected = 0;
+        }
+    }
+    else
+    {
+    
+    }
+}
+
+if get_input_pressed(INPUT_LEFT)
+{
+    if equipSelected[equipLineSelected] > 0
+    {
+        equipSelected[equipLineSelected]--;
+    }
+    else
+    {
+        equipSelected[equipLineSelected] = equipSize;
+    }
+    if !have_item(ds_list_find_value(equipLines[equipLineSelected],equipSelected))
+    {
+        var i=0,j=equipSelected[equipLineSelected];
+        
+        while i <= equipSize
+        {
+           if have_item(ds_list_find_value(equipLines[equipLineSelected],j))
+           {
+                equipSelected[equipLineSelected] = j;
+                break;
+           }
+           if j > 0
+           {j--;}
+           else
+           {j=equipSize}
+           i++;
+        }
+    }
+}
+
+if get_input_pressed(INPUT_RIGHT)
+{
+    if equipSelected[equipLineSelected] < equipSize
+    {
+        equipSelected[equipLineSelected]++;
+    }
+    else
+    {
+        equipSelected[equipLineSelected] = 0;
+    }
+    
+    if !have_item(ds_list_find_value(equipLines[equipLineSelected],equipSelected))
+    {
+        var i=0,j=equipSelected[equipLineSelected];
+        
+        while i <= equipSize
+        {
+           if have_item(ds_list_find_value(equipLines[equipLineSelected],j))
+           {
+                equipSelected[equipLineSelected] = j;
+                break;
+           }
+           if j < equipSize
+           {j++;}
+           else
+           {j=0}
+           i++;
+        }
+    }
+}

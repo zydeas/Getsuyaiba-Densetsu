@@ -26,5 +26,5 @@ else
 {
     draw_set_valign(fa_top);
     
-    draw_text_shadow(8,1,1,1,screenNames[screen],c_white,c_blue,-1);
+    draw_text_shadow(8,1,1,1,screenNames[screen],c_white,c_gray,-1);
 }

@@ -1,15 +1,33 @@
 ///menu_init()
 
-equipLineSelect = 0;
-equipSelect = 0; 
+equipLineSelected = 0;
+equipSelected[0] = 0;
+equipSelected[1] = 0;
+equipSelected[2] = 0;
+equipSelected[3] = 0;
+equipSize = 5;
 
 armorList = ds_list_create();
 bracerList = ds_list_create();
 relicList = ds_list_create();
 
+trinketList[1] = ds_list_create();
+trinketList[2] = ds_list_create();
+trinketList[3] = ds_list_create();
+
 ds_list_add(armorList,"royal_cloak","gladiator_armour","training_chest","nomad_vest","warrior_garb","meteor_plate");
 ds_list_add(bracerList,"royal_bracer","guardian_glove","twin_bracelet","leaf_wrap","berserker_pauldron","meteor_gauntlet");
 ds_list_add(relicList,"fireball","discus","wave","spread","beam","rebound");
+
+ds_list_add(trinketList[1], "glide","dive","soar","hunt","rush","swarm");
+ds_list_add(trinketList[2], "split","grenade","flamethrower","sheild","scatter","chain");
+ds_list_add(trinketList[3], "cannonball","bola","anchor","fireworks","trident","dragon_breath");
+
+equipLines[0] = armorList
+equipLines[1] = bracerList
+equipLines[2] = relicList
+equipLines[3] = trinketList[1];
+
 
 //Selected Screen
 // 0: Equip menu
@@ -34,7 +52,7 @@ screenNames[6] = "Exit"
 screenScript[0,ev_step] = -1;
 screenScript[0,ev_draw] = menu_draw_stats;
 
-screenScript[1,ev_step] = -1;
+screenScript[1,ev_step] = menu_step_equipment;
 screenScript[1,ev_draw] = menu_draw_equipment;
 
 screenScript[2,ev_step] = -1;

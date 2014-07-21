@@ -7,6 +7,9 @@ global.itemMap = ds_map_create();
 //The map that holds if you have an item or not.
 global.inventory = ds_map_create();
 
+global.armorSelected = 0;
+global.bracerSelected = 0;
+global.relicSelected = 0;
 
 //Armor
 ds_map_add(global.itemMap,"royal_cloak",1);
@@ -16,11 +19,11 @@ ds_map_add(global.itemMap,"nomad_vest",4);
 ds_map_add(global.itemMap,"warrior_garb",5);
 ds_map_add(global.itemMap,"meteor_plate",6);
 
-inventory_set_item("royal_cloak",false);
+inventory_set_item("royal_cloak",true);
 inventory_set_item("gladiator_armour",false);
 inventory_set_item("training_chest",false);
-inventory_set_item("nomad_vest",false);
-inventory_set_item("warrior_garb",false);
+inventory_set_item("nomad_vest",true);
+inventory_set_item("warrior_garb",true);
 inventory_set_item("meteor_plate",false);
 
 
@@ -34,7 +37,7 @@ ds_map_add(global.itemMap,"meteor_gauntlet",12);
 
 inventory_set_item("royal_bracer",false);
 inventory_set_item("guardian_glove",false);
-inventory_set_item("twin_bracelet",false);
+inventory_set_item("twin_bracelet",true);
 inventory_set_item("leaf_wrap",false);
 inventory_set_item("berserker_pauldron",false);
 inventory_set_item("meteor_gauntlet",false);
@@ -49,10 +52,10 @@ ds_map_add(global.itemMap,"beam",17);
 ds_map_add(global.itemMap,"rebound",18);
 
 inventory_set_item("fireball",false);
-inventory_set_item("discus",false);
+inventory_set_item("discus",true);
 inventory_set_item("wave",false);
 inventory_set_item("spread",false);
-inventory_set_item("beam",false);
+inventory_set_item("beam",true);
 inventory_set_item("rebound",false);
 
 
