@@ -72,4 +72,18 @@ equipLines[2] = relicList
 equipLines[3] = trinketList[1];
 
 
+optionsIndex = 0;
+keyMenu = false;
+keyMenuIndex = 0;
+keyMenuSelecting = false;
+keyMenuExitKey = vk_escape;
+
+keyMenuList = ds_list_create();
+
+ds_list_add(keyMenuList,INPUT_LEFT,INPUT_RIGHT,INPUT_UP,INPUT_DOWN,INPUT_ATTACK,INPUT_SPECIAL,INPUT_MENU,INPUT_OPTION);
+
 topBarHeight = 16;
+
+
+
+

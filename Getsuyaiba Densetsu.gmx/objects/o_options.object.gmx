@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,27 +25,31 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//The ticker text display
+            <string>init_options();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>audio_master_gain(clamp(global.masterVolume/100,0,100));
 
-//tickerState
-//0: ticker is typing out text
-//1: ticker is paused after typing out. Advances back to 0 when timer is out.
-tickerState = 0;
-
-
-
-tickerRunning = false;
-tickerfullString[0] = "";
-tickerstring = "";
-stringIndex = 0;
-lineIndex = 0;
-spd = 0;
-finished = false;
-lineFinished = false;
-//set width and height to -1 for no limit.
-w = -1;
-h = -1;
-textFont = menu_font;
 </string>
           </argument>
         </arguments>

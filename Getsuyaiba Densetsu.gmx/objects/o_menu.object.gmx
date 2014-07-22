@@ -73,7 +73,7 @@ instance_create(0,0,o_menu_companion);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if get_input_pressed(INPUT_ATTACK)
+            <string>if get_input_pressed(INPUT_SPECIAL)
 {
     if canOpenScreen
     {

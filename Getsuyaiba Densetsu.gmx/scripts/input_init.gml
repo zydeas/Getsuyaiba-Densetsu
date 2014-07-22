@@ -20,6 +20,15 @@ global.inputs[INPUT_MENU,DEVICE_PAD] = gp_start;
 global.inputs[INPUT_ATTACK,DEVICE_PAD] = gp_face3;
 global.inputs[INPUT_OPTION,DEVICE_PAD] = gp_select;
 
+global.inputs[INPUT_LEFT,NAME] = "Left";
+global.inputs[INPUT_RIGHT,NAME] = "Right";
+global.inputs[INPUT_UP,NAME] = "Up";
+global.inputs[INPUT_DOWN,NAME] = "Down";
+global.inputs[INPUT_SPECIAL,NAME] = "Special";
+global.inputs[INPUT_MENU,NAME] = "Menu";
+global.inputs[INPUT_ATTACK,NAME] = "Attack";
+global.inputs[INPUT_OPTION,NAME] = "Option";
+
 global.lockMap = ds_map_create();
 
 ds_map_add(global.lockMap,INPUT_LEFT,0);
@@ -36,5 +45,7 @@ globalvar gpvibrate,gpvibration,gpdecay;
 gpvibrate = true; //whether the pad can vibrate
 gpvibration = 0;
 gpdecay = .5; //The amount to lerp down the vibration. 0 to 1.
+
+input_key_names();
 
 //input_pad_init();

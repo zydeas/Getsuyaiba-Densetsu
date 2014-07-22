@@ -134,6 +134,7 @@
       <script>scripts\input_stick_get.gml</script>
       <script>scripts\input_pad_update.gml</script>
       <script>scripts\input_init.gml</script>
+      <script>scripts\input_key_names.gml</script>
     </scripts>
     <scripts name="enemy_scripts">
       <script>scripts\enemy_init.gml</script>
@@ -147,6 +148,8 @@
       <script>scripts\menu_step_equipment.gml</script>
       <script>scripts\menu_draw_main.gml</script>
       <script>scripts\menu_box_draw.gml</script>
+      <script>scripts\menu_step_option.gml</script>
+      <script>scripts\menu_draw_option.gml</script>
     </scripts>
     <scripts name="Inventory">
       <script>scripts\inventory_set_item.gml</script>
@@ -154,6 +157,7 @@
       <script>scripts\init_inventory.gml</script>
       <script>scripts\have_item.gml</script>
     </scripts>
+    <script>scripts\init_options.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font</font>
@@ -215,7 +219,8 @@
       <object>objects\enemy</object>
       <object>objects\scroll</object>
     </objects>
-    <object>objects\text_ticker_obj</object>
+    <object>objects\o_text_ticker</object>
+    <object>objects\o_options</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\initialization_room</room>
@@ -227,9 +232,10 @@
       <room>rooms\title</room>
     </rooms>
   </rooms>
-  <constants number="10">
+  <constants number="11">
     <constant name="DEVICE_KEYBOARD">0</constant>
     <constant name="DEVICE_PAD">1</constant>
+    <constant name="NAME">2</constant>
     <constant name="INPUT_LEFT">0</constant>
     <constant name="INPUT_RIGHT">1</constant>
     <constant name="INPUT_UP">2</constant>
