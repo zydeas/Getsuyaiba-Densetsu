@@ -284,8 +284,8 @@
       <object>objects\enemy</object>
       <object>objects\scroll</object>
     </objects>
-    <object>objects\o_text_ticker</object>
     <object>objects\o_results</object>
+    <object>objects\o_text_ticker</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\initialization_room</room>
