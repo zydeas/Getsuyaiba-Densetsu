@@ -1,3 +1,5 @@
+///enemy_init(hp,dmg,gold,xp)
+
 hp = argument0; //enemy health
 dmg = argument1; //Damage on touching player
 gold = argument2; //Gold granted

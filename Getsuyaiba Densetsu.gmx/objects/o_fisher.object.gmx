@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>event_inherited();
 
-enemy_init(5,2,1,2);
+enemy_init(5,2,30,2);
 
 vspeed = -random_range(3,4);
 gravity = 0.065;

@@ -44,10 +44,21 @@ screenScript[6,ev_draw] = -1;
 
 //Equip Menu
 equipLineSelected = 0;
-equipSelected[0] = 0;
-equipSelected[1] = 0;
-equipSelected[2] = 0;
-equipSelected[3] = 0;
+equipSelected[0] = global.armorSelected;
+equipSelected[1] = global.bracerSelected;
+equipSelected[2] = global.relicSelected;
+switch(global.current_companion)
+{
+    case 1:
+        equipSelected[3] = global.didotrinketSelected;
+    break;
+    case 2:
+        equipSelected[3] = global.kasitrinketSelected;
+    break;
+    case 3:
+        equipSelected[3] = global.zoetrinketSelected;
+    break;
+}
 equipSize = 5;
 selectEnd = 3;
 
@@ -70,7 +81,7 @@ ds_list_add(trinketList[3], "cannonball","bola","anchor","fireworks","trident","
 equipLines[0] = armorList
 equipLines[1] = bracerList
 equipLines[2] = relicList
-equipLines[3] = trinketList[3];
+equipLines[3] = trinketList[global.current_companion];
 
 optionsIndex = 0;
 keyMenu = false;

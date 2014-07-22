@@ -178,13 +178,17 @@
       <script>scripts\menu_draw_stats.gml</script>
       <script>scripts\menu_draw_save.gml</script>
       <script>scripts\menu_draw_companion.gml</script>
-      <script>scripts\menu_step_equipment.gml</script>
       <script>scripts\menu_step_companion.gml</script>
-      <script>scripts\menu_draw_equipment.gml</script>
       <script>scripts\menu_draw_main.gml</script>
       <script>scripts\menu_box_draw.gml</script>
-      <script>scripts\menu_step_option.gml</script>
-      <script>scripts\menu_draw_option.gml</script>
+      <scripts name="menu_equip">
+        <script>scripts\menu_step_equipment.gml</script>
+        <script>scripts\menu_draw_equipment.gml</script>
+      </scripts>
+      <scripts name="menu_option">
+        <script>scripts\menu_draw_option.gml</script>
+        <script>scripts\menu_step_option.gml</script>
+      </scripts>
     </scripts>
     <scripts name="Inventory">
       <script>scripts\inventory_set_item.gml</script>
@@ -286,6 +290,7 @@
     </objects>
     <object>objects\o_results</object>
     <object>objects\o_text_ticker</object>
+    <object>objects\o_health_display</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\initialization_room</room>
@@ -296,7 +301,7 @@
       <room>rooms\intro_cutscene</room>
       <room>rooms\title</room>
     </rooms>
-    <room>rooms\results_room</room>
+    <room>rooms\room7_new</room>
   </rooms>
   <constants number="11">
     <constant name="DEVICE_KEYBOARD">0</constant>

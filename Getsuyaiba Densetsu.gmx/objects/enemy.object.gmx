@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>event_inherited();
 
-enemy_init(2,2,1,2);
+enemy_init(2,2,50,2);
 
 invuln =false;
 invuln_time = 0;

@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>event_inherited();
 
-enemy_init(5,2,1,2);
+enemy_init(5,2,26,2);
 
 hspeed = -2;
 

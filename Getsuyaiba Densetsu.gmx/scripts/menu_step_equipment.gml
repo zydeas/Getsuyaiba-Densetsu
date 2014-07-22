@@ -2,6 +2,10 @@ if global.current_companion != 0
 {
     selectEnd = 4;
 }
+else
+{
+    selectEnd = 3;
+}
 
 if get_input_pressed(INPUT_UP)
 {
@@ -16,20 +20,14 @@ if get_input_pressed(INPUT_UP)
 }
 if get_input_pressed(INPUT_DOWN)
 {
-    if global.current_companion != 0
+
+    if equipLineSelected < selectEnd
     {
-        if equipLineSelected < selectEnd
-        {
-            equipLineSelected++;
-        }
-        else
-        { 
-            equipLineSelected = 0;
-        }
+        equipLineSelected++;
     }
     else
-    {
-    
+    { 
+        equipLineSelected = 0;
     }
 }
 
@@ -46,7 +44,7 @@ if get_input_pressed(INPUT_LEFT)
             equipSelected[equipLineSelected] = equipSize;
         }
         
-        if !have_item(ds_list_find_value(equipLines[equipLineSelected],equipSelected))
+        if !have_item(ds_list_find_value(equipLines[equipLineSelected],equipSelected[equipLineSelected]))
         {
             var i=0,j=equipSelected[equipLineSelected];
             show_debug_message("BLAGH LEFT");
@@ -82,7 +80,7 @@ if get_input_pressed(INPUT_RIGHT)
             equipSelected[equipLineSelected] = 0;
         }
         
-        if !have_item(ds_list_find_value(equipLines[equipLineSelected],equipSelected))
+        if !have_item(ds_list_find_value(equipLines[equipLineSelected],equipSelected[equipLineSelected]))
         {
             var i=0,j=equipSelected[equipLineSelected];
             show_debug_message("BLAGH RIGHT");
@@ -105,7 +103,7 @@ if get_input_pressed(INPUT_RIGHT)
 
 for(var k=0;k<selectEnd-1;k++)
 {
-    if !have_item(ds_list_find_value(equipLines[k],equipSelected))
+    if !have_item(ds_list_find_value(equipLines[k],equipSelected[k]))
     {
         var i=0,j=equipSelected[k];
         
@@ -128,5 +126,36 @@ for(var k=0;k<selectEnd-1;k++)
 if equipLineSelected = selectEnd and get_input_pressed(INPUT_ATTACK)
 {
     screenOpen = false;
+}
+
+if have_item(ds_list_find_value(equipLines[0],equipSelected[0]))
+{
+    global.armorSelected = equipSelected[0];
+}
+
+if have_item(ds_list_find_value(equipLines[1],equipSelected[1]))
+{
+    global.bracerSelected = equipSelected[1];
+}
+
+if have_item(ds_list_find_value(equipLines[2],equipSelected[2]))
+{
+    global.relicSelected = equipSelected[2];
+}
+
+if have_item(ds_list_find_value(trinketList[global.current_companion],equipSelected[0]))
+{
+    switch(global.current_companion)
+    {
+        case 1:
+            global.didotrinketSelected = equipSelected[3];
+        break;
+        case 2:
+            global.kasitrinketSelected = equipSelected[3];
+        break;
+        case 3:
+            global.zoetrinketSelected = equipSelected[3];
+        break;
+    }
 }
 

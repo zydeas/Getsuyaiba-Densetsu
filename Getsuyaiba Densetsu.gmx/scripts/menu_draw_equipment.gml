@@ -59,14 +59,17 @@ if global.current_companion != 0
 {
     for(var i = 0;i<6;i++)
     {
-        if have_item(ds_list_find_value(trinketList[global.current_companion],i))
+        if have_item(ds_list_find_value(equipLines[3],i))
         {
-        if global.current_companion==1 {draw_sprite(s_didotrinket,i+2,xx+16+(16*i),yy+112);}
-        if global.current_companion==2 {draw_sprite(s_kasitrinket,i+2,xx+16+(16*i),yy+112);}
-        if global.current_companion==3 {draw_sprite(s_zoetrinket,i+2,xx+16+(16*i),yy+112);}
+            if global.current_companion==1 {draw_sprite(s_didotrinket,i+2,xx+16+(16*i),yy+112);}
+            if global.current_companion==2 {draw_sprite(s_kasitrinket,i+2,xx+16+(16*i),yy+112);}
+            if global.current_companion==3 {draw_sprite(s_zoetrinket,i+2,xx+16+(16*i),yy+112);}
         }
     }
 }
+
+draw_text_shadow(20,180,1,1,string(have_item(ds_list_find_value(trinketList[global.current_companion],equipSelected[3]))),c_white,c_red,-1)
+
 /*
 if global.current_companion != 0
 {

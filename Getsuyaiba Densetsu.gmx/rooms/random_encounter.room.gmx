@@ -53,6 +53,7 @@
   <instances>
     <instance objName="o_plr" x="32" y="104" name="inst_D0E6F8A7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_effect_water" x="0" y="0" name="inst_CE05E828" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_health_display" x="40" y="0" name="inst_7D2779FC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

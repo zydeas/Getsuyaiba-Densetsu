@@ -22,12 +22,12 @@ ds_map_add(global.itemMap,"nomad_vest",4);
 ds_map_add(global.itemMap,"warrior_garb",5);
 ds_map_add(global.itemMap,"meteor_plate",6);
 
-inventory_set_item("royal_cloak",true);
+inventory_set_item("royal_cloak",false);
 inventory_set_item("gladiator_armour",false);
-inventory_set_item("training_chest",false);
-inventory_set_item("nomad_vest",true);
+inventory_set_item("training_chest",true);
+inventory_set_item("nomad_vest",false);
 inventory_set_item("warrior_garb",true);
-inventory_set_item("meteor_plate",false);
+inventory_set_item("meteor_plate",true);
 
 
 //Bracer
@@ -104,7 +104,7 @@ ds_map_add(global.itemMap,"dragon_breath",36);
 
 inventory_set_item("cannonball",true);
 inventory_set_item("bola",true);
-inventory_set_item("anchor",true);
-inventory_set_item("fireworks",true);
+inventory_set_item("anchor",false);
+inventory_set_item("fireworks",false);
 inventory_set_item("trident",true);
 inventory_set_item("dragon_breath",true);
