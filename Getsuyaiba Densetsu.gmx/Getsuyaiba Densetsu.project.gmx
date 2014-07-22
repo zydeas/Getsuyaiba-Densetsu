@@ -99,6 +99,14 @@
         <sprite>sprites\s_zoe_lift</sprite>
         <sprite>sprites\s_zoe_slip</sprite>
         <sprite>sprites\s_cannon_fire</sprite>
+        <sprite>sprites\s_anchor</sprite>
+        <sprite>sprites\s_anchorchain</sprite>
+        <sprite>sprites\s_trident</sprite>
+        <sprite>sprites\s_firework</sprite>
+        <sprite>sprites\s_bola</sprite>
+        <sprite>sprites\s_zoe_dragonbreath</sprite>
+        <sprite>sprites\s_bola_hit</sprite>
+        <sprite>sprites\s_cannonball_explode</sprite>
       </sprites>
       <sprites name="grp_companion_portraits">
         <sprites name="grp_zoe_portraits">
@@ -172,6 +180,14 @@
       <object>objects\o_zoe</object>
       <object>objects\o_zoe_flare</object>
       <object>objects\o_zoe_ball</object>
+      <object>objects\o_zoe_cannonball</object>
+      <object>objects\o_zoe_explosion</object>
+      <object>objects\o_zoe_dragonbreath</object>
+      <object>objects\o_zoe_firework_spark</object>
+      <object>objects\o_zoe_bola</object>
+      <object>objects\o_zoe_trident</object>
+      <object>objects\o_zoe_anchor</object>
+      <object>objects\o_zoe_anchorchain</object>
       <object>objects\o_zoe_blast</object>
     </objects>
     <object>objects\o_encounter</object>
