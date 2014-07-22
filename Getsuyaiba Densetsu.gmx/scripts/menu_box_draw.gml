@@ -12,7 +12,7 @@ col = argument5;
 if opaque
 {
     draw_set_colour(col);
-    draw_rectangle(x1,y1,x2,y2,false);
+    draw_rectangle(x1-2,y1-2,x2+2,y2+2,false);
 }
 
 draw_set_colour(c_white);

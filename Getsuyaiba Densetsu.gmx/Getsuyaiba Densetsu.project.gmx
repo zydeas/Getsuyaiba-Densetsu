@@ -158,6 +158,7 @@
       <script>scripts\have_item.gml</script>
     </scripts>
     <script>scripts\init_options.gml</script>
+    <script>scripts\input_get_key_name.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font</font>
@@ -195,6 +196,7 @@
       <object>objects\o_music</object>
       <object>objects\o_effect_water</object>
       <object>objects\o_window_size</object>
+      <object>objects\o_options</object>
     </objects>
     <objects name="grp_continents">
       <object>objects\o_albard</object>
@@ -220,7 +222,6 @@
       <object>objects\scroll</object>
     </objects>
     <object>objects\o_text_ticker</object>
-    <object>objects\o_options</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\initialization_room</room>

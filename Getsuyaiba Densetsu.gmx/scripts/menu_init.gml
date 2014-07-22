@@ -30,13 +30,13 @@ screenScript[2,ev_step] = -1;
 screenScript[2,ev_draw] = menu_draw_companion;
 
 screenScript[3,ev_step] = -1;
-screenScript[3,ev_draw] =  menu_draw_companion;
+screenScript[3,ev_draw] = menu_draw_companion;
 
 screenScript[4,ev_step] = -1;
-screenScript[4,ev_draw] =  menu_draw_save;
+screenScript[4,ev_draw] = menu_draw_save;
 
-screenScript[5,ev_step] = -1;
-screenScript[5,ev_draw] = -1;
+screenScript[5,ev_step] = menu_step_option;
+screenScript[5,ev_draw] = menu_draw_option;
 
 screenScript[6,ev_step] = -1;
 screenScript[6,ev_draw] = -1;
