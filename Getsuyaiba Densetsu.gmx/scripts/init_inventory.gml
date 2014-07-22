@@ -40,7 +40,7 @@ inventory_set_item("guardian_glove",false);
 inventory_set_item("twin_bracelet",true);
 inventory_set_item("leaf_wrap",false);
 inventory_set_item("berserker_pauldron",false);
-inventory_set_item("meteor_gauntlet",false);
+inventory_set_item("meteor_gauntlet",true);
 
 
 //Relics
@@ -53,7 +53,7 @@ ds_map_add(global.itemMap,"rebound",18);
 
 inventory_set_item("fireball",true);
 inventory_set_item("discus",true);
-inventory_set_item("wave",true);
+inventory_set_item("wave",false);
 inventory_set_item("spread",true);
 inventory_set_item("beam",true);
 inventory_set_item("rebound",true);

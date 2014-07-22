@@ -45,12 +45,15 @@ if get_input_pressed(INPUT_LEFT)
         {
             equipSelected[equipLineSelected] = equipSize;
         }
+        
         if !have_item(ds_list_find_value(equipLines[equipLineSelected],equipSelected))
         {
             var i=0,j=equipSelected[equipLineSelected];
-            
+            show_debug_message("BLAGH LEFT");
             while i <= equipSize
             {
+               
+               
                if have_item(ds_list_find_value(equipLines[equipLineSelected],j))
                {
                     equipSelected[equipLineSelected] = j;
@@ -82,7 +85,7 @@ if get_input_pressed(INPUT_RIGHT)
         if !have_item(ds_list_find_value(equipLines[equipLineSelected],equipSelected))
         {
             var i=0,j=equipSelected[equipLineSelected];
-            
+            show_debug_message("BLAGH RIGHT");
             while i <= equipSize
             {
                if have_item(ds_list_find_value(equipLines[equipLineSelected],j))
@@ -96,6 +99,28 @@ if get_input_pressed(INPUT_RIGHT)
                {j=0}
                i++;
             }
+        }
+    }
+}
+
+for(var k=0;k<selectEnd-1;k++)
+{
+    if !have_item(ds_list_find_value(equipLines[k],equipSelected))
+    {
+        var i=0,j=equipSelected[k];
+        
+        while i <= equipSize
+        {
+           if have_item(ds_list_find_value(equipLines[k],j))
+           {
+                equipSelected[k] = j;
+                break;
+           }
+           if j < equipSize
+           {j++;}
+           else
+           {j=0;}
+           i++;
         }
     }
 }

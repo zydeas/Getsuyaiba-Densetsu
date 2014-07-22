@@ -162,6 +162,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\font</font>
+    <font>fonts\font_big</font>
     <font>fonts\menu_font</font>
   </fonts>
   <objects name="objects">
@@ -222,6 +223,7 @@
       <object>objects\scroll</object>
     </objects>
     <object>objects\o_text_ticker</object>
+    <object>objects\o_results</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\initialization_room</room>
@@ -232,6 +234,7 @@
       <room>rooms\intro_cutscene</room>
       <room>rooms\title</room>
     </rooms>
+    <room>rooms\results_room</room>
   </rooms>
   <constants number="11">
     <constant name="DEVICE_KEYBOARD">0</constant>

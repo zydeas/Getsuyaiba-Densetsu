@@ -70,8 +70,7 @@ ds_list_add(trinketList[3], "cannonball","bola","anchor","fireworks","trident","
 equipLines[0] = armorList
 equipLines[1] = bracerList
 equipLines[2] = relicList
-equipLines[3] = trinketList[1];
-
+equipLines[3] = trinketList[3];
 
 optionsIndex = 0;
 keyMenu = false;

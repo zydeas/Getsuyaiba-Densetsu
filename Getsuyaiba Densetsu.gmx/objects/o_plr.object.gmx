@@ -104,13 +104,13 @@ else room_goto(overworld_main);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if o_stats.previousRoom != -1 {room_goto(o_stats.previousRoom);}
+            <string>o_stats.spawning=false;
+if o_stats.previousRoom != -1 {room_goto(o_stats.previousRoom);}
 else room_goto(overworld_main);
 
 global.gold+=gained_gold;
 global.xp+=gained_xp;
 global.hp=myhp;
-o_stats.enemy_timer=30;
 </string>
           </argument>
         </arguments>
