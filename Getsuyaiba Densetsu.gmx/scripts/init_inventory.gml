@@ -10,6 +10,9 @@ global.inventory = ds_map_create();
 global.armorSelected = 0;
 global.bracerSelected = 0;
 global.relicSelected = 0;
+global.didotrinketSelected = 0;
+global.kasitrinketSelected = 0;
+global.zoetrinketSelected = 0;
 
 //Armor
 ds_map_add(global.itemMap,"royal_cloak",1);
@@ -67,12 +70,12 @@ ds_map_add(global.itemMap,"hunt",22);
 ds_map_add(global.itemMap,"rush",23);
 ds_map_add(global.itemMap,"swarm",24);
 
-inventory_set_item("glide",false);
-inventory_set_item("dive",false);
-inventory_set_item("soar",false);
-inventory_set_item("hunt",false);
-inventory_set_item("rush",false);
-inventory_set_item("swarm",false);
+inventory_set_item("glide",true);
+inventory_set_item("dive",true);
+inventory_set_item("soar",true);
+inventory_set_item("hunt",true);
+inventory_set_item("rush",true);
+inventory_set_item("swarm",true);
 
 
 //Trinkets - Kasi
@@ -83,12 +86,12 @@ ds_map_add(global.itemMap,"sheild",28);
 ds_map_add(global.itemMap,"scatter",29);
 ds_map_add(global.itemMap,"chain",30);
 
-inventory_set_item("split",false);
-inventory_set_item("grenade",false);
-inventory_set_item("flamethrower",false);
-inventory_set_item("sheild",false);
-inventory_set_item("scatter",false);
-inventory_set_item("chain",false);
+inventory_set_item("split",true);
+inventory_set_item("grenade",true);
+inventory_set_item("flamethrower",true);
+inventory_set_item("sheild",true);
+inventory_set_item("scatter",true);
+inventory_set_item("chain",true);
 
 
 //Trinkets - Zoe
@@ -99,9 +102,9 @@ ds_map_add(global.itemMap,"fireworks",34);
 ds_map_add(global.itemMap,"trident",35);
 ds_map_add(global.itemMap,"dragon_breath",36);
 
-inventory_set_item("cannonball",false);
-inventory_set_item("bola",false);
-inventory_set_item("anchor",false);
-inventory_set_item("fireworks",false);
-inventory_set_item("trident",false);
-inventory_set_item("dragon_breath",false);
+inventory_set_item("cannonball",true);
+inventory_set_item("bola",true);
+inventory_set_item("anchor",true);
+inventory_set_item("fireworks",true);
+inventory_set_item("trident",true);
+inventory_set_item("dragon_breath",true);

@@ -59,12 +59,26 @@ if global.current_companion != 0
 {
     for(var i = 0;i<6;i++)
     {
+        if have_item(ds_list_find_value(trinketList[global.current_companion],i))
+        {
+        if global.current_companion==1 {draw_sprite(s_didotrinket,i+2,xx+16+(16*i),yy+112);}
+        if global.current_companion==2 {draw_sprite(s_kasitrinket,i+2,xx+16+(16*i),yy+112);}
+        if global.current_companion==3 {draw_sprite(s_zoetrinket,i+2,xx+16+(16*i),yy+112);}
+        }
+    }
+}
+/*
+if global.current_companion != 0
+{
+    for(var i = 0;i<6;i++)
+    {
         if have_item(ds_list_find_value(relicList,i))
         {
             draw_sprite(s_relic,i+2,xx+16+(16*i),yy+80);
         }
     }
 }
+*/
 
 draw_sprite(s_armour,0,xx+16+equipSelected[0]*16,yy+16);
 draw_sprite(s_armour,0,xx+16+equipSelected[1]*16,yy+48);
@@ -85,3 +99,9 @@ menu_box_draw(16,172,room_width-16,room_height-20,false,c_black);
 
 
 global.relicSelected= equipSelected[2];
+if global.current_companion !=0
+    {
+    trinketList[global.current_companion]= equipSelected[3];
+    }
+
+global.current_trinket=trinketList[global.current_companion];

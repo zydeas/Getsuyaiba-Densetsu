@@ -26,7 +26,7 @@ screenScript[0,ev_draw] = menu_draw_stats;
 screenScript[1,ev_step] = menu_step_equipment;
 screenScript[1,ev_draw] = menu_draw_equipment;
 
-screenScript[2,ev_step] = -1;
+screenScript[2,ev_step] = menu_step_companion;
 screenScript[2,ev_draw] = menu_draw_companion;
 
 screenScript[3,ev_step] = -1;

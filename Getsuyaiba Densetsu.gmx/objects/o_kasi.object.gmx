@@ -46,6 +46,8 @@ ty=0;
 spray_frame=0;
 show_spray=false;
 offset=0;
+
+damage=1+round(global.pow);
 </string>
           </argument>
         </arguments>
@@ -89,6 +91,113 @@ tx = lerp(tx,dx,0.1);
 ty = lerp(ty,dy,0.1);
 x=o_plr.x+tx;
 y=o_plr.y+ty;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+if global.current_trinket ==0 {
+    a=instance_create(x,y,o_kasi_vshot); a.damage=ceil(damage*0.25);
+    if offset==0 {a.direction = 180-25;} //fine
+    else if offset==2 {a.direction = 225-25;} // fine
+    else if offset==4 {a.direction = 270-25;} //fine
+    else if offset==6 {a.direction = 315-25;} // fine
+    else if offset==8 {a.direction = 0-25;}
+    else if offset==10 {a.direction = 45-25;} //fine
+    else if offset==12 {a.direction = 90-25;} //fine
+    else if offset==14 {a.direction = 135-25;} //fine
+    
+    
+    a=instance_create(x,y,o_kasi_vshot); a.damage=ceil(damage*0.25);
+    if offset==0 {a.direction = 180+25;}
+    else if offset==2 {a.direction = 225+25;} // fine
+    else if offset==4 {a.direction = 270+25;} //fine
+    else if offset==6 {a.direction = 315+25;} // fine
+    else if offset==8 {a.direction = 0+25;}
+    else if offset==10 {a.direction = 45+25;} //fine
+    else if offset==12 {a.direction = 90+25;} //fine
+    else if offset==14 {a.direction = 135+25;} //fine
+    
+    audio_play_sound(snd_player_slash,2,false);
+
+    }
+if global.current_trinket ==1 {
+    a=instance_create(x,y,o_kasi_gas); a.damage=ceil(damage*0.45);
+    if offset==0 {a.direction = 180;} //fine
+    else if offset==2 {a.direction = 225;} // fine
+    else if offset==4 {a.direction = 270;} //fine
+    else if offset==6 {a.direction = 315;} // fine
+    else if offset==8 {a.direction = 0;}
+    else if offset==10 {a.direction = 45;} //fine
+    else if offset==12 {a.direction = 90;} //fine
+    else if offset==14 {a.direction = 135;} //fine
+    
+    }
+if global.current_trinket ==2 {
+    a=instance_create(x,y,o_kasi_flamethrower); a.damage=ceil(damage*0.025);
+    if offset==0 {a.direction = 180;} //fine
+    else if offset==2 {a.direction = 225;} // fine
+    else if offset==4 {a.direction = 270;} //fine
+    else if offset==6 {a.direction = 315;} // fine
+    else if offset==8 {a.direction = 0;}
+    else if offset==10 {a.direction = 45;} //fine
+    else if offset==12 {a.direction = 90;} //fine
+    else if offset==14 {a.direction = 135;} //fine
+    
+    }
+    
+if (global.current_trinket ==3) {
+    if !instance_exists(o_kasi_shield)
+        {
+        a=instance_create(x,y,o_kasi_shield); a.damage=ceil(damage*0.15);
+        }
+    else if instance_number(o_kasi_shield) &lt; 5
+        {
+        a=instance_create(x,y,o_kasi_shield); a.damage=ceil(damage*0.15);
+        }
+    }
+    
+if global.current_trinket ==4 {
+    for (i=0; i&lt;32; i++)
+    {
+        a=instance_create(x,y,o_kasi_spark); a.damage=ceil(damage*0.025);
+        if offset==0 {a.direction = 180;} //fine
+        else if offset==2 {a.direction = 225;} // fine
+        else if offset==4 {a.direction = 270;} //fine
+        else if offset==6 {a.direction = 315;} // fine
+        else if offset==8 {a.direction = 0;}
+        else if offset==10 {a.direction = 45;} //fine
+        else if offset==12 {a.direction = 90;} //fine
+        else if offset==14 {a.direction = 135;} //fine
+        a.rate_add=choose(-0.5,0.5,0.4,-0.4)
+        a.direction+=irandom_range(-15,15);
+        a.speed = irandom_range(2,4);
+    }
+    }
+    
+if global.current_trinket ==5 {
+    a=instance_create(x,y,o_kasi_gear); a.damage=ceil(damage*0.35);
+    {a.rate=-1.5;}
+    
+    }
 </string>
           </argument>
         </arguments>

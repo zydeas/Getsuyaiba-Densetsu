@@ -43,6 +43,9 @@ dy=y;
 
 spray_frame=0;
 show_spray=false;
+
+damage=1+round(global.pow);
+dash=false;
 </string>
           </argument>
         </arguments>
@@ -80,6 +83,41 @@ if point_distance(x,y,o_plr.x,o_plr.y)&gt;32
         if y &gt;view_yview[0]+view_hview[0]-border-34 {show_spray=true; spray_frame+=1;}
         else {show_spray=false; spray_frame=0;}
         }
+        
+if dash ==false {visible=true;} else {visible=false;}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if dash ==false
+{
+if global.current_trinket ==0 {a=instance_create(x+8,y,o_dido_glide); a.damage=ceil(damage);}
+if global.current_trinket ==1 {a=instance_create(x+8,y,o_dido_dive); a.damage=ceil(damage);}
+if global.current_trinket ==2 {a=instance_create(x+8,y,o_dido_soar); a.damage=ceil(damage);}
+if global.current_trinket ==3 {a=instance_create(x+8,y,o_dido_hunt); a.damage=ceil(damage*0.5);}
+
+if global.current_trinket ==4 {a=instance_create(x+8,y,o_dido_rush); a.damage=ceil(damage); dash=true;}
+
+if global.current_trinket ==5 {a=instance_create(x+8,y,o_dido_swarm); a.damage=ceil(damage*0.5);}
+}
 </string>
           </argument>
         </arguments>

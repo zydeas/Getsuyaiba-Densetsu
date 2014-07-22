@@ -71,6 +71,17 @@ a.damage=ceil(damage*0.2);
     }
 
 }
+
+
+if instance_exists(o_dido)
+    {
+    with(o_dido) {event_user(0);}
+    }
+    
+if instance_exists(o_kasi)
+    {
+    with(o_kasi) {event_user(0);}
+    }
 </string>
           </argument>
         </arguments>

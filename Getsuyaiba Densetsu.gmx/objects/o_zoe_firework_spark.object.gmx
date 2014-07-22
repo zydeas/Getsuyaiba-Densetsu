@@ -25,13 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed=0.25;
+            <string>image_speed=0.275;
 
 damage=1;
 
 direction = irandom_range(0,359);
 speed= random_range(4,8);
-friction = 0.4;
+friction = 0.425;
 </string>
           </argument>
         </arguments>

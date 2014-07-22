@@ -88,8 +88,6 @@
       </sprites>
     </sprites>
     <sprites name="grp_companions">
-      <sprite>sprites\s_kasi</sprite>
-      <sprite>sprites\s_dido</sprite>
       <sprites name="grp_zoe">
         <sprite>sprites\s_zoe_cursor</sprite>
         <sprite>sprites\s_zoe_cannonballs</sprite>
@@ -114,6 +112,31 @@
           <sprite>sprites\s_zoe_talk</sprite>
           <sprite>sprites\s_zoe_blink</sprite>
         </sprites>
+        <sprites name="grp_kasi_portraits">
+          <sprite>sprites\s_kasi_default</sprite>
+          <sprite>sprites\s_kasi_talk</sprite>
+          <sprite>sprites\s_kasi_blink</sprite>
+        </sprites>
+        <sprites name="grp_dido_portraits">
+          <sprite>sprites\s_dido_default</sprite>
+          <sprite>sprites\s_dido_blink</sprite>
+          <sprite>sprites\s_dido_talk</sprite>
+        </sprites>
+      </sprites>
+      <sprites name="grp_dido">
+        <sprite>sprites\s_dido_dash</sprite>
+        <sprite>sprites\s_eagle</sprite>
+        <sprite>sprites\s_dido</sprite>
+      </sprites>
+      <sprites name="grp_kasi">
+        <sprite>sprites\s_kasi</sprite>
+        <sprite>sprites\s_kasi_vshot</sprite>
+        <sprite>sprites\s_kasi_gas</sprite>
+        <sprite>sprites\s_kasi_shield</sprite>
+        <sprite>sprites\s_kasi_flamethrower</sprite>
+        <sprite>sprites\s_kasi_spark</sprite>
+        <sprite>sprites\s_kasi_gear</sprite>
+        <sprite>sprites\s_kasi_gear_chain</sprite>
       </sprites>
     </sprites>
     <sprite>sprites\s_menu_hand</sprite>
@@ -122,6 +145,9 @@
       <sprite>sprites\s_armour</sprite>
       <sprite>sprites\s_bracer</sprite>
       <sprite>sprites\s_relic</sprite>
+      <sprite>sprites\s_zoetrinket</sprite>
+      <sprite>sprites\s_didotrinket</sprite>
+      <sprite>sprites\s_kasitrinket</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -153,6 +179,7 @@
       <script>scripts\menu_draw_save.gml</script>
       <script>scripts\menu_draw_companion.gml</script>
       <script>scripts\menu_step_equipment.gml</script>
+      <script>scripts\menu_step_companion.gml</script>
       <script>scripts\menu_draw_equipment.gml</script>
       <script>scripts\menu_draw_main.gml</script>
       <script>scripts\menu_box_draw.gml</script>
@@ -177,19 +204,38 @@
     <objects name="grp_companion_objects">
       <object>objects\o_menu_companion</object>
       <object>objects\o_dido</object>
-      <object>objects\o_kasi</object>
-      <object>objects\o_zoe</object>
-      <object>objects\o_zoe_flare</object>
-      <object>objects\o_zoe_ball</object>
-      <object>objects\o_zoe_cannonball</object>
-      <object>objects\o_zoe_explosion</object>
-      <object>objects\o_zoe_dragonbreath</object>
-      <object>objects\o_zoe_firework_spark</object>
-      <object>objects\o_zoe_bola</object>
-      <object>objects\o_zoe_trident</object>
-      <object>objects\o_zoe_anchor</object>
-      <object>objects\o_zoe_anchorchain</object>
-      <object>objects\o_zoe_blast</object>
+      <objects name="grp_dido_combat">
+        <object>objects\o_dido_glide</object>
+        <object>objects\o_dido_dive</object>
+        <object>objects\o_dido_soar</object>
+        <object>objects\o_dido_hunt</object>
+        <object>objects\o_dido_rush</object>
+        <object>objects\o_dido_swarm</object>
+        <object>objects\o_dido_rush_trail</object>
+      </objects>
+      <objects name="grp_zoe_combat">
+        <object>objects\o_zoe_blast</object>
+        <object>objects\o_zoe_anchorchain</object>
+        <object>objects\o_zoe_anchor</object>
+        <object>objects\o_zoe_trident</object>
+        <object>objects\o_zoe_bola</object>
+        <object>objects\o_zoe_firework_spark</object>
+        <object>objects\o_zoe_dragonbreath</object>
+        <object>objects\o_zoe_explosion</object>
+        <object>objects\o_zoe_cannonball</object>
+        <object>objects\o_zoe_ball</object>
+        <object>objects\o_zoe_flare</object>
+        <object>objects\o_zoe</object>
+      </objects>
+      <objects name="grp_kasi_combat">
+        <object>objects\o_kasi_vshot</object>
+        <object>objects\o_kasi_gas</object>
+        <object>objects\o_kasi_spark</object>
+        <object>objects\o_kasi_flamethrower</object>
+        <object>objects\o_kasi_shield</object>
+        <object>objects\o_kasi_gear</object>
+        <object>objects\o_kasi</object>
+      </objects>
     </objects>
     <object>objects\o_encounter</object>
     <object>objects\o_overworld_plr</object>

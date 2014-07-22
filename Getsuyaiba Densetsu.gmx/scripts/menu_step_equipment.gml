@@ -129,3 +129,4 @@ if equipLineSelected = selectEnd and get_input_pressed(INPUT_ATTACK)
 {
     screenOpen = false;
 }
+

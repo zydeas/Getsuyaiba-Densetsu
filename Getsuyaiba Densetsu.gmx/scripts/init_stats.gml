@@ -4,7 +4,7 @@
 global.lvl = 1;
 global.xp = 0;
 global.gold = 0;
-
+global.current_trinket =0;
 
 global.hp = 10;
 global.basehp = 10;
@@ -36,4 +36,5 @@ global.current_companion = 3; //0 for none, 1, 2, 3 for Dido, Kasi and Zoe
 global.dido =1; //Is Dido Unlocked?
 global.kasi =1;  //Is Kasi Unlocked?
 global.zoe =1; //Is Zoe Unlocked?
+
 
