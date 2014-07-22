@@ -1,7 +1,6 @@
-var selectEnd = 2;
 if global.current_companion != 0
 {
-    selectEnd = 3;
+    selectEnd = 4;
 }
 
 if get_input_pressed(INPUT_UP)
@@ -36,61 +35,72 @@ if get_input_pressed(INPUT_DOWN)
 
 if get_input_pressed(INPUT_LEFT)
 {
-    if equipSelected[equipLineSelected] > 0
+    if equipLineSelected != selectEnd
     {
-        equipSelected[equipLineSelected]--;
-    }
-    else
-    {
-        equipSelected[equipLineSelected] = equipSize;
-    }
-    if !have_item(ds_list_find_value(equipLines[equipLineSelected],equipSelected))
-    {
-        var i=0,j=equipSelected[equipLineSelected];
-        
-        while i <= equipSize
+        if equipSelected[equipLineSelected] > 0
         {
-           if have_item(ds_list_find_value(equipLines[equipLineSelected],j))
-           {
-                equipSelected[equipLineSelected] = j;
-                break;
-           }
-           if j > 0
-           {j--;}
-           else
-           {j=equipSize}
-           i++;
+            equipSelected[equipLineSelected]--;
+        }
+        else
+        {
+            equipSelected[equipLineSelected] = equipSize;
+        }
+        if !have_item(ds_list_find_value(equipLines[equipLineSelected],equipSelected))
+        {
+            var i=0,j=equipSelected[equipLineSelected];
+            
+            while i <= equipSize
+            {
+               if have_item(ds_list_find_value(equipLines[equipLineSelected],j))
+               {
+                    equipSelected[equipLineSelected] = j;
+                    break;
+               }
+               if j > 0
+               {j--;}
+               else
+               {j=equipSize}
+               i++;
+            }
         }
     }
 }
 
 if get_input_pressed(INPUT_RIGHT)
 {
-    if equipSelected[equipLineSelected] < equipSize
+    if equipLineSelected != selectEnd
     {
-        equipSelected[equipLineSelected]++;
-    }
-    else
-    {
-        equipSelected[equipLineSelected] = 0;
-    }
-    
-    if !have_item(ds_list_find_value(equipLines[equipLineSelected],equipSelected))
-    {
-        var i=0,j=equipSelected[equipLineSelected];
-        
-        while i <= equipSize
+        if equipSelected[equipLineSelected] < equipSize
         {
-           if have_item(ds_list_find_value(equipLines[equipLineSelected],j))
-           {
-                equipSelected[equipLineSelected] = j;
-                break;
-           }
-           if j < equipSize
-           {j++;}
-           else
-           {j=0}
-           i++;
+            equipSelected[equipLineSelected]++;
+        }
+        else
+        {
+            equipSelected[equipLineSelected] = 0;
+        }
+        
+        if !have_item(ds_list_find_value(equipLines[equipLineSelected],equipSelected))
+        {
+            var i=0,j=equipSelected[equipLineSelected];
+            
+            while i <= equipSize
+            {
+               if have_item(ds_list_find_value(equipLines[equipLineSelected],j))
+               {
+                    equipSelected[equipLineSelected] = j;
+                    break;
+               }
+               if j < equipSize
+               {j++;}
+               else
+               {j=0}
+               i++;
+            }
         }
     }
+}
+
+if equipLineSelected = selectEnd and get_input_pressed(INPUT_ATTACK)
+{
+    screenOpen = false;
 }

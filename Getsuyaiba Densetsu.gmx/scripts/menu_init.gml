@@ -49,6 +49,7 @@ equipSelected[1] = 0;
 equipSelected[2] = 0;
 equipSelected[3] = 0;
 equipSize = 5;
+selectEnd = 3;
 
 armorList = ds_list_create();
 bracerList = ds_list_create();

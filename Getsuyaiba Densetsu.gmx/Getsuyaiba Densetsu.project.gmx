@@ -142,10 +142,10 @@
     <scripts name="menu_scripts">
       <script>scripts\menu_init.gml</script>
       <script>scripts\menu_draw_stats.gml</script>
-      <script>scripts\menu_draw_equipment.gml</script>
       <script>scripts\menu_draw_save.gml</script>
       <script>scripts\menu_draw_companion.gml</script>
       <script>scripts\menu_step_equipment.gml</script>
+      <script>scripts\menu_draw_equipment.gml</script>
       <script>scripts\menu_draw_main.gml</script>
       <script>scripts\menu_box_draw.gml</script>
       <script>scripts\menu_step_option.gml</script>

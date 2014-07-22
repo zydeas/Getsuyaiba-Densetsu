@@ -7,17 +7,25 @@ yy = argument1;
 col1 = c_white;
 col2 = c_blue;
 
-
+draw_set_valign(fa_center);
 draw_set_halign(fa_left);
+
 //Cursor
-draw_sprite(s_menu_hand,0,xx+16,yy+16+8+(32*equipLineSelected));
+if equipLineSelected < selectEnd
+{
+    draw_sprite(s_menu_hand,0,xx+16,yy+16+8+(32*equipLineSelected));
+}
+else
+{
+    draw_sprite(s_menu_hand,0,xx+48,yy+136);
+}
 
 //Names
 
-draw_text_shadow(xx+16,yy,1,1,"Armour",col1,col2,-1);
-draw_text_shadow(xx+16,yy+32,1,1,"Bracer",col1,col2,-1);
-draw_text_shadow(xx+16,yy+64,1,1,"Relics",col1,col2,-1);
-draw_text_shadow(xx+16,yy+96,1,1,"Trinket",col1,col2,-1);
+draw_text_shadow(xx+16,yy+8,1,1,"Armour",col1,col2,-1);
+draw_text_shadow(xx+16,yy+40,1,1,"Bracer",col1,col2,-1);
+draw_text_shadow(xx+16,yy+72,1,1,"Relics",col1,col2,-1);
+draw_text_shadow(xx+16,yy+104,1,1,"Trinket",col1,col2,-1);
 
 
 //Draw Armours
@@ -66,6 +74,7 @@ if global.current_companion != 0
     draw_sprite(s_armour,0,xx+16+equipSelected[3]*16,yy+112);
 }
 
+draw_text_shadow(xx+48,yy+136,1,1,"Back",col1,col2,-1);
 
 draw_set_halign(fa_right);
 //Values

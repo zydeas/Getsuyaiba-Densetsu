@@ -73,28 +73,19 @@ instance_create(0,0,o_menu_companion);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if get_input_pressed(INPUT_SPECIAL)
-{
-    if canOpenScreen
-    {
-        if screenOpen
-        {
-            screenOpen = false;
-        }
-        else
-        {
-            screenOpen = true;
-        }
-        canOpenScreen = false;
-        alarm[0] = 1;
-    }
-}
-
-if screenOpen
+            <string>if screenOpen
 {
     if script_exists(screenScript[screen,ev_step])
     {
         script_execute(screenScript[screen,ev_step])
+    }
+    else
+    {
+        if get_input_pressed(INPUT_ATTACK)
+        {
+            screenOpen = false;
+            exit;
+        }
     }
     if screen==6 {room_goto(o_stats.previousRoom);}
 }
@@ -117,7 +108,13 @@ else
             screen+=1;
         }
     }
-
+    else if get_input_pressed(INPUT_ATTACK)
+    {
+        if canOpenScreen
+        {
+                screenOpen = true;
+        }
+    }
 }
 </string>
           </argument>

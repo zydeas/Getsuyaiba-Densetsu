@@ -8,7 +8,7 @@ if !screenOpen
 {
     for(var i = 0;i < array_height_2d(screenScript);i++)
     {
-        draw_text_shadow(24,24+(18*i),1,1,screenNames[i],c_white,c_gray,-1);
+        draw_text_shadow(24,24+(18*i),1,1,screenNames[i],c_white,c_blue,-1);
         if i = screen
         {
             draw_sprite(s_menu_hand,0,20,24+(18*i))
@@ -26,5 +26,5 @@ else
 {
     draw_set_valign(fa_top);
     
-    draw_text_shadow(8,1,1,1,screenNames[screen],c_white,c_gray,-1);
+    draw_text_shadow(8,1,1,1,screenNames[screen],c_white,c_blue,-1);
 }
