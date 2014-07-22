@@ -47,6 +47,8 @@ count=0;
 flicker=0;
 target_x=32;
 cursor_x=0;
+projectile_x = x; 
+projectile_y=y;
 
 flare_count=0;
 
@@ -183,9 +185,24 @@ if count &lt;0 {count=0;}
           <argument>
             <kind>1</kind>
             <string>blast=1;
-if cannon ==3 {instance_create(x+192,y,o_zoe_blast);}
-else if cannon ==2 {instance_create(x+128,y,o_zoe_blast);}
-else if cannon ==1 {instance_create(x+64,y,o_zoe_blast);}
+if cannon ==3 {instance_create(x+192,y,o_zoe_blast); 
+    a= instance_create(x+192,y,o_zoe_cannonball);
+    a.target_x = projectile_x;
+    a.target_y = projectile_y;
+    a.damage=1+round(global.pow*0.5);
+    }
+else if cannon ==2 {instance_create(x+128,y,o_zoe_blast);
+    a= instance_create(x+128,y,o_zoe_cannonball);
+    a.target_x = projectile_x;
+    a.target_y = projectile_y;
+    a.damage=1+round(global.pow*0.5);
+    }
+else if cannon ==1 {instance_create(x+64,y,o_zoe_blast);
+    a= instance_create(x+64,y,o_zoe_cannonball);
+    a.target_x = projectile_x;
+    a.target_y = projectile_y;
+    a.damage=1+round(global.pow*0.5);
+    }
 audio_play_sound(snd_zoe_fire,1,false);
 cannon-=1;
 count -=1;
