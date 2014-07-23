@@ -10,7 +10,8 @@
   <persistent>-1</persistent>
   <colour>15288074</colour>
   <showcolour>-1</showcolour>
-  <code></code>
+  <code>show_debug_message(string(have_item("royal_cloak")))
+show_debug_message(string(have_item(item("royal_cloak"))))</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

@@ -47,7 +47,6 @@ if get_input_pressed(INPUT_LEFT)
         if !have_item(ds_list_find_value(equipLines[equipLineSelected],equipSelected[equipLineSelected]))
         {
             var i=0,j=equipSelected[equipLineSelected];
-            show_debug_message("BLAGH LEFT");
             while i <= equipSize
             {
                
@@ -83,7 +82,6 @@ if get_input_pressed(INPUT_RIGHT)
         if !have_item(ds_list_find_value(equipLines[equipLineSelected],equipSelected[equipLineSelected]))
         {
             var i=0,j=equipSelected[equipLineSelected];
-            show_debug_message("BLAGH RIGHT");
             while i <= equipSize
             {
                if have_item(ds_list_find_value(equipLines[equipLineSelected],j))
@@ -130,32 +128,35 @@ if equipLineSelected = selectEnd and get_input_pressed(INPUT_ATTACK)
 
 if have_item(ds_list_find_value(equipLines[0],equipSelected[0]))
 {
-    global.armorSelected = equipSelected[0];
+    global.armorSelected = ds_list_find_value(equipLines[0],equipSelected[0]);
 }
 
 if have_item(ds_list_find_value(equipLines[1],equipSelected[1]))
 {
-    global.bracerSelected = equipSelected[1];
+    global.bracerSelected = ds_list_find_value(equipLines[1],equipSelected[1]);
 }
 
 if have_item(ds_list_find_value(equipLines[2],equipSelected[2]))
 {
-    global.relicSelected = equipSelected[2];
+    global.relicSelected = ds_list_find_value(equipLines[2],equipSelected[2]);
 }
-
-if have_item(ds_list_find_value(trinketList[global.current_companion],equipSelected[0]))
+if global.current_companion >0
 {
-    switch(global.current_companion)
+    if have_item(ds_list_find_value(trinketList[global.current_companion],equipSelected[3]))
     {
-        case 1:
-            global.didotrinketSelected = equipSelected[3];
-        break;
-        case 2:
-            global.kasitrinketSelected = equipSelected[3];
-        break;
-        case 3:
-            global.zoetrinketSelected = equipSelected[3];
-        break;
+        switch(global.current_companion)
+        {
+            case 0:
+            break;
+            case 1:
+                global.didotrinketSelected = ds_list_find_value(equipLines[3],equipSelected[3]);
+            break;
+            case 2:
+                global.kasitrinketSelected = ds_list_find_value(equipLines[3],equipSelected[3]);
+            break;
+            case 3:
+                global.zoetrinketSelected = ds_list_find_value(equipLines[3],equipSelected[3]);
+            break;
+        }
     }
 }
-

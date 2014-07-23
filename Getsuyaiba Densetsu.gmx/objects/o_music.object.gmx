@@ -94,6 +94,9 @@ if ds_list_find_index(pauseMusicRooms,room) != -1
 }
 else
 {
+    audio_sound_gain(musicOverworld, 0, 0);
+    audio_sound_gain(musicOverworld, 1, 5000);
+    
     audio_resume_sound(musicOverworld);
     audio_resume_sound(musicOverworldAlbard);
     audio_resume_sound(musicOverworldVerdt);

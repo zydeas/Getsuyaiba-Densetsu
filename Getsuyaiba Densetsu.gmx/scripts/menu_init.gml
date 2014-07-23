@@ -43,22 +43,8 @@ screenScript[6,ev_draw] = -1;
 
 
 //Equip Menu
-equipLineSelected = 0;
-equipSelected[0] = global.armorSelected;
-equipSelected[1] = global.bracerSelected;
-equipSelected[2] = global.relicSelected;
-switch(global.current_companion)
-{
-    case 1:
-        equipSelected[3] = global.didotrinketSelected;
-    break;
-    case 2:
-        equipSelected[3] = global.kasitrinketSelected;
-    break;
-    case 3:
-        equipSelected[3] = global.zoetrinketSelected;
-    break;
-}
+
+
 equipSize = 5;
 selectEnd = 3;
 
@@ -70,19 +56,40 @@ trinketList[1] = ds_list_create();
 trinketList[2] = ds_list_create();
 trinketList[3] = ds_list_create();
 
-ds_list_add(armorList,"royal_cloak","gladiator_armour","training_chest","nomad_vest","warrior_garb","meteor_plate");
-ds_list_add(bracerList,"royal_bracer","guardian_glove","twin_bracelet","leaf_wrap","berserker_pauldron","meteor_gauntlet");
-ds_list_add(relicList,"fireball","discus","wave","spread","beam","rebound");
+ds_list_add(armorList,item("royal_cloak"),item("gladiator_armour"),item("training_chest"),item("nomad_vest"),item("warrior_garb"),item("meteor_plate"));
+ds_list_add(bracerList,item("royal_bracer"),item("guardian_glove"),item("twin_bracelet"),item("leaf_wrap"),item("berserker_pauldron"),item("meteor_gauntlet"));
+ds_list_add(relicList,item("fireball"),item("discus"),item("wave"),item("spread"),item("beam"),item("rebound"));
 
-ds_list_add(trinketList[1], "glide","dive","soar","hunt","rush","swarm");
-ds_list_add(trinketList[2], "split","grenade","flamethrower","sheild","scatter","chain");
-ds_list_add(trinketList[3], "cannonball","bola","anchor","fireworks","trident","dragon_breath");
+ds_list_add(trinketList[1], item("glide"),item("dive"),item("soar"),item("hunt"),item("rush"),item("swarm"));
+ds_list_add(trinketList[2], item("split"),item("grenade"),item("flamethrower"),item("sheild"),item("scatter"),item("chain"));
+ds_list_add(trinketList[3], item("cannonball"),item("bola"),item("anchor"),item("fireworks"),item("trident"),item("dragon_breath"));
 
-equipLines[0] = armorList
-equipLines[1] = bracerList
-equipLines[2] = relicList
+equipLines[0] = armorList;
+equipLines[1] = bracerList;
+equipLines[2] = relicList;
 equipLines[3] = trinketList[global.current_companion];
 
+equipLineSelected = 0;
+equipSelected[0] = ds_list_find_index(armorList ,global.armorSelected);
+equipSelected[1] = ds_list_find_index(bracerList ,global.bracerSelected);
+equipSelected[2] = ds_list_find_index(relicList ,global.relicSelected);
+
+switch(global.current_companion)
+{
+    case 0:
+        equipSelected[3] = -1;
+    case 1:
+        equipSelected[3] = ds_list_find_index(trinketList[1] ,global.didotrinketSelected);
+    break;
+    case 2:
+        equipSelected[3] = ds_list_find_index(trinketList[2] ,global.kasitrinketSelected);
+    break;
+    case 3:
+        equipSelected[3] = ds_list_find_index(trinketList[3] ,global.zoetrinketSelected);
+    break;
+}
+
+///OPTIONS MENU:
 optionsIndex = 0;
 keyMenu = false;
 keyMenuIndex = 0;

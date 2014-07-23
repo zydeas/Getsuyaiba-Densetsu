@@ -61,16 +61,16 @@ lerp_rate +=0.1;
 
 if lerp_rate &gt;=1 {instance_destroy(); 
 
-if global.current_trinket ==0 {a=instance_create(x,y,o_zoe_explosion); a.damage=ceil(damage);}
-if global.current_trinket ==1 {a=instance_create(x,y,o_zoe_bola); a.damage=ceil(damage*0.35);}
-if global.current_trinket ==2 {a=instance_create(x,y,o_zoe_anchor); a.damage=ceil(damage*0.35);}
-if global.current_trinket ==3 {for(i=0; i &lt; 64; i++)
+if global.zoetrinketSelected ==item("cannonball") {a=instance_create(x,y,o_zoe_explosion); a.damage=ceil(damage);}
+if global.zoetrinketSelected ==item("bola") {a=instance_create(x,y,o_zoe_bola); a.damage=ceil(damage*0.35);}
+if global.zoetrinketSelected ==item("anchor") {a=instance_create(x,y,o_zoe_anchor); a.damage=ceil(damage*0.35);}
+if global.zoetrinketSelected ==item("fireworks") {for(i=0; i &lt; 64; i++)
         {
         a=instance_create(x,y,o_zoe_firework_spark); a.damage=ceil(damage*0.15);
         }
     }
-if global.current_trinket ==4 {a=instance_create(x,y,o_zoe_trident);  a.damage=ceil(damage*0.5);}
-if global.current_trinket ==5 {a=instance_create(x,y,o_zoe_dragonbreath); a.damage=ceil(damage*0.25);}
+if global.zoetrinketSelected ==item("trident") {a=instance_create(x,y,o_zoe_trident);  a.damage=ceil(damage*0.5);}
+if global.zoetrinketSelected ==item("dragon_breath") {a=instance_create(x,y,o_zoe_dragonbreath); a.damage=ceil(damage*0.25);}
 }
 else if lerp_rate &gt;0.7 {image_index=2;}
 else if lerp_rate &gt;0.4 {image_index=1;}

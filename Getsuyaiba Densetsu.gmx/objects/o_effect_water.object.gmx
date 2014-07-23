@@ -31,6 +31,9 @@ tx2=0;
 tx3=0;
 tx4=0;
 tx5=0;
+
+yMod = 0;
+yModSize = 48;
 </string>
           </argument>
         </arguments>
@@ -66,6 +69,12 @@ if tx2 &lt;=-room_width {tx2=0;}
 if tx3 &lt;=-room_width {tx3=0;}
 if tx4 &lt;=-room_width {tx4=0;}
 if tx5 &lt;=-room_width {tx5=0;}
+if instance_exists(o_plr)
+{
+    var plrFactor = o_plr.y/room_height;
+    
+    yMod = -plrFactor; //The modification to the y of each texture
+}
 
 
 
@@ -95,27 +104,32 @@ if tx5 &lt;=-room_width {tx5=0;}
 //draw_sprite(s_ocean_battle_top,0,tx,152);
 //draw_sprite(s_ocean_battle_top,0,sprite_get_width(s_ocean_battle_top)+tx,152);
 
+var yy1 = room_height-80;
+var yy2 = room_height-54;
+var h1 = sprite_get_height(s_ocean_battle_top);
+var h2 = sprite_get_height(s_ocean_battle_middle);
 
 
+background_y[0] = 0;
 
-draw_sprite_part(s_ocean_battle_top,0,0,0,s_width,2,tx0,152);
-draw_sprite_part(s_ocean_battle_top,0,0,0,s_width,2,tx0+s_width,152);
+draw_sprite_part(s_ocean_battle_top,0,0,0,s_width,2,tx0,yy1*yMod);
+draw_sprite_part(s_ocean_battle_top,0,0,0,s_width,2,tx0+s_width,yy1*yMod);
 
-draw_sprite_part(s_ocean_battle_top,0,0,2,s_width,4,tx1,152+2);
-draw_sprite_part(s_ocean_battle_top,0,0,2,s_width,4,tx1+s_width,152+2);
+draw_sprite_part(s_ocean_battle_top,0,0,2,s_width,4,tx1,yy1+(2*yMod));
+draw_sprite_part(s_ocean_battle_top,0,0,2,s_width,4,tx1+s_width,yy1+(2*yMod));
 
-draw_sprite_part(s_ocean_battle_top,0,0,6,s_width,9,tx2,152+6);
-draw_sprite_part(s_ocean_battle_top,0,0,6,s_width,9,tx2+s_width,152+6);
+draw_sprite_part(s_ocean_battle_top,0,0,6,s_width,9,tx2,yy1+(6*yMod));
+draw_sprite_part(s_ocean_battle_top,0,0,6,s_width,9,tx2+s_width,yy1+(6*yMod));
 
 
-draw_sprite_part(s_ocean_battle_middle,0,0,0,s_width,26-8,tx3,162);
-draw_sprite_part(s_ocean_battle_middle,0,0,0,s_width,26-8,tx3+s_width,162);
+draw_sprite_part(s_ocean_battle_middle,0,0,0,s_width,26-8,tx3,yy2*yMod);
+draw_sprite_part(s_ocean_battle_middle,0,0,0,s_width,26-8,tx3+s_width,yy2*yMod);
 
-draw_sprite_part(s_ocean_battle_middle,0,0,8,s_width,26-8+4,tx4,162+16);
-draw_sprite_part(s_ocean_battle_middle,0,0,8,s_width,26-8+4,tx4+s_width,162+16);
+draw_sprite_part(s_ocean_battle_middle,0,0,8,s_width,26-8+4,tx4,yy2+(16*yMod));
+draw_sprite_part(s_ocean_battle_middle,0,0,8,s_width,26-8+4,tx4+s_width,yy2+(16*yMod));
 
-draw_sprite_part(s_ocean_battle_middle,0,0,8+4,s_width,26-12,tx5,168+24);
-draw_sprite_part(s_ocean_battle_middle,0,0,8+4,s_width,26-12,tx5+s_width,168+24);
+draw_sprite_part(s_ocean_battle_middle,0,0,8+4,s_width,26-12,tx5,yy2+(24*yMod));
+draw_sprite_part(s_ocean_battle_middle,0,0,8+4,s_width,26-12,tx5+s_width,yy2+(24*yMod));
 
 </string>
           </argument>

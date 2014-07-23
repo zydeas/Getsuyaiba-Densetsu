@@ -75,23 +75,32 @@ y = view_yview[0];
             <kind>1</kind>
             <string>if instance_exists(o_plr)
 {    
-    var i,hpbarw;
-    hpbarw = 116;
-    i = (o_plr.myhp/global.maxhp)*hpbarw;
-    
-    draw_set_color(c_green);
-    draw_rectangle(x,y+12,x+10,y+4+i,false);
-    
-    draw_set_color(c_white);
-    draw_rectangle(x,y+12,x+10,y+4+hpbarw,true);
-    
     draw_set_font(menu_font);
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
-    draw_text_shadow_full(x,y,1,string(o_plr.myhp)+"/"+string(global.maxhp),c_blue,c_black,-1);
+    
+    var i,hpbarw,text_w;
+    hpbarw = 116;
+    i = (o_plr.myhp/global.maxhp)*hpbarw;
+    text_w = 48;
+    
+    draw_set_color(c_black);
+    draw_rectangle(x+2+text_w,y+4,x+i+text_w+2,y+10+2,false);
+    
+    draw_set_color(c_white);
+    draw_rectangle(x+2+text_w,y+4,x+hpbarw+text_w+2,y+10+2,true);
+    
+    draw_set_color(c_white);
+    draw_rectangle(x+text_w-1,y+2-1,x+i+text_w-1,y+8+2-1,false);
+    
+    draw_set_color(make_colour_rgb(56,192,252));
+    draw_rectangle(x+text_w,y+2,x+i+text_w,y+8+2,false);
+    
+    
+    draw_text_shadow_full(x+2,y+2,1,string(o_plr.myhp)+"/"+string(global.maxhp),c_white,c_blue,-1);
     
     draw_set_font(font);
-    draw_text_shadow_full(x+3,y+15,1,"H#E#A#L#T#H",c_white,c_black,-1);
+    //draw_text_shadow_full(x+3,y+15,1,"H#E#A#L#T#H",c_white,c_black,-1);
 }
 </string>
           </argument>

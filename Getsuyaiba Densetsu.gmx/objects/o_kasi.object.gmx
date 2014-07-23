@@ -114,7 +114,7 @@ y=o_plr.y+ty;
           <argument>
             <kind>1</kind>
             <string>
-if global.current_trinket ==0 {
+if global.kasitrinketSelected = item("split") {
     a=instance_create(x,y,o_kasi_vshot); a.damage=ceil(damage*0.25);
     if offset==0 {a.direction = 180-25;} //fine
     else if offset==2 {a.direction = 225-25;} // fine
@@ -139,7 +139,7 @@ if global.current_trinket ==0 {
     audio_play_sound(snd_player_slash,2,false);
 
     }
-if global.current_trinket ==1 {
+if global.kasitrinketSelected = item("granade") {
     a=instance_create(x,y,o_kasi_gas); a.damage=ceil(damage*0.45);
     if offset==0 {a.direction = 180;} //fine
     else if offset==2 {a.direction = 225;} // fine
@@ -151,7 +151,7 @@ if global.current_trinket ==1 {
     else if offset==14 {a.direction = 135;} //fine
     
     }
-if global.current_trinket ==2 {
+if global.kasitrinketSelected = item("flamethrower") {
     a=instance_create(x,y,o_kasi_flamethrower); a.damage=ceil(damage*0.025);
     if offset==0 {a.direction = 180;} //fine
     else if offset==2 {a.direction = 225;} // fine
@@ -164,7 +164,7 @@ if global.current_trinket ==2 {
     
     }
     
-if (global.current_trinket ==3) {
+if global.kasitrinketSelected = item("sheild") {
     if !instance_exists(o_kasi_shield)
         {
         a=instance_create(x,y,o_kasi_shield); a.damage=ceil(damage*0.15);
@@ -175,7 +175,7 @@ if (global.current_trinket ==3) {
         }
     }
     
-if global.current_trinket ==4 {
+if global.kasitrinketSelected = item("scatter") {
     for (i=0; i&lt;32; i++)
     {
         a=instance_create(x,y,o_kasi_spark); a.damage=ceil(damage*0.025);
@@ -193,7 +193,7 @@ if global.current_trinket ==4 {
     }
     }
     
-if global.current_trinket ==5 {
+if global.kasitrinketSelected = item("chain"){
     a=instance_create(x,y,o_kasi_gear); a.damage=ceil(damage*0.35);
     {a.rate=-1.5;}
     

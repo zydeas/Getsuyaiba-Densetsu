@@ -137,9 +137,10 @@ else visible=true;
 
 
 
-if global.current_companion ==1 {sprite_index=s_dido_default;}
-else if global.current_companion ==2 {sprite_index=s_kasi_default;}
-else if global.current_companion ==3 {sprite_index=s_zoe_default;}
+if global.current_companion ==1 {sprite_index=s_dido_default;visible = true;}
+else if global.current_companion ==2 {sprite_index=s_kasi_default;visible = true;}
+else if global.current_companion ==3 {sprite_index=s_zoe_default;visible = true;}
+else if global.current_companion ==0 {visible = false;}
 </string>
           </argument>
         </arguments>

@@ -109,14 +109,14 @@ if dash ==false {visible=true;} else {visible=false;}
             <kind>1</kind>
             <string>if dash ==false
 {
-if global.current_trinket ==0 {a=instance_create(x+8,y,o_dido_glide); a.damage=ceil(damage);}
-if global.current_trinket ==1 {a=instance_create(x+8,y,o_dido_dive); a.damage=ceil(damage);}
-if global.current_trinket ==2 {a=instance_create(x+8,y,o_dido_soar); a.damage=ceil(damage);}
-if global.current_trinket ==3 {a=instance_create(x+8,y,o_dido_hunt); a.damage=ceil(damage*0.5);}
+if global.didotrinketSelected ==item("glide") {a=instance_create(x+8,y,o_dido_glide); a.damage=ceil(damage);}
+if global.didotrinketSelected ==item("dive") {a=instance_create(x+8,y,o_dido_dive); a.damage=ceil(damage);}
+if global.didotrinketSelected ==item("soar") {a=instance_create(x+8,y,o_dido_soar); a.damage=ceil(damage);}
+if global.didotrinketSelected ==item("hunt") {a=instance_create(x+8,y,o_dido_hunt); a.damage=ceil(damage*0.5);}
 
-if global.current_trinket ==4 {a=instance_create(x+8,y,o_dido_rush); a.damage=ceil(damage); dash=true;}
+if global.didotrinketSelected ==item("rush") {a=instance_create(x+8,y,o_dido_rush); a.damage=ceil(damage); dash=true;}
 
-if global.current_trinket ==5 {a=instance_create(x+8,y,o_dido_swarm); a.damage=ceil(damage*0.5);}
+if global.didotrinketSelected ==item("swarm") {a=instance_create(x+8,y,o_dido_swarm); a.damage=ceil(damage*0.5);}
 }
 </string>
           </argument>

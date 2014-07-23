@@ -55,7 +55,7 @@ for(var i = 0;i<6;i++)
     }
 }
 
-if global.current_companion != 0
+if global.current_companion > 0
 {
     for(var i = 0;i<6;i++)
     {
@@ -67,8 +67,10 @@ if global.current_companion != 0
         }
     }
 }
-
-draw_text_shadow(20,180,1,1,string(have_item(ds_list_find_value(trinketList[global.current_companion],equipSelected[3]))),c_white,c_red,-1)
+if equipLineSelected < selectEnd
+{
+    draw_text_shadow(20,180,1,1,string(item_name(ds_list_find_value(equipLines[equipLineSelected],equipSelected[equipLineSelected]))),c_white,c_blue,-1);
+}
 
 /*
 if global.current_companion != 0
@@ -99,12 +101,3 @@ draw_set_halign(fa_right);
 menu_box_draw(128,16,248-16,144,false,c_black);
 
 menu_box_draw(16,172,room_width-16,room_height-20,false,c_black);
-
-
-global.relicSelected= equipSelected[2];
-if global.current_companion !=0
-    {
-    trinketList[global.current_companion]= equipSelected[3];
-    }
-
-global.current_trinket=trinketList[global.current_companion];

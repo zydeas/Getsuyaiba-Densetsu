@@ -2,9 +2,10 @@
 
 /////////////////////////////////////////
 //DEF:
-//  Screen: A map that holds all elements in a section of a menu.
+//  Screen: A map that holds all elements and objects in a section of a menu.
 //  Element: An object for a screen to display. Usually a menu item.
 //      Elements are created with zmenu_element_create(name)
+//  Object: A Gamemaker object that is held on the screen.
 //  SCREEN KEYS:
 //      Element Keys:
 //          Every element in a screen is externally tied to a string,
@@ -30,6 +31,3 @@ screens = ds_map_create();
 ds_map_add(screens,"screen_main",ds_map_create());
 
 ds_map_add(screens,ELEMENT_ORDER,ds_list_create());
-
-ds_list
-

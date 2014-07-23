@@ -198,14 +198,19 @@
       <script>scripts\item.gml</script>
       <script>scripts\init_inventory.gml</script>
       <script>scripts\have_item.gml</script>
+      <script>scripts\inventory_add_item.gml</script>
+      <script>scripts\item_set_stats.gml</script>
+      <script>scripts\get_stat.gml</script>
+      <script>scripts\step_stats.gml</script>
+      <script>scripts\item_name.gml</script>
     </scripts>
     <script>scripts\init_options.gml</script>
     <script>scripts\input_get_key_name.gml</script>
     <scripts name="zmenu">
       <script>scripts\zmenu_init.gml</script>
       <script>scripts\zmenu_screen_add.gml</script>
+      <script>scripts\zm_element.gml</script>
     </scripts>
-    <script>scripts\zm_element.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font</font>
@@ -215,7 +220,6 @@
   <objects name="objects">
     <objects name="grp_companion_objects">
       <object>objects\o_menu_companion</object>
-      <object>objects\o_dido</object>
       <objects name="grp_dido_combat">
         <object>objects\o_dido_glide</object>
         <object>objects\o_dido_dive</object>
@@ -224,6 +228,7 @@
         <object>objects\o_dido_rush</object>
         <object>objects\o_dido_swarm</object>
         <object>objects\o_dido_rush_trail</object>
+        <object>objects\o_dido</object>
       </objects>
       <objects name="grp_zoe_combat">
         <object>objects\o_zoe_blast</object>
@@ -313,7 +318,7 @@
     </rooms>
     <room>rooms\room7_new</room>
   </rooms>
-  <constants number="12">
+  <constants number="17">
     <constant name="DEVICE_KEYBOARD">0</constant>
     <constant name="DEVICE_PAD">1</constant>
     <constant name="NAME">2</constant>
@@ -326,6 +331,11 @@
     <constant name="INPUT_SPECIAL">6</constant>
     <constant name="INPUT_OPTION">7</constant>
     <constant name="ELEMENT_ORDER">2</constant>
+    <constant name="STAT_POWER">0</constant>
+    <constant name="STAT_DEFENSE">1</constant>
+    <constant name="STAT_AGILITY">2</constant>
+    <constant name="STAT_SPEED">3</constant>
+    <constant name="STAT_HEALTH">4</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
