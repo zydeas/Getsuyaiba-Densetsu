@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-10000</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -88,10 +88,10 @@ y = view_yview[0];
     draw_set_font(menu_font);
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
-    draw_text_shadow(x,y,1,1,string(o_plr.myhp)+"/"+string(global.maxhp),c_blue,c_black,-1);
+    draw_text_shadow_full(x,y,1,string(o_plr.myhp)+"/"+string(global.maxhp),c_blue,c_black,-1);
     
     draw_set_font(font);
-    draw_text_shadow(x+3,y+15,1,1,"H#E#A#L#T#H",c_white,c_black,-1);
+    draw_text_shadow_full(x+3,y+15,1,"H#E#A#L#T#H",c_white,c_black,-1);
 }
 </string>
           </argument>

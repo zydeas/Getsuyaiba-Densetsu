@@ -153,10 +153,13 @@
   <backgrounds name="background">
     <background>background\bck_ocean</background>
     <background>background\background</background>
+    <background>background\background3</background>
+    <background>background\background2</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\draw_text_shadow.gml</script>
+    <script>scripts\draw_text_shadow_full.gml</script>
     <script>scripts\init_stats.gml</script>
     <scripts name="input_scripts">
       <script>scripts\get_input.gml</script>
@@ -201,8 +204,8 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\font</font>
-    <font>fonts\font_big</font>
     <font>fonts\menu_font</font>
+    <font>fonts\big_menu_font</font>
   </fonts>
   <objects name="objects">
     <objects name="grp_companion_objects">
@@ -291,6 +294,7 @@
     <object>objects\o_results</object>
     <object>objects\o_text_ticker</object>
     <object>objects\o_health_display</object>
+    <object>objects\o_overworld_ocean</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\initialization_room</room>

@@ -157,22 +157,18 @@ else if state = 3
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_font(font_big);
+            <string>draw_set_font(font);
 draw_set_halign(fa_center);
 draw_text_colour(x+room_width/2-1,y+32+1,"LEVEL COMPLETE",c_black,c_black,c_black,c_black,1);
 draw_text_colour(x+room_width/2-1,y+32-1,"LEVEL COMPLETE",c_black,c_black,c_black,c_black,1);
-draw_text_shadow(x+room_width/2,y+32,1,-1,"LEVEL COMPLETE",c_white,c_black,-1);
+draw_text_shadow_full(x+room_width/2,y+32,2,"LEVEL COMPLETE",c_white,c_black,-1);
 if state &gt;= 1
 {
-    draw_text_colour(x+room_width/2-1,y+room_height/2-32+1,"GOLD:  "+string(goldCounter),c_black,c_black,c_black,c_black,1);
-        draw_text_colour(x+room_width/2-1,y+room_height/2-32-1,"GOLD:  "+string(goldCounter),c_black,c_black,c_black,c_black,1);
-    draw_text_shadow(x+room_width/2,y+room_height/2-32,1,-1,"GOLD:  "+string(goldCounter),c_white,c_black,-1);
+    draw_text_shadow_full(x+room_width/2,y+room_height/2-32,1,"GOLD:  "+string(goldCounter),c_white,c_black,-1);
 }
 if state &gt;= 3
 {
-    draw_text_colour(x+room_width/2-1,y+room_height/2-16+1,"XP:  "+string(xpCounter),c_black,c_black,c_black,c_black,1);
-    draw_text_colour(x+room_width/2-1,y+room_height/2-16-1,"XP:  "+string(xpCounter),c_black,c_black,c_black,c_black,1);
-    draw_text_shadow(x+room_width/2,y+room_height/2-16,1,-1,"XP:  "+string(xpCounter),c_white,c_black,-1);
+    draw_text_shadow_full(x+room_width/2,y+room_height/2-16,1,"XP:  "+string(xpCounter),c_white,c_black,-1);
 } 
 </string>
           </argument>
