@@ -201,6 +201,10 @@
     </scripts>
     <script>scripts\init_options.gml</script>
     <script>scripts\input_get_key_name.gml</script>
+    <scripts name="zmenu">
+      <script>scripts\zmenu_init.gml</script>
+      <script>scripts\zmenu_screen_add.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font</font>
@@ -295,6 +299,7 @@
     <object>objects\o_text_ticker</object>
     <object>objects\o_health_display</object>
     <object>objects\o_overworld_ocean</object>
+    <object>objects\o_new_menu_parent</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\initialization_room</room>
@@ -307,7 +312,7 @@
     </rooms>
     <room>rooms\room7_new</room>
   </rooms>
-  <constants number="11">
+  <constants number="12">
     <constant name="DEVICE_KEYBOARD">0</constant>
     <constant name="DEVICE_PAD">1</constant>
     <constant name="NAME">2</constant>
@@ -319,6 +324,7 @@
     <constant name="INPUT_ATTACK">5</constant>
     <constant name="INPUT_SPECIAL">6</constant>
     <constant name="INPUT_OPTION">7</constant>
+    <constant name="ELEMENT_ORDER">2</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
