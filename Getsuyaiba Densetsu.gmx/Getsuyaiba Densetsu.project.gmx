@@ -56,13 +56,22 @@
       </sprites>
     </sprites>
     <sprites name="grp_cutscenes">
-      <sprite>sprites\s_intro0</sprite>
-      <sprite>sprites\s_introno</sprite>
-      <sprite>sprites\s_intro</sprite>
-      <sprite>sprites\s_intro2</sprite>
-      <sprite>sprites\s_intro3</sprite>
-      <sprite>sprites\s_intro4</sprite>
-      <sprite>sprites\s_title</sprite>
+      <sprites name="grp_intro_cutscene_sprites">
+        <sprite>sprites\s_title</sprite>
+        <sprite>sprites\s_intro4</sprite>
+        <sprite>sprites\s_intro3</sprite>
+        <sprite>sprites\s_intro2</sprite>
+        <sprite>sprites\s_intro</sprite>
+        <sprite>sprites\s_introno</sprite>
+        <sprite>sprites\s_intro0</sprite>
+      </sprites>
+      <sprites name="grp_portal_open">
+        <sprite>sprites\s_portal_sen</sprite>
+        <sprite>sprites\s_portal_zoe</sprite>
+        <sprite>sprites\s_portal_dido</sprite>
+        <sprite>sprites\s_portal_kasi</sprite>
+        <sprite>sprites\s_portal_open_alone</sprite>
+      </sprites>
     </sprites>
     <sprites name="grp_continents">
       <sprite>sprites\s_albard</sprite>
@@ -306,9 +315,17 @@
     <object>objects\o_health_display</object>
     <object>objects\o_overworld_ocean</object>
     <object>objects\o_new_menu_parent</object>
+    <objects name="grp_cutscenes">
+      <object>objects\o_portal_alone</object>
+      <object>objects\o_portal_dido</object>
+      <object>objects\o_portal_zoe</object>
+      <object>objects\o_portal_kasi</object>
+      <object>objects\o_cutscene_template</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\initialization_room</room>
+    <room>rooms\cutscene_portal</room>
     <rooms name="Game">
       <room>rooms\overworld_main</room>
       <room>rooms\menu_room</room>
