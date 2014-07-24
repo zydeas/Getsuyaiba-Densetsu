@@ -54,7 +54,6 @@
     <instance objName="o_dungeon_6_4" x="0" y="0" name="inst_E6E38E34" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_dungeon_teleport" x="16" y="384" name="inst_AEFDAF58" locked="0" code="teleport_init(40,392,dungeon_6_3);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_dungeon_teleport" x="288" y="96" name="inst_29E4F7A3" locked="0" code="teleport_init(296,120,dungeon_6_5);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="&lt;undefined&gt;" x="0" y="0" name="inst_41E7B12E" locked="0" code="" scaleX="0" scaleY="0" colour="0" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

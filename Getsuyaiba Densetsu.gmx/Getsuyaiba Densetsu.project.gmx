@@ -396,6 +396,7 @@
     </objects>
     <object>objects\o_results</object>
     <object>objects\o_text_ticker</object>
+    <object>objects\o_text_timer</object>
     <object>objects\o_health_display</object>
     <object>objects\o_overworld_ocean</object>
     <object>objects\o_new_menu_parent</object>

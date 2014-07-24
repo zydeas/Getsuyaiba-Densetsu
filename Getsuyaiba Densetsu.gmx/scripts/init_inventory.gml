@@ -17,8 +17,8 @@ inventory_add_item("royal_cloak","Royal Cloak",true);
 inventory_add_item("gladiator_armour","Gladiator Armor",true);
 inventory_add_item("training_chest"," Training Chest",true);
 inventory_add_item("nomad_vest","Nomad Vest",false);
-inventory_add_item("warrior_garb","Warrior Garb",true);
-inventory_add_item("meteor_plate","Meteor Plate",true);
+inventory_add_item("warrior_garb","Warrior Garb",false);
+inventory_add_item("meteor_plate","Meteor Plate",false);
 
 item_set_stats("royal_cloak",0,2,0,0,0);
 item_set_stats("gladiator_armour",4,-2,0,0,0);
@@ -50,7 +50,7 @@ inventory_add_item("discus","Discus",true);
 inventory_add_item("wave","Wave",true);
 inventory_add_item("spread","Spread",true);
 inventory_add_item("beam","Beam",true);
-inventory_add_item("rebound","Rebound",true);
+inventory_add_item("rebound","Rebound",false);
 
 item_set_stats("fireball",0,0,2,0,0);
 item_set_stats("discus",0,0,-2,0,0);

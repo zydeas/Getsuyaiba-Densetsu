@@ -10,3 +10,5 @@ global.shopItems[TOWN_ALBARD] = ds_list_create();
 global.shopItems[TOWN_VERDT] = ds_list_create();
 global.shopItems[TOWN_HORNES] = ds_list_create();
 global.shopItems[TOWN_WITCH] = ds_list_create();
+
+ds_list_add(global.shopItems[TOWN_NONE],item("meteor_plate"),item("warrior_garb"),item("rebound"));
