@@ -158,6 +158,7 @@
       <sprite>sprites\s_didotrinket</sprite>
       <sprite>sprites\s_kasitrinket</sprite>
     </sprites>
+    <sprite>sprites\s_solid_block</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bck_ocean</background>
@@ -169,7 +170,9 @@
   <scripts name="scripts">
     <script>scripts\draw_text_shadow.gml</script>
     <script>scripts\draw_text_shadow_full.gml</script>
+    <script>scripts\init_options.gml</script>
     <script>scripts\init_stats.gml</script>
+    <script>scripts\input_get_key_name.gml</script>
     <scripts name="input_scripts">
       <script>scripts\get_input.gml</script>
       <script>scripts\get_input_pressed.gml</script>
@@ -213,12 +216,16 @@
       <script>scripts\step_stats.gml</script>
       <script>scripts\item_name.gml</script>
     </scripts>
-    <script>scripts\init_options.gml</script>
-    <script>scripts\input_get_key_name.gml</script>
     <scripts name="zmenu">
       <script>scripts\zmenu_init.gml</script>
       <script>scripts\zmenu_screen_add.gml</script>
       <script>scripts\zm_element.gml</script>
+    </scripts>
+    <scripts name="object_movement">
+      <script>scripts\object_move_collide_direction.gml</script>
+      <script>scripts\object_move_collide_xy.gml</script>
+      <script>scripts\object_move_init.gml</script>
+      <script>scripts\object_move_stats_change.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -322,9 +329,15 @@
       <object>objects\o_portal_kasi</object>
       <object>objects\o_cutscene_template</object>
     </objects>
+    <objects name="grp_map">
+      <object>objects\o_solid_block</object>
+      <object>objects\o_solid</object>
+      <object>objects\o_walk_plr</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\initialization_room</room>
+    <room>rooms\dungeon_test_rm</room>
     <room>rooms\cutscene_portal</room>
     <rooms name="Game">
       <room>rooms\overworld_main</room>
@@ -333,7 +346,6 @@
       <room>rooms\intro_cutscene</room>
       <room>rooms\title</room>
     </rooms>
-    <room>rooms\room7_new</room>
   </rooms>
   <constants number="17">
     <constant name="DEVICE_KEYBOARD">0</constant>
