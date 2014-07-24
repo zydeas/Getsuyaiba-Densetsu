@@ -72,6 +72,42 @@
         <sprite>sprites\s_portal_kasi</sprite>
         <sprite>sprites\s_portal_open_alone</sprite>
       </sprites>
+      <sprites name="grp_albard_entry">
+        <sprite>sprites\s_albard_forest_cutscene</sprite>
+        <sprite>sprites\s_albard_kasi</sprite>
+        <sprite>sprites\s_albard_zoe</sprite>
+      </sprites>
+      <sprites name="grp_stone_dido">
+        <sprite>sprites\s_stone_dido_magic</sprite>
+        <sprite>sprites\s_stone_dido</sprite>
+      </sprites>
+      <sprites name="grp_meeting_witch">
+        <sprite>sprites\s_meeting_witch</sprite>
+        <sprite>sprites\s_meeting_witch_anim</sprite>
+      </sprites>
+      <sprites name="grp_beating_serpent">
+        <sprite>sprites\s_babang</sprite>
+        <sprite>sprites\s_smug_sen</sprite>
+        <sprite>sprites\s_serpent_defeated</sprite>
+        <sprite>sprites\s_witch_konking_alone</sprite>
+        <sprite>sprites\s_witch_konking_zoe</sprite>
+        <sprite>sprites\s_witch_angry</sprite>
+        <sprite>sprites\s_witch_ugu</sprite>
+        <sprite>sprites\s_witch_ugu2</sprite>
+        <sprite>sprites\s_witch_kawaii</sprite>
+        <sprite>sprites\s_witch_explain</sprite>
+        <sprite>sprites\s_witch_normal</sprite>
+      </sprites>
+      <sprites name="grp_unpetrifying_dido">
+        <sprite>sprites\s_unpetrifying_sen</sprite>
+        <sprite>sprites\s_unpetrifying_dido</sprite>
+      </sprites>
+      <sprites name="grp_icarus_reunion">
+        <sprite>sprites\s_icarus_reunion</sprite>
+      </sprites>
+      <sprites name="grp_grave_scene">
+        <sprite>sprites\s_grave_uncovered</sprite>
+      </sprites>
     </sprites>
     <sprites name="grp_continents">
       <sprite>sprites\s_albard</sprite>
@@ -323,11 +359,47 @@
     <object>objects\o_overworld_ocean</object>
     <object>objects\o_new_menu_parent</object>
     <objects name="grp_cutscenes">
-      <object>objects\o_portal_alone</object>
-      <object>objects\o_portal_dido</object>
-      <object>objects\o_portal_zoe</object>
-      <object>objects\o_portal_kasi</object>
       <object>objects\o_cutscene_template</object>
+      <objects name="grp_portal_cutscenes">
+        <object>objects\o_portal_kasi</object>
+        <object>objects\o_portal_zoe</object>
+        <object>objects\o_portal_dido</object>
+        <object>objects\o_portal_alone</object>
+      </objects>
+      <objects name="grp_albard_cutscenes">
+        <objects name="grp_albard_entry">
+          <object>objects\o_albard_entry_alone</object>
+          <object>objects\o_albard_entry_kasi</object>
+          <object>objects\o_albard_entry_zoe</object>
+        </objects>
+        <objects name="grp_dido_stone">
+          <object>objects\o_dido_magic_barrier</object>
+          <object>objects\o_albard_stone_alone</object>
+          <object>objects\o_albard_stone_kasi</object>
+          <object>objects\o_albard_stone_zoe</object>
+        </objects>
+        <objects name="grp_meeting_witch">
+          <object>objects\o_albard_witch_alone</object>
+          <object>objects\o_albard_witch_kasi</object>
+          <object>objects\o_albard_witch_zoe</object>
+        </objects>
+        <objects name="grp_defeating_serpent">
+          <object>objects\o_albard_serpent_beat_alone</object>
+          <object>objects\o_albard_serpent_beat_kasi</object>
+          <object>objects\o_albard_serpent_beat_zoe</object>
+        </objects>
+        <objects name="grp_unpetrifying_dido">
+          <object>objects\o_albard_unpetrifying_dido</object>
+        </objects>
+        <objects name="grp_icarus_reunion">
+          <object>objects\o_albard_icarus_reunion_alone</object>
+          <object>objects\o_albard_icarus_reunion_zoe</object>
+          <object>objects\o_albard_icarus_reunion_kasi</object>
+        </objects>
+      </objects>
+      <objects name="grp_uncover_grave">
+        <object>objects\object93</object>
+      </objects>
     </objects>
     <objects name="grp_map">
       <object>objects\o_solid_block</object>
@@ -338,7 +410,13 @@
   <rooms name="rooms">
     <room>rooms\initialization_room</room>
     <room>rooms\dungeon_test_rm</room>
+    <room>rooms\cutscene_witch_first</room>
+    <room>rooms\cutscene_witch_second</room>
+    <room>rooms\cutscene_stone_dido</room>
+    <room>rooms\cutscene_albard_forest</room>
     <room>rooms\cutscene_portal</room>
+    <room>rooms\cutscene_unpetrify</room>
+    <room>rooms\cutscene_icarus</room>
     <rooms name="Game">
       <room>rooms\overworld_main</room>
       <room>rooms\menu_room</room>
