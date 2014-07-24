@@ -400,9 +400,11 @@
       <object>objects\o_cutscene_template</object>
     </objects>
     <object>objects\o_dungeon_teleport</object>
+    <object>objects\o_dungeon_transition</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\initialization_room</room>
+    <room>rooms\transition_room</room>
     <rooms name="Dungeons">
       <room>rooms\dungeon_template_rm</room>
       <room>rooms\dungeon_1_1</room>

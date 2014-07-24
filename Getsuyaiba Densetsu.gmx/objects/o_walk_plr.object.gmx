@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>10</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -31,6 +31,8 @@ hor = 0;
 ver = 0;
 
 image_speed = 0;
+
+transition = false;
 </string>
           </argument>
         </arguments>
@@ -53,10 +55,13 @@ image_speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hor = get_input(INPUT_RIGHT)-get_input(INPUT_LEFT);
-ver = get_input(INPUT_DOWN)-get_input(INPUT_UP);
-
-object_move_collide_xy(hor*maxMoveSpeed,ver*maxMoveSpeed,o_solid);
+            <string>if !transition
+{
+    hor = get_input(INPUT_RIGHT)-get_input(INPUT_LEFT);
+    ver = get_input(INPUT_DOWN)-get_input(INPUT_UP);
+    
+    object_move_collide_xy(hor*maxMoveSpeed,ver*maxMoveSpeed,o_solid);
+}
 </string>
           </argument>
         </arguments>
