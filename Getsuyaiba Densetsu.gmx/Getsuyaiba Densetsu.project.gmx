@@ -37,6 +37,39 @@
     </sounds>
   </sounds>
   <sprites name="sprites">
+    <sprites name="grp_dungeon">
+      <sprite>sprites\s_dungeon_teleport</sprite>
+      <sprites name="grp_dungeon_masks">
+        <sprite>sprites\s_dungeon_mask_1_1</sprite>
+        <sprite>sprites\s_dungeon_mask_1_2</sprite>
+        <sprite>sprites\s_dungeon_mask_2</sprite>
+        <sprite>sprites\s_dungeon_mask_3_1</sprite>
+        <sprite>sprites\s_dungeon_mask_3_2</sprite>
+        <sprite>sprites\s_dungeon_mask_3_3</sprite>
+        <sprite>sprites\s_dungeon_mask_4</sprite>
+        <sprite>sprites\s_dungeon_mask_5_1</sprite>
+        <sprite>sprites\s_dungeon_mask_5_2</sprite>
+        <sprite>sprites\s_dungeon_mask_6_1</sprite>
+        <sprite>sprites\s_dungeon_mask_6_2</sprite>
+        <sprite>sprites\s_dungeon_mask_6_3</sprite>
+        <sprite>sprites\s_dungeon_mask_6_4</sprite>
+        <sprite>sprites\s_dungeon_mask_6_5</sprite>
+        <sprite>sprites\s_dungeon_mask_7_1</sprite>
+        <sprite>sprites\s_dungeon_mask_7_2</sprite>
+        <sprite>sprites\s_dungeon_mask_8</sprite>
+        <sprite>sprites\s_dungeon_mask_9</sprite>
+        <sprite>sprites\s_dungeon_mask_10_1</sprite>
+        <sprite>sprites\s_dungeon_mask_10_2</sprite>
+        <sprite>sprites\s_dungeon_mask_11_1</sprite>
+        <sprite>sprites\s_dungeon_mask_11_2</sprite>
+        <sprite>sprites\s_dungeon_mask_11_3</sprite>
+        <sprite>sprites\s_dungeon_mask_12_1</sprite>
+        <sprite>sprites\s_dungeon_mask_12_2</sprite>
+        <sprite>sprites\s_dungeon_mask_13</sprite>
+        <sprite>sprites\s_dungeon_mask_14_1</sprite>
+        <sprite>sprites\s_dungeon_mask_14_2</sprite>
+      </sprites>
+    </sprites>
     <sprites name="grp_player">
       <sprite>sprites\s_player</sprite>
       <sprite>sprites\s_plr_hitbox</sprite>
@@ -46,6 +79,7 @@
       <sprite>sprites\s_shadow</sprite>
       <sprite>sprites\s_encounter</sprite>
       <sprite>sprites\s_overworld</sprite>
+      <sprite>sprites\s_player_dungeon</sprite>
       <sprites name="grp_projectiles">
         <sprite>sprites\s_fireball</sprite>
         <sprite>sprites\s_discus</sprite>
@@ -234,6 +268,42 @@
     <font>fonts\big_menu_font</font>
   </fonts>
   <objects name="objects">
+    <objects name="grp_map">
+      <object>objects\o_solid_block</object>
+      <object>objects\o_solid</object>
+      <object>objects\o_walk_plr</object>
+      <object>objects\o_dungeon_mask</object>
+      <objects name="grp_dungeon_masks">
+        <object>objects\o_dungeon_1_1</object>
+        <object>objects\o_dungeon_1_2</object>
+        <object>objects\o_dungeon_2</object>
+        <object>objects\o_dungeon_3_1</object>
+        <object>objects\o_dungeon_3_2</object>
+        <object>objects\o_dungeon_3_3</object>
+        <object>objects\o_dungeon_4</object>
+        <object>objects\o_dungeon_5_1</object>
+        <object>objects\o_dungeon_5_2</object>
+        <object>objects\o_dungeon_6_1</object>
+        <object>objects\o_dungeon_6_2</object>
+        <object>objects\o_dungeon_6_3</object>
+        <object>objects\o_dungeon_6_4</object>
+        <object>objects\o_dungeon_6_5</object>
+        <object>objects\o_dungeon_7_1</object>
+        <object>objects\o_dungeon_7_2</object>
+        <object>objects\o_dungeon_8</object>
+        <object>objects\o_dungeon_9</object>
+        <object>objects\o_dungeon_10_1</object>
+        <object>objects\o_dungeon_10_2</object>
+        <object>objects\o_dungeon_11_1</object>
+        <object>objects\o_dungeon_11_2</object>
+        <object>objects\o_dungeon_11_3</object>
+        <object>objects\o_dungeon_12_1</object>
+        <object>objects\o_dungeon_12_2</object>
+        <object>objects\o_dungeon_13</object>
+        <object>objects\o_dungeon_14_1</object>
+        <object>objects\o_dungeon_14_2</object>
+      </objects>
+    </objects>
     <objects name="grp_companion_objects">
       <object>objects\o_menu_companion</object>
       <objects name="grp_dido_combat">
@@ -329,15 +399,15 @@
       <object>objects\o_portal_kasi</object>
       <object>objects\o_cutscene_template</object>
     </objects>
-    <objects name="grp_map">
-      <object>objects\o_solid_block</object>
-      <object>objects\o_solid</object>
-      <object>objects\o_walk_plr</object>
-    </objects>
+    <object>objects\o_dungeon_teleport</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\initialization_room</room>
-    <room>rooms\dungeon_test_rm</room>
+    <rooms name="Dungeons">
+      <room>rooms\dungeon_template_rm</room>
+      <room>rooms\dungeon_1_1</room>
+      <room>rooms\dungeon_test_rm</room>
+    </rooms>
     <room>rooms\cutscene_portal</room>
     <rooms name="Game">
       <room>rooms\overworld_main</room>
