@@ -51,9 +51,8 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="640" hview="480" xport="0" yport="0" wport="640" hport="480" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="o_dungeon_1_1" x="0" y="0" name="inst_E485A576" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="o_walk_plr" x="224" y="400" name="inst_95F40505" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="o_dungeon_teleport" x="336" y="256" name="inst_62C3DDF0" locked="0" code="teleport_init(320,264,dungeon_1_2);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_dungeon_11_3" x="0" y="0" name="inst_5F7E319C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_dungeon_teleport" x="400" y="144" name="inst_41C29836" locked="0" code="teleport_init(392,152,dungeon_11_2);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
