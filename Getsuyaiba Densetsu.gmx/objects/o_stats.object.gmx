@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>init_stats();
 init_inventory();
+towns_init();
 alarm[0] = 2;
 previousRoom = -1;
 

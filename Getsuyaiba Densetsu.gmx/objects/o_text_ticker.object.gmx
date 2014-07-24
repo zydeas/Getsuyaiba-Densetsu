@@ -34,8 +34,7 @@ tickerState = 0;
 
 tickerRunning = false;
 //The full array of strnig(s) for the text.
-tickerFullString[0] = "TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST";
-tickerFullString[1] = "TEST2 TEST2 TEST2 TEST2 TEST2 TEST2 TEST2 TEST2 TEST2 TEST2 TEST2 TEST2 TEST2 TEST2 TEST2 TEST2 TEST2 ";
+tickerFullString[0] = "EMPTYSTRING";
 tickerString = "";
 stringIndex = 0;
 lineIndex = 0;
@@ -129,7 +128,8 @@ else if tickerState = 1
           <argument>
             <kind>1</kind>
             <string>draw_set_font(textFont);
-
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
 draw_text_shadow(x,y,1,1,tickerString,c_white,c_blue,w);
 </string>
           </argument>

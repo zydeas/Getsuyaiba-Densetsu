@@ -6,7 +6,6 @@ con = argument0;
 if keyboard_check_pressed(global.inputs[con,DEVICE_KEYBOARD]) or
     gamepad_button_check_pressed(gpdevice,global.inputs[con,DEVICE_PAD])
 {
-    show_debug_message("INPUT RECIVED");
     return true;
 }
 else return false;

@@ -200,7 +200,9 @@
     <background>background\background3</background>
     <background>background\background2</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\path0</path>
+  </paths>
   <scripts name="scripts">
     <script>scripts\draw_text_shadow.gml</script>
     <script>scripts\draw_text_shadow_full.gml</script>
@@ -262,6 +264,10 @@
       <script>scripts\object_move_stats_change.gml</script>
     </scripts>
     <script>scripts\teleport_init.gml</script>
+    <scripts name="town scripts">
+      <script>scripts\town_create.gml</script>
+      <script>scripts\towns_init.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font</font>
@@ -403,66 +409,11 @@
     <object>objects\o_dungeon_teleport</object>
     <object>objects\o_dungeon_transition</object>
     <object>objects\o_dungeon_hud</object>
+    <object>objects\o_town_menu</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\initialization_room</room>
-    <rooms name="Dungeons">
-      <room>rooms\dungeon_test_rm</room>
-      <rooms name="dungeon_1">
-        <room>rooms\dungeon_1_1</room>
-        <room>rooms\dungeon_1_2</room>
-      </rooms>
-      <rooms name="dungeon_2">
-        <room>rooms\dungeon_2</room>
-      </rooms>
-      <rooms name="dungeon_3">
-        <room>rooms\dungeon_3_1</room>
-        <room>rooms\dungeon_3_2</room>
-        <room>rooms\dungeon_3_3</room>
-      </rooms>
-      <rooms name="dungeon_4">
-        <room>rooms\dungeon_4</room>
-      </rooms>
-      <rooms name="dungeon_5">
-        <room>rooms\dungeon_5_1</room>
-        <room>rooms\dungeon_5_2</room>
-      </rooms>
-      <rooms name="dungeon_6">
-        <room>rooms\dungeon_6_2</room>
-        <room>rooms\dungeon_6_3</room>
-        <room>rooms\dungeon_6_4</room>
-        <room>rooms\dungeon_6_5</room>
-        <room>rooms\dungeon_6_1</room>
-      </rooms>
-      <rooms name="dungeon_7">
-        <room>rooms\dungeon_7_1</room>
-        <room>rooms\dungeon_7_2</room>
-      </rooms>
-      <rooms name="dungeon_8">
-        <room>rooms\dungeon_8</room>
-      </rooms>
-      <rooms name="dungeon_9">
-        <room>rooms\dungeon_9</room>
-      </rooms>
-      <rooms name="dungeon_10">
-        <room>rooms\dungeon_10_1</room>
-        <room>rooms\dungeon_10_2</room>
-      </rooms>
-      <rooms name="dungeon_11">
-        <room>rooms\dungeon_11_1</room>
-        <room>rooms\dungeon_11_2</room>
-        <room>rooms\dungeon_11_3</room>
-      </rooms>
-      <rooms name="dungeon_12">
-        <room>rooms\dungeon_12_1</room>
-        <room>rooms\dungeon_12_2</room>
-      </rooms>
-      <rooms name="dungeon_14">
-        <room>rooms\dungeon_14_1</room>
-        <room>rooms\dungeon_14_2</room>
-      </rooms>
-      <room>rooms\dungeon_template_rm</room>
-    </rooms>
+    <room>rooms\town_test_room</room>
     <room>rooms\cutscene_portal</room>
     <rooms name="Game">
       <room>rooms\overworld_main</room>
@@ -471,9 +422,66 @@
       <room>rooms\intro_cutscene</room>
       <room>rooms\title</room>
       <room>rooms\transition_room</room>
+      <rooms name="Dungeons">
+        <room>rooms\dungeon_test_rm</room>
+        <rooms name="dungeon_1">
+          <room>rooms\dungeon_1_1</room>
+          <room>rooms\dungeon_1_2</room>
+        </rooms>
+        <rooms name="dungeon_2">
+          <room>rooms\dungeon_2</room>
+        </rooms>
+        <rooms name="dungeon_3">
+          <room>rooms\dungeon_3_1</room>
+          <room>rooms\dungeon_3_2</room>
+          <room>rooms\dungeon_3_3</room>
+        </rooms>
+        <rooms name="dungeon_4">
+          <room>rooms\dungeon_4</room>
+        </rooms>
+        <rooms name="dungeon_5">
+          <room>rooms\dungeon_5_1</room>
+          <room>rooms\dungeon_5_2</room>
+        </rooms>
+        <rooms name="dungeon_6">
+          <room>rooms\dungeon_6_2</room>
+          <room>rooms\dungeon_6_3</room>
+          <room>rooms\dungeon_6_4</room>
+          <room>rooms\dungeon_6_5</room>
+          <room>rooms\dungeon_6_1</room>
+        </rooms>
+        <rooms name="dungeon_7">
+          <room>rooms\dungeon_7_1</room>
+          <room>rooms\dungeon_7_2</room>
+        </rooms>
+        <rooms name="dungeon_8">
+          <room>rooms\dungeon_8</room>
+        </rooms>
+        <rooms name="dungeon_9">
+          <room>rooms\dungeon_9</room>
+        </rooms>
+        <rooms name="dungeon_10">
+          <room>rooms\dungeon_10_1</room>
+          <room>rooms\dungeon_10_2</room>
+        </rooms>
+        <rooms name="dungeon_11">
+          <room>rooms\dungeon_11_1</room>
+          <room>rooms\dungeon_11_2</room>
+          <room>rooms\dungeon_11_3</room>
+        </rooms>
+        <rooms name="dungeon_12">
+          <room>rooms\dungeon_12_1</room>
+          <room>rooms\dungeon_12_2</room>
+        </rooms>
+        <rooms name="dungeon_14">
+          <room>rooms\dungeon_14_1</room>
+          <room>rooms\dungeon_14_2</room>
+        </rooms>
+        <room>rooms\dungeon_template_rm</room>
+      </rooms>
     </rooms>
   </rooms>
-  <constants number="17">
+  <constants number="24">
     <constant name="DEVICE_KEYBOARD">0</constant>
     <constant name="DEVICE_PAD">1</constant>
     <constant name="NAME">2</constant>
@@ -491,6 +499,13 @@
     <constant name="STAT_AGILITY">2</constant>
     <constant name="STAT_SPEED">3</constant>
     <constant name="STAT_HEALTH">4</constant>
+    <constant name="TOWN_NONE">0</constant>
+    <constant name="TOWN_NOMAD">1</constant>
+    <constant name="TOWN_ABANDONED">2</constant>
+    <constant name="TOWN_ALBARD">3</constant>
+    <constant name="TOWN_VERDT">4</constant>
+    <constant name="TOWN_HORNES">5</constant>
+    <constant name="TOWN_WITCH">6</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
