@@ -129,7 +129,7 @@
           <sprite>sprites\s_zoe_house_kasi</sprite>
         </sprites>
         <sprites name="grp_wyrm_return">
-          <sprite>sprites\sprite120</sprite>
+          <sprite>sprites\s_wyrm_return</sprite>
         </sprites>
       </sprites>
     </sprites>
@@ -452,6 +452,9 @@
         <object>objects\o_verdt_zoe_house_kasi</object>
         <object>objects\o_verd_zoe_house_dido</object>
       </objects>
+      <objects name="grp_wyrm_return">
+        <object>objects\o_verdt_wyrm_return_alone</object>
+      </objects>
     </objects>
     <objects name="grp_map">
       <object>objects\o_solid_block</object>
@@ -461,6 +464,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\initialization_room</room>
+    <room>rooms\cutscene_wyrm_return</room>
     <room>rooms\dungeon_test_rm</room>
     <room>rooms\cutscene_zoe_house</room>
     <room>rooms\cutscene_bail</room>
