@@ -34,27 +34,24 @@ tickerState = 0;
 
 tickerRunning = false;
 //The full array of strnig(s) for the text.
-tickerFullString[0] = "Zoe: Sensy! Sensy yer damn dipstick why'd you go and do that?! Yer coulda got yerself killed!";
-tickerFullString[1] = "Sen: It was nothing, really... So what's next?";
-tickerFullString[2] = "???: I'm glad you asked, my child.";
-tickerFullString[3] = "Father: It is a pleasure to meet you at last. I've heard you've been making some news around Verdt.";
-tickerFullString[4] = "Zoe: Ain't he just? First he wrecks up the dress rehearsal and now he's going out of his way to fix things!";
-tickerFullString[5] = "Father: That's rather remarkable. I must say I have a fondness for young people such as yourself.";
-tickerFullString[6] = "Father: That rambunctiousness of youth. Oh I miss those days...";
-tickerFullString[7] = "Zoe: So this is Father Jeroah. When the church heard yer went off to dispose of the Wyrms they sent Father to haul up with me for a few days.";
-tickerFullString[8] = "Sen: ...I guess that means news has wings here then huh?";
-tickerFullString[9] = "Zoe: When nothing much happens around here, yer have a lot of gossip on anything that -does-.";
-tickerFullString[10] = "Father: It's the joys of youth! But I digress, I'm here for a reason of utmost importance.";
-tickerFullString[11] = "Zoe: The Church reckons that you're the most capable of doing something about the shrine.";
-tickerFullString[12] = "Father: Ah yes, the Shrine. It is crucial that the bell rings out across all of Verdt...";
-tickerFullString[13] = "Father: But with the recent infestations and lurking creatures in the shrine, this has become...";
-tickerFullString[14] = "Zoe: Impossible, basically! Without the bell ringing out the festivities can't truely start.";
-tickerFullString[15] = "Sen: Why's a bell that important?";
-tickerFullString[16] = "Father: It is a signal for the lambs of the Protector, to embrace his watchful eye and listen to his voice.";
-tickerFullString[17] = "Zoe: If you wanna go on the formalities then yeah, but honestly it's just part of the tradition.";
-tickerFullString[18] = "Sen: So you're saying you need me to ring this bell? ...Well... If it helps, I'll do it.";
-tickerFullString[19] = "Father: May God be with you, young one. May his light guide your path.";
-tickerFullString[20] = "Zoe: You should rest up before going! Oh be careful Sensy! Yer like, the third most interesting person I've spoken to here!";
+tickerFullString[0] = "Zoe: Hey! We heard the bell ring all the way from here! Whatever yer did, yer did it well!";
+tickerFullString[1] = "Sen: It took about a week to get there... Zoe? Are you okay?";
+tickerFullString[2] = "Zoe: Father Jeroah came the other day... The festival is really under way huh?";
+tickerFullString[3] = "Sen: ...Isn't that what you wanted? Zoe, you don't look so good, what's wrong?";
+tickerFullString[4] = "Zoe: I'm perfectly fine! It's nothing you'd even care about anyway!";
+tickerFullString[6] = "Sen: ...";
+tickerFullString[7] = "Zoe: ...I'm sorry. I'm just... I've been thinking a lot, that's all.";
+tickerFullString[8] = "Zoe: I've been preparing for the festival really hard and... I think it's stressing me out.";
+tickerFullString[9] = "Zoe: Besides... There's someone I've wanted to see for the longest time.";
+tickerFullString[10] = "Zoe: My uncle lives in a cottage to the south-west of here... He doesn't really like visitors but...";
+tickerFullString[11] = "Zoe: If yer could tell him about the festival I'd greatly appreciate it!";
+tickerFullString[12] = "Zoe: I just wanna see the look on his face when he sees me crowned the Lamb of the festival!";
+tickerFullString[13] = "Zoe: Thinking about it gives me goosebumps! It's been a long time coming, and I'm super excited!";
+tickerFullString[14] = "Zoe: Don't you think so? Well...";
+tickerFullString[15] = "Zoe: I'm afraid I don't think I'm quite ready yet for the Festival, and it's coming in a few days...";
+tickerFullString[16] = "Zoe: Surely you can make it back in time with my Uncle? I'd really appreciate it!";
+tickerFullString[17] = "Zoe: I've not seen him for the longest time! Please, this Festival has become really important to me...";
+tickerFullString[18] = "Sen: Let's see what we can do! I'll be back in no time!";
 tickerString = "";
 stringIndex = 0;
 lineIndex = 0;
@@ -162,15 +159,27 @@ if tickerCountdown &gt;0 {tickerCountdown--;}
             <kind>1</kind>
             <string>draw_set_font(textFont);
 
-if lineIndex &lt; 20 {draw_sprite(s_zoe_house_alone,0,x,y);
-    draw_sprite(s_wyrm_return,frame,x+scroll_x,y) if scroll_x &gt;0 {scroll_x-=0.1;};
-    }
-    
-    
-if lineIndex ==3 {if frame &lt;3 {frame+=0.2;}}
-if lineIndex ==4 {frame=4;}
-if lineIndex &gt;=5 {frame=3;}
+if lineIndex &lt; 19 {draw_sprite(s_zoe_house_alone,0,x,y);}
 
+if lineIndex ==0 {draw_sprite(s_shrine_return,0,x,y);}
+else if lineIndex ==1 {draw_sprite(s_shrine_return,2,x,y);}
+else if lineIndex ==2 {draw_sprite(s_shrine_return,2,x,y);}
+else if lineIndex ==3 {draw_sprite(s_shrine_return,2,x,y);}
+else if lineIndex ==4 {draw_sprite(s_shrine_return,1,x,y);}
+else if lineIndex ==5 {draw_sprite(s_shrine_return,1,x,y);}
+else if lineIndex ==6 {draw_sprite(s_shrine_return,1,x,y);}
+else if lineIndex ==7 {draw_sprite(s_shrine_return,2,x,y);}
+else if lineIndex ==8 {draw_sprite(s_shrine_return,2,x,y);}
+else if lineIndex ==9 {draw_sprite(s_shrine_return,2,x,y);}
+else if lineIndex ==10 {draw_sprite(s_shrine_return,0,x,y);}
+else if lineIndex ==11 {draw_sprite(s_shrine_return,0,x,y);}
+else if lineIndex ==12 {draw_sprite(s_shrine_return,4,x,y);}
+else if lineIndex ==13 {draw_sprite(s_shrine_return,4,x,y);}
+else if lineIndex ==14 {draw_sprite(s_shrine_return,3,x,y);}
+else if lineIndex ==15 {draw_sprite(s_shrine_return,0,x,y);}
+else if lineIndex ==16 {draw_sprite(s_shrine_return,0,x,y);}
+else if lineIndex ==17 {draw_sprite(s_shrine_return,2,x,y);}
+else if lineIndex ==18 {draw_sprite(s_shrine_return,0,x,y);}
 
 draw_text_shadow(8,144,1,1,tickerString,c_white,c_blue,w);
 

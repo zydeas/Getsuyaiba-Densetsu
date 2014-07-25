@@ -131,6 +131,19 @@
         <sprites name="grp_wyrm_return">
           <sprite>sprites\s_wyrm_return</sprite>
         </sprites>
+        <sprites name="grp_shrine_return">
+          <sprite>sprites\s_shrine_return</sprite>
+        </sprites>
+        <sprites name="grp_woodcutter">
+          <sprite>sprites\s_woodcutter</sprite>
+          <sprite>sprites\s_woodcutter_flashback</sprite>
+        </sprites>
+        <sprites name="grp_festival_end">
+          <sprite>sprites\s_festival_end</sprite>
+        </sprites>
+        <sprites name="grp_encounter_valimos">
+          <sprite>sprites\s_encounter_valimos</sprite>
+        </sprites>
       </sprites>
     </sprites>
     <sprites name="grp_continents">
@@ -454,6 +467,21 @@
       </objects>
       <objects name="grp_wyrm_return">
         <object>objects\o_verdt_wyrm_return_alone</object>
+        <object>objects\o_verdt_wyrm_return_kasi</object>
+        <object>objects\o_verdt_wyrm_return_dido</object>
+      </objects>
+      <objects name="grp_shrine_return">
+        <object>objects\o_verdt_shrine_return</object>
+      </objects>
+      <objects name="grp_woodcutter">
+        <object>objects\o_woodcutter_before_shrine</object>
+        <object>objects\o_woodcutter_after_shrine</object>
+      </objects>
+      <objects name="grp_festival_end">
+        <object>objects\o_festival_end</object>
+      </objects>
+      <objects name="grp_encounter_valimos">
+        <object>objects\o_encounter_valimos</object>
       </objects>
     </objects>
     <objects name="grp_map">
@@ -464,8 +492,12 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\initialization_room</room>
-    <room>rooms\cutscene_wyrm_return</room>
     <room>rooms\dungeon_test_rm</room>
+    <room>rooms\cutscene_festival_end</room>
+    <room>rooms\cutscene_woodcutter_after_shrine</room>
+    <room>rooms\cutscene_woodcutter_before_shrine</room>
+    <room>rooms\cutscene_shrine_return</room>
+    <room>rooms\cutscene_wyrm_return</room>
     <room>rooms\cutscene_zoe_house</room>
     <room>rooms\cutscene_bail</room>
     <room>rooms\cutscene_huge_mistake</room>

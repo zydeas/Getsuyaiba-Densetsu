@@ -166,7 +166,7 @@ if tickerCountdown &gt;0 {tickerCountdown--;}
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>o_verdt_zoe_house_alone</whoName>
+        <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
