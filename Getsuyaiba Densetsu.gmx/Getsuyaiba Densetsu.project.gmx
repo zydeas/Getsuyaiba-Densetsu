@@ -108,6 +108,30 @@
       <sprites name="grp_grave_scene">
         <sprite>sprites\s_grave_uncovered</sprite>
       </sprites>
+      <sprites name="grp_imposter">
+        <sprite>sprites\s_imposter_confronted</sprite>
+        <sprite>sprites\s_imposter_defeated</sprite>
+      </sprites>
+      <sprites name="grp_verdt_cutscenes">
+        <sprites name="grp_bursting_out">
+          <sprite>sprites\s_bursting_out</sprite>
+          <sprite>sprites\s_huge_mistake</sprite>
+          <sprite>sprites\s_huge_mistake_fire</sprite>
+        </sprites>
+        <sprites name="grp_bail">
+          <sprite>sprites\s_bail_alone</sprite>
+          <sprite>sprites\s_bail_kasi</sprite>
+          <sprite>sprites\s_bail_dido</sprite>
+        </sprites>
+        <sprites name="grp_zoe_house">
+          <sprite>sprites\s_zoe_house_alone</sprite>
+          <sprite>sprites\s_zoe_house_dido</sprite>
+          <sprite>sprites\s_zoe_house_kasi</sprite>
+        </sprites>
+        <sprites name="grp_wyrm_return">
+          <sprite>sprites\sprite120</sprite>
+        </sprites>
+      </sprites>
     </sprites>
     <sprites name="grp_continents">
       <sprite>sprites\s_albard</sprite>
@@ -396,9 +420,37 @@
           <object>objects\o_albard_icarus_reunion_zoe</object>
           <object>objects\o_albard_icarus_reunion_kasi</object>
         </objects>
+        <objects name="grp_uncover_grave">
+          <object>objects\o_albard_uncover_grave_alone</object>
+          <object>objects\o_albard_uncover_grave_zoe</object>
+          <object>objects\o_albard_uncover_grave_kasi</object>
+        </objects>
+        <objects name="grp_imposter_confrontation">
+          <object>objects\o_imposter_confronted</object>
+          <object>objects\o_imposter_defeated</object>
+        </objects>
       </objects>
-      <objects name="grp_uncover_grave">
-        <object>objects\object93</object>
+      <objects name="grp_verdt_cutscenes">
+        <objects name="grp_intro_carnival">
+          <object>objects\o_verdt_intro_carnival_dido</object>
+          <object>objects\o_verdt_intro_carnival_kasi</object>
+          <object>objects\o_verdt_intro_carnival_alone</object>
+        </objects>
+        <objects name="grp_royal_fuckup">
+          <object>objects\o_verdt_huge_mistake_alone</object>
+          <object>objects\o_verdt_huge_mistake_kasi</object>
+          <object>objects\o_verdt_huge_mistake_dido</object>
+        </objects>
+        <objects name="grp_jailcell">
+          <object>objects\o_bail_kasi</object>
+          <object>objects\o_bail_alone</object>
+          <object>objects\o_bail_dido</object>
+        </objects>
+      </objects>
+      <objects name="grp_zoe_house">
+        <object>objects\o_verdt_zoe_house_alone</object>
+        <object>objects\o_verdt_zoe_house_kasi</object>
+        <object>objects\o_verd_zoe_house_dido</object>
       </objects>
     </objects>
     <objects name="grp_map">
@@ -410,6 +462,13 @@
   <rooms name="rooms">
     <room>rooms\initialization_room</room>
     <room>rooms\dungeon_test_rm</room>
+    <room>rooms\cutscene_zoe_house</room>
+    <room>rooms\cutscene_bail</room>
+    <room>rooms\cutscene_huge_mistake</room>
+    <room>rooms\cutscene_verdt_festival</room>
+    <room>rooms\cutscene_confronting_imposter</room>
+    <room>rooms\cutscene_imposter_defeated</room>
+    <room>rooms\cutscene_uncover_grave</room>
     <room>rooms\cutscene_witch_first</room>
     <room>rooms\cutscene_witch_second</room>
     <room>rooms\cutscene_stone_dido</room>
