@@ -413,16 +413,19 @@ else if state = 1
 }
 else if state = 2
 {
-    var sep = 18;
+    var sep = 14;
     var xx=16,yy=14;
-    
+    draw_set_font(font);
     
     if ds_list_size(global.shopItems[townID]) &gt; 0
     {
-        menu_box_draw(xx,yy,xx+172,yy+(ds_list_size(global.shopItems[townID])*sep),true,c_black);
+        menu_box_draw(xx,yy,xx+186,yy+(ds_list_size(global.shopItems[townID])*sep)+10,true,c_black);
         for(var i = 0;i&lt;ds_list_size(global.shopItems[townID]);i++)
         {
-            draw_text_shadow(xx+18,yy+12+(sep*i),1,1,item_name(ds_list_find_value(global.shopItems[townID],i)),c_white,c_blue,-1)
+            draw_text_shadow(xx+18,yy+12+(sep*i),1,1,item_name(ds_list_find_value(global.shopItems[townID],i)),c_white,c_blue,-1);
+            draw_set_halign(fa_right);
+            draw_text_shadow(xx+170,yy+12+(sep*i),1,1,string(ds_map_find_value(global.itemValue,ds_list_find_value(global.shopItems[townID],i)))+" G",c_white,c_blue,-1);
+            draw_set_halign(fa_left);
         }
     }
     else
@@ -432,7 +435,7 @@ else if state = 2
     }
     if shopx = 0
     {
-        draw_sprite(s_menu_hand,0,210,16);
+        draw_sprite(s_menu_hand,0,224,16);
     }
     else
     {
@@ -456,7 +459,8 @@ else if state = 2
         menu_box_draw(32,100,256-32,100+64,true,c_black);
     }
     
-    draw_text_shadow(212,16,1,1,"Back",c_white,c_blue,-1)
+    draw_text_shadow(226,16,1,1,"Back",c_white,c_blue,-1)
+    draw_set_font(menu_font);
 }
 else if state = 3
 {
