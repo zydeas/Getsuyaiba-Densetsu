@@ -63,6 +63,7 @@ show_debug_message(string(have_item(item("royal_cloak"))))</code>
     <instance objName="o_encounter" x="256" y="0" name="inst_440643EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_music" x="0" y="0" name="inst_3FF22A29" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_overworld_ocean" x="512" y="0" name="inst_65D027D3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_map_interaction" x="512" y="480" name="inst_5E05AB95" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

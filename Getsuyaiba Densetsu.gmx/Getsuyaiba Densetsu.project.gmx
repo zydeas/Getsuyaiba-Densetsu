@@ -193,6 +193,7 @@
       <sprite>sprites\s_kasitrinket</sprite>
     </sprites>
     <sprite>sprites\s_solid_block</sprite>
+    <sprite>sprites\s_map_interaction_mask</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bck_ocean</background>
@@ -411,13 +412,15 @@
     <object>objects\o_dungeon_transition</object>
     <object>objects\o_dungeon_hud</object>
     <object>objects\o_town_menu</object>
+    <object>objects\o_map_interaction</object>
+    <object>objects\object111</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\initialization_room</room>
+    <room>rooms\overworld_main</room>
     <room>rooms\town_test_room</room>
     <room>rooms\cutscene_portal</room>
     <rooms name="Game">
-      <room>rooms\overworld_main</room>
       <room>rooms\menu_room</room>
       <room>rooms\random_encounter</room>
       <room>rooms\intro_cutscene</room>
