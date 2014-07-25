@@ -194,6 +194,9 @@
     </sprites>
     <sprite>sprites\s_solid_block</sprite>
     <sprite>sprites\s_map_interaction_mask</sprite>
+    <sprite>sprites\s_portal</sprite>
+    <sprite>sprites\s_portal_glow</sprite>
+    <sprite>sprites\s_edge_part</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bck_ocean</background>
@@ -269,6 +272,7 @@
       <script>scripts\town_create.gml</script>
       <script>scripts\towns_init.gml</script>
     </scripts>
+    <script>scripts\part_portal.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font</font>
@@ -413,7 +417,8 @@
     <object>objects\o_dungeon_hud</object>
     <object>objects\o_town_menu</object>
     <object>objects\o_map_interaction</object>
-    <object>objects\object111</object>
+    <object>objects\o_map_transition</object>
+    <object>objects\o_dome</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\initialization_room</room>

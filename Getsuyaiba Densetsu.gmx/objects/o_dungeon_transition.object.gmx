@@ -41,9 +41,6 @@ if instance_exists(o_walk_plr)
     o_walk_plr.transition = true;
 }
 
-cellsx = view_wview[view_current]/16;
-cellsy = view_hview[view_current]/16;
-
 //The index for drawing the squares. Goes from 0 to 1
 tIndex = 0;
 
