@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>-100000</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -26,13 +26,36 @@
           <argument>
             <kind>1</kind>
             <string>surf = surface_create(view_wview[view_current],view_hview[view_current]);
-
+targetroom = -1;
 r = 256;
 
 state = 0;
 
 factor = 1;
 squareFactor = 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>state = 2;
 </string>
           </argument>
         </arguments>
@@ -55,12 +78,16 @@ squareFactor = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>state = 2;
+            <string>if instance_exists(o_overworld_plr)
+{
+    o_overworld_plr.transition = false;
+}
 
-if instance_exists(o_overworld_plr)
-        {
-            o_overworld_plr.transition = false;
-        }
+if room_exists(targetroom)
+{
+    room_goto(targetroom);
+}
+alarm[1] = 1;
 </string>
           </argument>
         </arguments>
@@ -108,6 +135,7 @@ if instance_exists(o_overworld_plr)
 }
 else if state = 2
 {
+    show_debug_message(squareFactor);
     if squareFactor &gt; 0
     {
         squareFactor = lerp(squareFactor,0,.1);
@@ -150,10 +178,8 @@ if state = 0
 else
 {
     draw_set_color(c_black);
-    var vx=view_xview[view_current],vy=view_yview[view_current],vw=view_wview[view_current],vh=view_hview[view_current];
-
-    draw_rectangle(vx,vy,vx+vw,vy+(vh*squareFactor)/2,false);
-    draw_rectangle(vx,vy+vh,vx+vw,vy+vh-(vh*squareFactor)/2,false);
+    draw_rectangle(view_xview[0],view_yview[0],view_xview[0]+view_wview[0],view_yview[0]+(view_hview[0]*squareFactor)/2,false);
+    draw_rectangle(view_xview[0],view_yview[0]+view_hview[0],view_xview[0]+view_wview[0],view_yview[0]+view_hview[0]-(view_hview[0]*squareFactor)/2,false);
 }
 </string>
           </argument>

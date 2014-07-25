@@ -101,12 +101,14 @@ else if y &gt; room_height-view_hview {y=view_hview;}
 if (get_input_pressed(INPUT_ATTACK) and diving==0 and !transition) 
 {
     diving = 1;
-    if collision_ellipse(x-8,y-4,x+8,y+4,o_map_interaction,true,true)
+    var o = collision_ellipse(x-8,y-4,x+8,y+4,o_map_interaction,true,true);
+    if instance_exists(o)
     {
         transition = true;
         dx = 0;
         dy = 0;
-        instance_create(x,y,o_map_transition);
+        var t = instance_create(x,y,o_map_transition);
+        t.targetroom = o.targetroom;
     }
 }
 
@@ -154,11 +156,11 @@ if o_encounter.encounter_time==1
           <argument>
             <kind>1</kind>
             <string>
-draw_line_colour(x,y,(o_albard.x+(o_albard.sprite_width*0.5+128)),(o_albard.y+(o_albard.sprite_height*0.5-128)),c_white,c_white);
+//draw_line_colour(x,y,(o_albard.x+(o_albard.sprite_width*0.5+128)),(o_albard.y+(o_albard.sprite_height*0.5-128)),c_white,c_white);
 
-draw_line_colour(x,y,(o_verdt.x+(o_verdt.sprite_width*0.5)),(o_verdt.y+(o_verdt.sprite_height*0.5-240)),c_white,c_white);
+//draw_line_colour(x,y,(o_verdt.x+(o_verdt.sprite_width*0.5)),(o_verdt.y+(o_verdt.sprite_height*0.5-240)),c_white,c_white);
 
-draw_line_colour(x,y,(o_bilai.x+(o_bilai.sprite_width*0.5)),(o_bilai.y+(o_bilai.sprite_height*0.5-160)),c_white,c_white);
+//draw_line_colour(x,y,(o_bilai.x+(o_bilai.sprite_width*0.5)),(o_bilai.y+(o_bilai.sprite_height*0.5-160)),c_white,c_white);
 
 if o_encounter.encounter_time==0
 {

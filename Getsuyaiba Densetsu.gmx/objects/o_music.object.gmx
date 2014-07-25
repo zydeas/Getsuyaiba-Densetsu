@@ -30,9 +30,23 @@ pauseMusicRooms = ds_list_create();
 ds_list_add(pauseMusicRooms,menu_room);
 ds_list_add(pauseMusicRooms,random_encounter);
 musicOverworld = audio_play_sound(mus_overworld,1,true);
-musicOverworldAlbard = audio_play_sound_at(mus_overworld_albard,(o_albard.x+(o_albard.sprite_width*0.5+128)),(o_albard.y+(o_albard.sprite_height*0.5-128)),0,160,160,1,true,1);
-musicOverworldVerdt = audio_play_sound_at(mus_overworld_verdt,(o_verdt.x+(o_verdt.sprite_width*0.5)),(o_verdt.y+(o_verdt.sprite_height*0.5-240)),0,160,160,1,true,1);
-musicOverworldBilai = audio_play_sound_at(mus_overworld_bilai,(o_bilai.x+(o_bilai.sprite_width*0.5)),(o_bilai.y+(o_bilai.sprite_height*0.5-160)),0,160,160,1,true,1);
+
+musicOverworldAlbard = -1;
+musicOverworldVerdt = -1;
+musicOverworldBilai = -1;
+
+if instance_exists(o_albard)
+{
+    musicOverworldAlbard = audio_play_sound_at(mus_overworld_albard,(o_albard.x+(o_albard.sprite_width*0.5+128)),(o_albard.y+(o_albard.sprite_height*0.5-128)),0,160,160,1,true,1);
+}
+if instance_exists(o_verdt)
+{
+    musicOverworldVerdt = audio_play_sound_at(mus_overworld_verdt,(o_verdt.x+(o_verdt.sprite_width*0.5)),(o_verdt.y+(o_verdt.sprite_height*0.5-240)),0,160,160,1,true,1);
+}
+if instance_exists(o_bilai)
+{
+    musicOverworldBilai = audio_play_sound_at(mus_overworld_bilai,(o_bilai.x+(o_bilai.sprite_width*0.5)),(o_bilai.y+(o_bilai.sprite_height*0.5-160)),0,160,160,1,true,1);
+}
 
 
 </string>
@@ -87,20 +101,23 @@ musicOverworldBilai = audio_play_sound_at(mus_overworld_bilai,(o_bilai.x+(o_bila
 
 if ds_list_find_index(pauseMusicRooms,room) != -1
 {
-    audio_pause_sound(musicOverworld);
-    audio_pause_sound(musicOverworldAlbard);
-    audio_pause_sound(musicOverworldVerdt);
-    audio_pause_sound(musicOverworldBilai);
+    if audio_exists(musicOverworld) audio_pause_sound(musicOverworld);
+    if audio_exists(musicOverworldAlbard) audio_pause_sound(musicOverworldAlbard);
+    if audio_exists(musicOverworldVerdt) audio_pause_sound(musicOverworldVerdt);
+    if audio_exists(musicOverworldBilai) audio_pause_sound(musicOverworldBilai);
 }
 else
 {
-    audio_sound_gain(musicOverworld, 0, 0);
-    audio_sound_gain(musicOverworld, 1, 5000);
+    if audio_exists(musicOverworld) 
+    {
+        audio_sound_gain(musicOverworld, 0, 0);
+        audio_sound_gain(musicOverworld, 1, 5000);
+        audio_resume_sound(musicOverworld);
+    }
     
-    audio_resume_sound(musicOverworld);
-    audio_resume_sound(musicOverworldAlbard);
-    audio_resume_sound(musicOverworldVerdt);
-    audio_resume_sound(musicOverworldBilai);
+    if audio_exists(musicOverworldAlbard) audio_resume_sound(musicOverworldAlbard);
+    if audio_exists(musicOverworldVerdt) audio_resume_sound(musicOverworldVerdt);
+    if audio_exists(musicOverworldBilai) audio_resume_sound(musicOverworldBilai);
 }
 
 if room == random_encounter {audio_play_sound(mus_battle1,1,true);}

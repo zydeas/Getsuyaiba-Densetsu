@@ -419,9 +419,11 @@
     <object>objects\o_map_interaction</object>
     <object>objects\o_map_transition</object>
     <object>objects\o_dome</object>
+    <object>objects\o_dome_verdit</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\initialization_room</room>
+    <room>rooms\overworld_verdt_rm</room>
     <room>rooms\overworld_main</room>
     <room>rooms\town_test_room</room>
     <room>rooms\cutscene_portal</room>
