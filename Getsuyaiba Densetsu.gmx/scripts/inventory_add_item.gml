@@ -23,3 +23,7 @@ ds_map_add(ds_map_find_value(global.statMods,index),STAT_DEFENSE,0);
 ds_map_add(ds_map_find_value(global.statMods,index),STAT_AGILITY,0);
 ds_map_add(ds_map_find_value(global.statMods,index),STAT_SPEED,0);
 ds_map_add(ds_map_find_value(global.statMods,index),STAT_HEALTH,0);
+
+ds_map_add(ds_map_find_value(global.statMods,index),STAT_HEALTH,0);
+
+ds_map_add(global.itemValue,index,10);

@@ -46,9 +46,7 @@ dive=0;
 dive_rate=0;
 scale=1;
 diving=0;
-
-
-
+transition = 0;
 </string>
           </argument>
         </arguments>
@@ -80,9 +78,9 @@ hover_prog +=0.05;
 
 
 if ver ==0 {dy*=0.75;}
-else {dy+=(speed_rate)*ver;}
+else if !transition {dy+=(speed_rate)*ver;}
 if hor ==0 {dx*=0.75;}
-else {dx+=(speed_rate)*hor;}
+else if !transition {dx+=(speed_rate)*hor;}
 
 if dx &gt; cap {dx=cap;}
 else if dx &lt; -cap {dx=-cap;}
@@ -100,7 +98,20 @@ if y &lt; view_hview {y=room_height-view_hview;}
 else if y &gt; room_height-view_hview {y=view_hview;}
 
 
-if (keyboard_check_pressed(ord('X')) &amp;&amp; diving==0 ) {diving=1;}
+if (get_input_pressed(INPUT_ATTACK) and diving==0 and !transition) 
+{
+    diving = 1;
+    var o = collision_ellipse(x-8,y-4,x+8,y+4,o_map_interaction,true,true);
+    if instance_exists(o)
+    {
+        transition = true;
+        dx = 0;
+        dy = 0;
+        show_debug_message("Created a transition Object!")
+        var t = instance_create(x,y,o_map_transition);
+        t.targetroom = o.targetroom;
+    }
+}
 
 if (diving!=0)
     {
@@ -108,7 +119,7 @@ if (diving!=0)
         {
         dive -=0.05;
         }
-    else {dive=0; diving=0;}
+    else if !transition {dive=0; diving=0;}
     }
     altitude = sin(dive)*32+32;
     
@@ -146,11 +157,11 @@ if o_encounter.encounter_time==1
           <argument>
             <kind>1</kind>
             <string>
-draw_line_colour(x,y,(o_albard.x+(o_albard.sprite_width*0.5+128)),(o_albard.y+(o_albard.sprite_height*0.5-128)),c_white,c_white);
+//draw_line_colour(x,y,(o_albard.x+(o_albard.sprite_width*0.5+128)),(o_albard.y+(o_albard.sprite_height*0.5-128)),c_white,c_white);
 
-draw_line_colour(x,y,(o_verdt.x+(o_verdt.sprite_width*0.5)),(o_verdt.y+(o_verdt.sprite_height*0.5-240)),c_white,c_white);
+//draw_line_colour(x,y,(o_verdt.x+(o_verdt.sprite_width*0.5)),(o_verdt.y+(o_verdt.sprite_height*0.5-240)),c_white,c_white);
 
-draw_line_colour(x,y,(o_bilai.x+(o_bilai.sprite_width*0.5)),(o_bilai.y+(o_bilai.sprite_height*0.5-160)),c_white,c_white);
+//draw_line_colour(x,y,(o_bilai.x+(o_bilai.sprite_width*0.5)),(o_bilai.y+(o_bilai.sprite_height*0.5-160)),c_white,c_white);
 
 if o_encounter.encounter_time==0
 {
