@@ -34,8 +34,8 @@ tickerState = 0;
 
 tickerRunning = false;
 //The full array of strnig(s) for the text.
-tickerFullString[0] = "Kasi: YIKES SEN WHERE HAVE YOU TAKEN US NOW? THIS ENTIRE THING IS SHAKING!";
-tickerFullString[1] = "Sen: I DON'T KNOW I DON'T KNOW I REALLY DON'T!! BUT WE GOTTA GET OUTTA HERE ASAP!";
+tickerFullString[0] = "Kasi: Well if this isn't claustrophobic... Sen? SEN?! WHERE ARE WE?!";
+tickerFullString[1] = "Sen: I DON'T KNOW I DON'T KNOW I REALLY DON'T!! BUT WE GOTTA GET OUTTA HERE NOW!! HOLD ON!!!";
 tickerFullString[2] = "Sen: HYAAAAH!!!";
 tickerFullString[3] = "";
 
@@ -145,7 +145,8 @@ if tickerCountdown &gt;0 {tickerCountdown--;}
             <string>draw_set_font(textFont);
 if flick ==3 {flick=4;} else flick =3;
 shake = irandom_range(-8,8);
-if lineIndex &lt;2 {draw_sprite(s_bursting_out,1,x+shake,y+shake*-random_range(-0.5,0.5));}
+if lineIndex &lt;1 {draw_sprite(s_bursting_out,6,x+shake,y+shake*-random_range(-0.5,0.5));}
+else if lineIndex &lt;2 {draw_sprite(s_bursting_out,1,x+shake,y+shake*-random_range(-0.5,0.5));}
 if lineIndex ==2 {draw_sprite(s_bursting_out,flick,x+shake,y+shake*-random_range(-0.5,0.5));}
 if lineIndex ==3 {if flick ==3 {draw_sprite(s_bursting_out,4,x,y);}}
 draw_text_shadow(8,144,1,1,tickerString,c_white,c_blue,w);

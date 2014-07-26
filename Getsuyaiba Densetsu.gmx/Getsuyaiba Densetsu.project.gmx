@@ -528,9 +528,9 @@
       </objects>
       <objects name="grp_verdt_cutscenes">
         <objects name="grp_intro_carnival">
+          <object>objects\o_verdt_intro_carnival_alone</object>
           <object>objects\o_verdt_intro_carnival_dido</object>
           <object>objects\o_verdt_intro_carnival_kasi</object>
-          <object>objects\o_verdt_intro_carnival_alone</object>
         </objects>
         <objects name="grp_royal_fuckup">
           <object>objects\o_verdt_huge_mistake_alone</object>
@@ -578,6 +578,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\initialization_room</room>
+    <room>rooms\cutscene_verdt_festival</room>
     <room>rooms\overworld_main</room>
     <room>rooms\overworld_verdt_rm</room>
     <room>rooms\town_test_room</room>
@@ -589,7 +590,6 @@
     <room>rooms\cutscene_zoe_house</room>
     <room>rooms\cutscene_bail</room>
     <room>rooms\cutscene_huge_mistake</room>
-    <room>rooms\cutscene_verdt_festival</room>
     <room>rooms\cutscene_confronting_imposter</room>
     <room>rooms\cutscene_imposter_defeated</room>
     <room>rooms\cutscene_uncover_grave</room>

@@ -10,28 +10,175 @@
       <sound>sound\snd_player_grunt02</sound>
       <sound>sound\snd_player_grunt03</sound>
       <sound>sound\snd_player_grunt04</sound>
+      <sound>sound\snd_player_death</sound>
+      <sound>sound\snd_player_slash</sound>
+      <sound>sound\snd_combat_transition</sound>
+      <sounds name="grp_enemies">
+        <sound>sound\snd_enemy_death</sound>
+        <sound>sound\snd_enemy_hurt_01</sound>
+        <sound>sound\snd_enemy_hurt_02</sound>
+        <sound>sound\snd_enemy_hurt_03</sound>
+        <sound>sound\snd_enemy_hurt_04</sound>
+        <sound>sound\snd_fish_leap</sound>
+      </sounds>
+      <sounds name="grp_companions">
+        <sound>sound\snd_zoe_load</sound>
+        <sound>sound\snd_zoe_fire</sound>
+      </sounds>
     </sounds>
     <sounds name="grp_music">
+      <sound>sound\mus_overworld_albard</sound>
+      <sound>sound\mus_overworld_bilai</sound>
+      <sound>sound\mus_overworld_verdt</sound>
       <sound>sound\mus_intro</sound>
       <sound>sound\mus_overworld</sound>
+      <sound>sound\mus_battle1</sound>
+      <sound>sound\mus_fanfare</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
+    <sprites name="grp_dungeon">
+      <sprite>sprites\s_dungeon_teleport</sprite>
+      <sprites name="grp_dungeon_masks">
+        <sprite>sprites\s_dungeon_mask_1_1</sprite>
+        <sprite>sprites\s_dungeon_mask_1_2</sprite>
+        <sprite>sprites\s_dungeon_mask_2</sprite>
+        <sprite>sprites\s_dungeon_mask_3_1</sprite>
+        <sprite>sprites\s_dungeon_mask_3_2</sprite>
+        <sprite>sprites\s_dungeon_mask_3_3</sprite>
+        <sprite>sprites\s_dungeon_mask_4</sprite>
+        <sprite>sprites\s_dungeon_mask_5_1</sprite>
+        <sprite>sprites\s_dungeon_mask_5_2</sprite>
+        <sprite>sprites\s_dungeon_mask_6_1</sprite>
+        <sprite>sprites\s_dungeon_mask_6_2</sprite>
+        <sprite>sprites\s_dungeon_mask_6_3</sprite>
+        <sprite>sprites\s_dungeon_mask_6_4</sprite>
+        <sprite>sprites\s_dungeon_mask_6_5</sprite>
+        <sprite>sprites\s_dungeon_mask_7_1</sprite>
+        <sprite>sprites\s_dungeon_mask_7_2</sprite>
+        <sprite>sprites\s_dungeon_mask_8</sprite>
+        <sprite>sprites\s_dungeon_mask_9</sprite>
+        <sprite>sprites\s_dungeon_mask_10_1</sprite>
+        <sprite>sprites\s_dungeon_mask_10_2</sprite>
+        <sprite>sprites\s_dungeon_mask_11_1</sprite>
+        <sprite>sprites\s_dungeon_mask_11_2</sprite>
+        <sprite>sprites\s_dungeon_mask_11_3</sprite>
+        <sprite>sprites\s_dungeon_mask_12_1</sprite>
+        <sprite>sprites\s_dungeon_mask_12_2</sprite>
+        <sprite>sprites\s_dungeon_mask_13</sprite>
+        <sprite>sprites\s_dungeon_mask_14_1</sprite>
+        <sprite>sprites\s_dungeon_mask_14_2</sprite>
+      </sprites>
+    </sprites>
     <sprites name="grp_player">
       <sprite>sprites\s_player</sprite>
+      <sprite>sprites\s_plr_hitbox</sprite>
       <sprite>sprites\s_player_swing</sprite>
       <sprite>sprites\s_player_attack</sprite>
+      <sprite>sprites\s_player_sword_hitbox</sprite>
       <sprite>sprites\s_shadow</sprite>
+      <sprite>sprites\s_encounter</sprite>
       <sprite>sprites\s_overworld</sprite>
+      <sprite>sprites\s_player_dungeon</sprite>
+      <sprites name="grp_projectiles">
+        <sprite>sprites\s_fireball</sprite>
+        <sprite>sprites\s_discus</sprite>
+        <sprite>sprites\s_spread</sprite>
+        <sprite>sprites\s_wave</sprite>
+        <sprite>sprites\s_beam</sprite>
+        <sprite>sprites\s_rebound</sprite>
+      </sprites>
     </sprites>
     <sprites name="grp_cutscenes">
-      <sprite>sprites\s_intro0</sprite>
-      <sprite>sprites\s_introno</sprite>
-      <sprite>sprites\s_intro</sprite>
-      <sprite>sprites\s_intro2</sprite>
-      <sprite>sprites\s_intro3</sprite>
-      <sprite>sprites\s_intro4</sprite>
-      <sprite>sprites\s_title</sprite>
+      <sprites name="grp_intro_cutscene_sprites">
+        <sprite>sprites\s_title</sprite>
+        <sprite>sprites\s_intro4</sprite>
+        <sprite>sprites\s_intro3</sprite>
+        <sprite>sprites\s_intro2</sprite>
+        <sprite>sprites\s_intro</sprite>
+        <sprite>sprites\s_introno</sprite>
+        <sprite>sprites\s_intro0</sprite>
+      </sprites>
+      <sprites name="grp_portal_open">
+        <sprite>sprites\s_portal_sen</sprite>
+        <sprite>sprites\s_portal_zoe</sprite>
+        <sprite>sprites\s_portal_dido</sprite>
+        <sprite>sprites\s_portal_kasi</sprite>
+        <sprite>sprites\s_portal_open_alone</sprite>
+      </sprites>
+      <sprites name="grp_albard_entry">
+        <sprite>sprites\s_albard_forest_cutscene</sprite>
+        <sprite>sprites\s_albard_kasi</sprite>
+        <sprite>sprites\s_albard_zoe</sprite>
+      </sprites>
+      <sprites name="grp_stone_dido">
+        <sprite>sprites\s_stone_dido_magic</sprite>
+        <sprite>sprites\s_stone_dido</sprite>
+      </sprites>
+      <sprites name="grp_meeting_witch">
+        <sprite>sprites\s_meeting_witch</sprite>
+        <sprite>sprites\s_meeting_witch_anim</sprite>
+      </sprites>
+      <sprites name="grp_beating_serpent">
+        <sprite>sprites\s_babang</sprite>
+        <sprite>sprites\s_smug_sen</sprite>
+        <sprite>sprites\s_serpent_defeated</sprite>
+        <sprite>sprites\s_witch_konking_alone</sprite>
+        <sprite>sprites\s_witch_konking_zoe</sprite>
+        <sprite>sprites\s_witch_angry</sprite>
+        <sprite>sprites\s_witch_ugu</sprite>
+        <sprite>sprites\s_witch_ugu2</sprite>
+        <sprite>sprites\s_witch_kawaii</sprite>
+        <sprite>sprites\s_witch_explain</sprite>
+        <sprite>sprites\s_witch_normal</sprite>
+      </sprites>
+      <sprites name="grp_unpetrifying_dido">
+        <sprite>sprites\s_unpetrifying_sen</sprite>
+        <sprite>sprites\s_unpetrifying_dido</sprite>
+      </sprites>
+      <sprites name="grp_icarus_reunion">
+        <sprite>sprites\s_icarus_reunion</sprite>
+      </sprites>
+      <sprites name="grp_grave_scene">
+        <sprite>sprites\s_grave_uncovered</sprite>
+      </sprites>
+      <sprites name="grp_imposter">
+        <sprite>sprites\s_imposter_confronted</sprite>
+        <sprite>sprites\s_imposter_defeated</sprite>
+      </sprites>
+      <sprites name="grp_verdt_cutscenes">
+        <sprites name="grp_bursting_out">
+          <sprite>sprites\s_bursting_out</sprite>
+          <sprite>sprites\s_huge_mistake</sprite>
+          <sprite>sprites\s_huge_mistake_fire</sprite>
+        </sprites>
+        <sprites name="grp_bail">
+          <sprite>sprites\s_bail_alone</sprite>
+          <sprite>sprites\s_bail_kasi</sprite>
+          <sprite>sprites\s_bail_dido</sprite>
+        </sprites>
+        <sprites name="grp_zoe_house">
+          <sprite>sprites\s_zoe_house_alone</sprite>
+          <sprite>sprites\s_zoe_house_dido</sprite>
+          <sprite>sprites\s_zoe_house_kasi</sprite>
+        </sprites>
+        <sprites name="grp_wyrm_return">
+          <sprite>sprites\s_wyrm_return</sprite>
+        </sprites>
+        <sprites name="grp_shrine_return">
+          <sprite>sprites\s_shrine_return</sprite>
+        </sprites>
+        <sprites name="grp_woodcutter">
+          <sprite>sprites\s_woodcutter</sprite>
+          <sprite>sprites\s_woodcutter_flashback</sprite>
+        </sprites>
+        <sprites name="grp_festival_end">
+          <sprite>sprites\s_festival_end</sprite>
+        </sprites>
+        <sprites name="grp_encounter_valimos">
+          <sprite>sprites\s_encounter_valimos</sprite>
+        </sprites>
+      </sprites>
     </sprites>
     <sprites name="grp_continents">
       <sprite>sprites\s_albard</sprite>
@@ -44,14 +191,101 @@
       <sprite>sprites\s_ocean_battle_middle</sprite>
       <sprite>sprites\sprite17</sprite>
     </sprites>
+    <sprites name="grp_enemies">
+      <sprites name="grp_overworld_enemies">
+        <sprite>sprites\s_watercreep</sprite>
+        <sprite>sprites\s_flying_fish</sprite>
+        <sprite>sprites\s_fisherknife</sprite>
+        <sprite>sprites\s_fisher</sprite>
+        <sprite>sprites\s_dustdevil</sprite>
+        <sprite>sprites\s_blottler</sprite>
+        <sprite>sprites\s_squid</sprite>
+        <sprite>sprites\s_flying_fish_splash</sprite>
+      </sprites>
+    </sprites>
+    <sprites name="grp_companions">
+      <sprites name="grp_zoe">
+        <sprite>sprites\s_zoe_cursor</sprite>
+        <sprite>sprites\s_zoe_cannonballs</sprite>
+        <sprite>sprites\s_cannonball_attack</sprite>
+        <sprite>sprites\s_zoe_ship</sprite>
+        <sprite>sprites\s_zoe</sprite>
+        <sprite>sprites\s_zoe_lift</sprite>
+        <sprite>sprites\s_zoe_slip</sprite>
+        <sprite>sprites\s_cannon_fire</sprite>
+        <sprite>sprites\s_anchor</sprite>
+        <sprite>sprites\s_anchorchain</sprite>
+        <sprite>sprites\s_trident</sprite>
+        <sprite>sprites\s_firework</sprite>
+        <sprite>sprites\s_bola</sprite>
+        <sprite>sprites\s_zoe_dragonbreath</sprite>
+        <sprite>sprites\s_bola_hit</sprite>
+        <sprite>sprites\s_cannonball_explode</sprite>
+      </sprites>
+      <sprites name="grp_companion_portraits">
+        <sprites name="grp_zoe_portraits">
+          <sprite>sprites\s_zoe_default</sprite>
+          <sprite>sprites\s_zoe_talk</sprite>
+          <sprite>sprites\s_zoe_blink</sprite>
+        </sprites>
+        <sprites name="grp_kasi_portraits">
+          <sprite>sprites\s_kasi_default</sprite>
+          <sprite>sprites\s_kasi_talk</sprite>
+          <sprite>sprites\s_kasi_blink</sprite>
+        </sprites>
+        <sprites name="grp_dido_portraits">
+          <sprite>sprites\s_dido_default</sprite>
+          <sprite>sprites\s_dido_blink</sprite>
+          <sprite>sprites\s_dido_talk</sprite>
+        </sprites>
+      </sprites>
+      <sprites name="grp_dido">
+        <sprite>sprites\s_dido_dash</sprite>
+        <sprite>sprites\s_eagle</sprite>
+        <sprite>sprites\s_dido</sprite>
+      </sprites>
+      <sprites name="grp_kasi">
+        <sprite>sprites\s_kasi</sprite>
+        <sprite>sprites\s_kasi_vshot</sprite>
+        <sprite>sprites\s_kasi_gas</sprite>
+        <sprite>sprites\s_kasi_shield</sprite>
+        <sprite>sprites\s_kasi_flamethrower</sprite>
+        <sprite>sprites\s_kasi_spark</sprite>
+        <sprite>sprites\s_kasi_gear</sprite>
+        <sprite>sprites\s_kasi_gear_chain</sprite>
+      </sprites>
+    </sprites>
+    <sprite>sprites\s_menu_hand</sprite>
+    <sprite>sprites\s_menu_box_corner</sprite>
+    <sprites name="grp_inventory">
+      <sprite>sprites\s_armour</sprite>
+      <sprite>sprites\s_bracer</sprite>
+      <sprite>sprites\s_relic</sprite>
+      <sprite>sprites\s_zoetrinket</sprite>
+      <sprite>sprites\s_didotrinket</sprite>
+      <sprite>sprites\s_kasitrinket</sprite>
+    </sprites>
+    <sprite>sprites\s_solid_block</sprite>
+    <sprite>sprites\s_map_interaction_mask</sprite>
+    <sprite>sprites\s_portal</sprite>
+    <sprite>sprites\s_portal_glow</sprite>
+    <sprite>sprites\s_edge_part</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bck_ocean</background>
     <background>background\background</background>
+    <background>background\background3</background>
+    <background>background\background2</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\path0</path>
+  </paths>
   <scripts name="scripts">
-    <script>scripts\input_init.gml</script>
+    <script>scripts\draw_text_shadow.gml</script>
+    <script>scripts\draw_text_shadow_full.gml</script>
+    <script>scripts\init_options.gml</script>
+    <script>scripts\init_stats.gml</script>
+    <script>scripts\input_get_key_name.gml</script>
     <scripts name="input_scripts">
       <script>scripts\get_input.gml</script>
       <script>scripts\get_input_pressed.gml</script>
@@ -61,56 +295,384 @@
       <script>scripts\input_is_locked.gml</script>
       <script>scripts\input_stick_get.gml</script>
       <script>scripts\input_pad_update.gml</script>
+      <script>scripts\input_init.gml</script>
+      <script>scripts\input_key_names.gml</script>
     </scripts>
-    <script>scripts\init_stats.gml</script>
-    <script>scripts\menu_init.gml</script>
-    <script>scripts\menu_draw_stats.gml</script>
-    <script>scripts\draw_text_shadow.gml</script>
-    <script>scripts\menu_draw_main.gml</script>
+    <scripts name="enemy_scripts">
+      <script>scripts\enemy_init.gml</script>
+    </scripts>
+    <scripts name="menu_scripts">
+      <script>scripts\menu_init.gml</script>
+      <script>scripts\menu_draw_stats.gml</script>
+      <script>scripts\menu_draw_save.gml</script>
+      <script>scripts\menu_draw_companion.gml</script>
+      <script>scripts\menu_step_companion.gml</script>
+      <script>scripts\menu_draw_main.gml</script>
+      <script>scripts\menu_box_draw.gml</script>
+      <scripts name="menu_equip">
+        <script>scripts\menu_step_equipment.gml</script>
+        <script>scripts\menu_draw_equipment.gml</script>
+      </scripts>
+      <scripts name="menu_option">
+        <script>scripts\menu_draw_option.gml</script>
+        <script>scripts\menu_step_option.gml</script>
+      </scripts>
+    </scripts>
+    <scripts name="Inventory">
+      <script>scripts\inventory_set_item.gml</script>
+      <script>scripts\item.gml</script>
+      <script>scripts\init_inventory.gml</script>
+      <script>scripts\have_item.gml</script>
+      <script>scripts\inventory_add_item.gml</script>
+      <script>scripts\item_set_stats.gml</script>
+      <script>scripts\get_stat.gml</script>
+      <script>scripts\step_stats.gml</script>
+      <script>scripts\item_name.gml</script>
+    </scripts>
+    <scripts name="zmenu">
+      <script>scripts\zmenu_init.gml</script>
+      <script>scripts\zmenu_screen_add.gml</script>
+      <script>scripts\zm_element.gml</script>
+    </scripts>
+    <scripts name="object_movement">
+      <script>scripts\object_move_collide_direction.gml</script>
+      <script>scripts\object_move_collide_xy.gml</script>
+      <script>scripts\object_move_init.gml</script>
+      <script>scripts\object_move_stats_change.gml</script>
+    </scripts>
+    <script>scripts\teleport_init.gml</script>
+    <scripts name="town scripts">
+      <script>scripts\town_create.gml</script>
+      <script>scripts\towns_init.gml</script>
+    </scripts>
+    <script>scripts\part_portal.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font</font>
     <font>fonts\menu_font</font>
+    <font>fonts\big_menu_font</font>
   </fonts>
   <objects name="objects">
+    <objects name="grp_map">
+      <object>objects\o_solid_block</object>
+      <object>objects\o_solid</object>
+      <object>objects\o_walk_plr</object>
+      <object>objects\o_dungeon_mask</object>
+      <objects name="grp_dungeon_masks">
+        <object>objects\o_dungeon_1_1</object>
+        <object>objects\o_dungeon_1_2</object>
+        <object>objects\o_dungeon_2</object>
+        <object>objects\o_dungeon_3_1</object>
+        <object>objects\o_dungeon_3_2</object>
+        <object>objects\o_dungeon_3_3</object>
+        <object>objects\o_dungeon_4</object>
+        <object>objects\o_dungeon_5_1</object>
+        <object>objects\o_dungeon_5_2</object>
+        <object>objects\o_dungeon_6_1</object>
+        <object>objects\o_dungeon_6_2</object>
+        <object>objects\o_dungeon_6_3</object>
+        <object>objects\o_dungeon_6_4</object>
+        <object>objects\o_dungeon_6_5</object>
+        <object>objects\o_dungeon_7_1</object>
+        <object>objects\o_dungeon_7_2</object>
+        <object>objects\o_dungeon_8</object>
+        <object>objects\o_dungeon_9</object>
+        <object>objects\o_dungeon_10_1</object>
+        <object>objects\o_dungeon_10_2</object>
+        <object>objects\o_dungeon_11_1</object>
+        <object>objects\o_dungeon_11_2</object>
+        <object>objects\o_dungeon_11_3</object>
+        <object>objects\o_dungeon_12_1</object>
+        <object>objects\o_dungeon_12_2</object>
+        <object>objects\o_dungeon_13</object>
+        <object>objects\o_dungeon_14_1</object>
+        <object>objects\o_dungeon_14_2</object>
+      </objects>
+    </objects>
+    <objects name="grp_companion_objects">
+      <object>objects\o_menu_companion</object>
+      <objects name="grp_dido_combat">
+        <object>objects\o_dido_glide</object>
+        <object>objects\o_dido_dive</object>
+        <object>objects\o_dido_soar</object>
+        <object>objects\o_dido_hunt</object>
+        <object>objects\o_dido_rush</object>
+        <object>objects\o_dido_swarm</object>
+        <object>objects\o_dido_rush_trail</object>
+        <object>objects\o_dido</object>
+      </objects>
+      <objects name="grp_zoe_combat">
+        <object>objects\o_zoe_blast</object>
+        <object>objects\o_zoe_anchorchain</object>
+        <object>objects\o_zoe_anchor</object>
+        <object>objects\o_zoe_trident</object>
+        <object>objects\o_zoe_bola</object>
+        <object>objects\o_zoe_firework_spark</object>
+        <object>objects\o_zoe_dragonbreath</object>
+        <object>objects\o_zoe_explosion</object>
+        <object>objects\o_zoe_cannonball</object>
+        <object>objects\o_zoe_ball</object>
+        <object>objects\o_zoe_flare</object>
+        <object>objects\o_zoe</object>
+      </objects>
+      <objects name="grp_kasi_combat">
+        <object>objects\o_kasi_vshot</object>
+        <object>objects\o_kasi_gas</object>
+        <object>objects\o_kasi_spark</object>
+        <object>objects\o_kasi_flamethrower</object>
+        <object>objects\o_kasi_shield</object>
+        <object>objects\o_kasi_gear</object>
+        <object>objects\o_kasi</object>
+      </objects>
+    </objects>
     <object>objects\o_encounter</object>
     <object>objects\o_overworld_plr</object>
+    <object>objects\o_plr_fireball</object>
+    <object>objects\o_plr_rebound</object>
+    <object>objects\o_plr_beam</object>
+    <object>objects\o_beam_trail</object>
+    <object>objects\o_plr_spread</object>
+    <object>objects\o_plr_wave</object>
+    <object>objects\o_plr_discus</object>
+    <object>objects\o_plr_swing</object>
     <object>objects\o_plr</object>
     <objects name="grp_intro_cutscene">
       <object>objects\o_title</object>
       <object>objects\o_intro1</object>
     </objects>
-    <objects name="controllers">
+    <objects name="grp_controllers">
       <object>objects\o_stats</object>
       <object>objects\o_input</object>
       <object>objects\o_menu</object>
+      <object>objects\o_music</object>
+      <object>objects\o_effect_water</object>
+      <object>objects\o_window_size</object>
+      <object>objects\o_options</object>
     </objects>
     <objects name="grp_continents">
       <object>objects\o_albard</object>
       <object>objects\o_bilai</object>
       <object>objects\o_verdt</object>
     </objects>
-    <object>objects\o_window_size</object>
-    <objects name="grp_systems">
-      <object>objects\o_music_overworld</object>
-      <object>objects\o_effect_water</object>
+    <objects name="grp_enemies">
+      <objects name="grp_overworld_enemies">
+        <object>objects\o_enemy_death</object>
+        <object>objects\o_fish_splash</object>
+        <object>objects\o_flyingfish</object>
+        <object>objects\o_fisher</object>
+        <object>objects\o_squid</object>
+        <object>objects\o_fisherknife</object>
+        <object>objects\o_dustdevil</object>
+        <object>objects\o_watercreep</object>
+        <object>objects\o_blottler</object>
+      </objects>
     </objects>
+    <objects name="grp_parents">
+      <object>objects\player_projectiles</object>
+      <object>objects\enemy</object>
+      <object>objects\scroll</object>
+    </objects>
+    <object>objects\o_results</object>
+    <object>objects\o_text_ticker</object>
+    <object>objects\o_text_timer</object>
+    <object>objects\o_health_display</object>
+    <object>objects\o_overworld_ocean</object>
+    <object>objects\o_new_menu_parent</object>
+    <objects name="grp_cutscenes">
+      <object>objects\o_cutscene_template</object>
+      <objects name="grp_portal_cutscenes">
+        <object>objects\o_portal_kasi</object>
+        <object>objects\o_portal_zoe</object>
+        <object>objects\o_portal_dido</object>
+        <object>objects\o_portal_alone</object>
+      </objects>
+      <objects name="grp_albard_cutscenes">
+        <objects name="grp_albard_entry">
+          <object>objects\o_albard_entry_alone</object>
+          <object>objects\o_albard_entry_kasi</object>
+          <object>objects\o_albard_entry_zoe</object>
+        </objects>
+        <objects name="grp_dido_stone">
+          <object>objects\o_dido_magic_barrier</object>
+          <object>objects\o_albard_stone_alone</object>
+          <object>objects\o_albard_stone_kasi</object>
+          <object>objects\o_albard_stone_zoe</object>
+        </objects>
+        <objects name="grp_meeting_witch">
+          <object>objects\o_albard_witch_alone</object>
+          <object>objects\o_albard_witch_kasi</object>
+          <object>objects\o_albard_witch_zoe</object>
+        </objects>
+        <objects name="grp_defeating_serpent">
+          <object>objects\o_albard_serpent_beat_alone</object>
+          <object>objects\o_albard_serpent_beat_kasi</object>
+          <object>objects\o_albard_serpent_beat_zoe</object>
+        </objects>
+        <objects name="grp_unpetrifying_dido">
+          <object>objects\o_albard_unpetrifying_dido</object>
+        </objects>
+        <objects name="grp_icarus_reunion">
+          <object>objects\o_albard_icarus_reunion_alone</object>
+          <object>objects\o_albard_icarus_reunion_zoe</object>
+          <object>objects\o_albard_icarus_reunion_kasi</object>
+        </objects>
+        <objects name="grp_uncover_grave">
+          <object>objects\o_albard_uncover_grave_alone</object>
+          <object>objects\o_albard_uncover_grave_zoe</object>
+          <object>objects\o_albard_uncover_grave_kasi</object>
+        </objects>
+        <objects name="grp_imposter_confrontation">
+          <object>objects\o_imposter_confronted</object>
+          <object>objects\o_imposter_defeated</object>
+        </objects>
+      </objects>
+      <objects name="grp_verdt_cutscenes">
+        <objects name="grp_intro_carnival">
+          <object>objects\o_verdt_intro_carnival_dido</object>
+          <object>objects\o_verdt_intro_carnival_kasi</object>
+          <object>objects\o_verdt_intro_carnival_alone</object>
+        </objects>
+        <objects name="grp_royal_fuckup">
+          <object>objects\o_verdt_huge_mistake_alone</object>
+          <object>objects\o_verdt_huge_mistake_kasi</object>
+          <object>objects\o_verdt_huge_mistake_dido</object>
+        </objects>
+        <objects name="grp_jailcell">
+          <object>objects\o_bail_kasi</object>
+          <object>objects\o_bail_alone</object>
+          <object>objects\o_bail_dido</object>
+        </objects>
+      </objects>
+      <objects name="grp_zoe_house">
+        <object>objects\o_verdt_zoe_house_alone</object>
+        <object>objects\o_verdt_zoe_house_kasi</object>
+        <object>objects\o_verd_zoe_house_dido</object>
+      </objects>
+      <objects name="grp_wyrm_return">
+        <object>objects\o_verdt_wyrm_return_alone</object>
+        <object>objects\o_verdt_wyrm_return_kasi</object>
+        <object>objects\o_verdt_wyrm_return_dido</object>
+      </objects>
+      <objects name="grp_shrine_return">
+        <object>objects\o_verdt_shrine_return</object>
+      </objects>
+      <objects name="grp_woodcutter">
+        <object>objects\o_woodcutter_before_shrine</object>
+        <object>objects\o_woodcutter_after_shrine</object>
+      </objects>
+      <objects name="grp_festival_end">
+        <object>objects\o_festival_end</object>
+      </objects>
+      <objects name="grp_encounter_valimos">
+        <object>objects\o_encounter_valimos</object>
+      </objects>
+    </objects>
+    <object>objects\o_dungeon_teleport</object>
+    <object>objects\o_dungeon_transition</object>
+    <object>objects\o_dungeon_hud</object>
+    <object>objects\o_town_menu</object>
+    <object>objects\o_map_interaction</object>
+    <object>objects\o_map_transition</object>
+    <object>objects\o_dome</object>
+    <object>objects\o_dome_verdit</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\initialization_room</room>
-    <room>rooms\random_encounter</room>
+<<<<<<< HEAD
+    <room>rooms\dungeon_test_rm</room>
+    <room>rooms\cutscene_festival_end</room>
+    <room>rooms\cutscene_woodcutter_after_shrine</room>
+    <room>rooms\cutscene_woodcutter_before_shrine</room>
+    <room>rooms\cutscene_shrine_return</room>
+    <room>rooms\cutscene_wyrm_return</room>
+    <room>rooms\cutscene_zoe_house</room>
+    <room>rooms\cutscene_bail</room>
+    <room>rooms\cutscene_huge_mistake</room>
+    <room>rooms\cutscene_verdt_festival</room>
+    <room>rooms\cutscene_confronting_imposter</room>
+    <room>rooms\cutscene_imposter_defeated</room>
+    <room>rooms\cutscene_uncover_grave</room>
+    <room>rooms\cutscene_witch_first</room>
+    <room>rooms\cutscene_witch_second</room>
+    <room>rooms\cutscene_stone_dido</room>
+    <room>rooms\cutscene_albard_forest</room>
+=======
+    <room>rooms\overworld_main</room>
+    <room>rooms\overworld_verdt_rm</room>
+    <room>rooms\town_test_room</room>
+>>>>>>> origin/Zargy
+    <room>rooms\cutscene_portal</room>
+    <room>rooms\cutscene_unpetrify</room>
+    <room>rooms\cutscene_icarus</room>
     <rooms name="Game">
       <room>rooms\menu_room</room>
-      <room>rooms\overworld_main</room>
-    <room>rooms\room0</room>
+      <room>rooms\random_encounter</room>
       <room>rooms\intro_cutscene</room>
       <room>rooms\title</room>
-      <room>rooms\room0</room>
+      <room>rooms\transition_room</room>
+      <rooms name="Dungeons">
+        <room>rooms\dungeon_test_rm</room>
+        <rooms name="dungeon_1">
+          <room>rooms\dungeon_1_1</room>
+          <room>rooms\dungeon_1_2</room>
+        </rooms>
+        <rooms name="dungeon_2">
+          <room>rooms\dungeon_2</room>
+        </rooms>
+        <rooms name="dungeon_3">
+          <room>rooms\dungeon_3_1</room>
+          <room>rooms\dungeon_3_2</room>
+          <room>rooms\dungeon_3_3</room>
+        </rooms>
+        <rooms name="dungeon_4">
+          <room>rooms\dungeon_4</room>
+        </rooms>
+        <rooms name="dungeon_5">
+          <room>rooms\dungeon_5_1</room>
+          <room>rooms\dungeon_5_2</room>
+        </rooms>
+        <rooms name="dungeon_6">
+          <room>rooms\dungeon_6_2</room>
+          <room>rooms\dungeon_6_3</room>
+          <room>rooms\dungeon_6_4</room>
+          <room>rooms\dungeon_6_5</room>
+          <room>rooms\dungeon_6_1</room>
+        </rooms>
+        <rooms name="dungeon_7">
+          <room>rooms\dungeon_7_1</room>
+          <room>rooms\dungeon_7_2</room>
+        </rooms>
+        <rooms name="dungeon_8">
+          <room>rooms\dungeon_8</room>
+        </rooms>
+        <rooms name="dungeon_9">
+          <room>rooms\dungeon_9</room>
+        </rooms>
+        <rooms name="dungeon_10">
+          <room>rooms\dungeon_10_1</room>
+          <room>rooms\dungeon_10_2</room>
+        </rooms>
+        <rooms name="dungeon_11">
+          <room>rooms\dungeon_11_1</room>
+          <room>rooms\dungeon_11_2</room>
+          <room>rooms\dungeon_11_3</room>
+        </rooms>
+        <rooms name="dungeon_12">
+          <room>rooms\dungeon_12_1</room>
+          <room>rooms\dungeon_12_2</room>
+        </rooms>
+        <rooms name="dungeon_14">
+          <room>rooms\dungeon_14_1</room>
+          <room>rooms\dungeon_14_2</room>
+        </rooms>
+        <room>rooms\dungeon_template_rm</room>
+      </rooms>
     </rooms>
   </rooms>
-  <constants number="10">
+  <constants number="24">
     <constant name="DEVICE_KEYBOARD">0</constant>
     <constant name="DEVICE_PAD">1</constant>
+    <constant name="NAME">2</constant>
     <constant name="INPUT_LEFT">0</constant>
     <constant name="INPUT_RIGHT">1</constant>
     <constant name="INPUT_UP">2</constant>
@@ -119,6 +681,19 @@
     <constant name="INPUT_ATTACK">5</constant>
     <constant name="INPUT_SPECIAL">6</constant>
     <constant name="INPUT_OPTION">7</constant>
+    <constant name="ELEMENT_ORDER">2</constant>
+    <constant name="STAT_POWER">0</constant>
+    <constant name="STAT_DEFENSE">1</constant>
+    <constant name="STAT_AGILITY">2</constant>
+    <constant name="STAT_SPEED">3</constant>
+    <constant name="STAT_HEALTH">4</constant>
+    <constant name="TOWN_NONE">0</constant>
+    <constant name="TOWN_NOMAD">1</constant>
+    <constant name="TOWN_ABANDONED">2</constant>
+    <constant name="TOWN_ALBARD">3</constant>
+    <constant name="TOWN_VERDT">4</constant>
+    <constant name="TOWN_HORNES">5</constant>
+    <constant name="TOWN_WITCH">6</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

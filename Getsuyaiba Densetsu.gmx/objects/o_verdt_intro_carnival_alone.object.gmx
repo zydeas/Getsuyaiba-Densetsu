@@ -35,7 +35,7 @@ tickerState = 0;
 tickerRunning = false;
 //The full array of strnig(s) for the text.
 tickerFullString[0] = "Sen: WHA! WHERE AM I? WHY'S IT SO DARK! I CAN BARELY MOVE!";
-tickerFullString[1] = "Sen: WHY'S THIS THING SHAKING SO MUCH! I GOTTA GET OUTTA HERE!";
+tickerFullString[1] = "Sen: WHY'S THIS THING SHAKING SO DAMN MUCH! I GOTTA GET OUTTA HERE!";
 tickerFullString[2] = "Sen: HYAAAAH!!!";
 tickerFullString[3] = "";
 
@@ -63,7 +63,7 @@ tickerCountdown=tickerDuration;
 
 flick=3;
 shake=1;
-shake = irandom_range(-8,8)
+shake = irandom_range(-4,4)
 </string>
           </argument>
         </arguments>
@@ -144,8 +144,9 @@ if tickerCountdown &gt;0 {tickerCountdown--;}
             <kind>1</kind>
             <string>draw_set_font(textFont);
 if flick ==3 {flick=4;} else flick =3;
-shake = irandom_range(-8,8);
-if lineIndex &lt;2 {draw_sprite(s_bursting_out,0,x+shake,y+shake*-random_range(-0.5,0.5));}
+shake = irandom_range(-4,4);
+if lineIndex &lt;1 {draw_sprite(s_bursting_out,5,x+shake,y+shake*-random_range(-0.5,0.5));}
+else if lineIndex &lt;2 {draw_sprite(s_bursting_out,0,x+shake,y+shake*-random_range(-0.5,0.5));}
 if lineIndex ==2 {draw_sprite(s_bursting_out,flick,x+shake,y+shake*-random_range(-0.5,0.5));}
 if lineIndex ==3 {if flick ==3 {draw_sprite(s_bursting_out,4,x,y);}}
 draw_text_shadow(8,144,1,1,tickerString,c_white,c_blue,w);
