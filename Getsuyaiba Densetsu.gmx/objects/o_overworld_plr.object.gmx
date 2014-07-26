@@ -107,6 +107,7 @@ if (get_input_pressed(INPUT_ATTACK) and diving==0 and !transition)
         transition = true;
         dx = 0;
         dy = 0;
+        show_debug_message("Created a transition Object!")
         var t = instance_create(x,y,o_map_transition);
         t.targetroom = o.targetroom;
     }

@@ -423,8 +423,8 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\initialization_room</room>
-    <room>rooms\overworld_verdt_rm</room>
     <room>rooms\overworld_main</room>
+    <room>rooms\overworld_verdt_rm</room>
     <room>rooms\town_test_room</room>
     <room>rooms\cutscene_portal</room>
     <rooms name="Game">
