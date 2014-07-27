@@ -59,7 +59,7 @@ part_emitter_stream(sys,em,type,5);
 draw_set_alpha(0.1);
 for(var i = 0;i&lt;5;i++)
 {
-    draw_ellipse(x-210-(i*10),y-64-(i*10),x+210+(i*10),y+64+(i*10),false)
+    //draw_ellipse(x-210-(i*10),y-64-(i*10),x+210+(i*10),y+64+(i*10),false)
 }
 draw_set_alpha(1);
 draw_self();

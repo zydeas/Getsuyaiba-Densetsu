@@ -150,6 +150,9 @@
         <sprites name="grp_bursting_out">
           <sprite>sprites\s_bursting_out</sprite>
           <sprite>sprites\s_huge_mistake</sprite>
+          <sprite>sprites\s_huge_mistake_child</sprite>
+          <sprite>sprites\s_huge_mistake_village</sprite>
+          <sprite>sprites\s_huge_mistake_director</sprite>
           <sprite>sprites\s_huge_mistake_fire</sprite>
         </sprites>
         <sprites name="grp_bail">
@@ -312,6 +315,7 @@
       <scripts name="menu_equip">
         <script>scripts\menu_step_equipment.gml</script>
         <script>scripts\menu_draw_equipment.gml</script>
+        <script>scripts\menu_draw_companion_comments.gml</script>
       </scripts>
       <scripts name="menu_option">
         <script>scripts\menu_draw_option.gml</script>
@@ -542,29 +546,29 @@
           <object>objects\o_bail_alone</object>
           <object>objects\o_bail_dido</object>
         </objects>
-      </objects>
-      <objects name="grp_zoe_house">
-        <object>objects\o_verdt_zoe_house_alone</object>
-        <object>objects\o_verdt_zoe_house_kasi</object>
-        <object>objects\o_verd_zoe_house_dido</object>
-      </objects>
-      <objects name="grp_wyrm_return">
-        <object>objects\o_verdt_wyrm_return_alone</object>
-        <object>objects\o_verdt_wyrm_return_kasi</object>
-        <object>objects\o_verdt_wyrm_return_dido</object>
-      </objects>
-      <objects name="grp_shrine_return">
-        <object>objects\o_verdt_shrine_return</object>
-      </objects>
-      <objects name="grp_woodcutter">
-        <object>objects\o_woodcutter_before_shrine</object>
-        <object>objects\o_woodcutter_after_shrine</object>
-      </objects>
-      <objects name="grp_festival_end">
-        <object>objects\o_festival_end</object>
-      </objects>
-      <objects name="grp_encounter_valimos">
-        <object>objects\o_encounter_valimos</object>
+        <objects name="grp_zoe_house">
+          <object>objects\o_verdt_zoe_house_alone</object>
+          <object>objects\o_verdt_zoe_house_kasi</object>
+          <object>objects\o_verd_zoe_house_dido</object>
+        </objects>
+        <objects name="grp_wyrm_return">
+          <object>objects\o_verdt_wyrm_return_alone</object>
+          <object>objects\o_verdt_wyrm_return_kasi</object>
+          <object>objects\o_verdt_wyrm_return_dido</object>
+        </objects>
+        <objects name="grp_shrine_return">
+          <object>objects\o_verdt_shrine_return</object>
+        </objects>
+        <objects name="grp_woodcutter">
+          <object>objects\o_woodcutter_before_shrine</object>
+          <object>objects\o_woodcutter_after_shrine</object>
+        </objects>
+        <objects name="grp_festival_end">
+          <object>objects\o_festival_end</object>
+        </objects>
+        <objects name="grp_encounter_valimos">
+          <object>objects\o_encounter_valimos</object>
+        </objects>
       </objects>
     </objects>
     <object>objects\o_dungeon_teleport</object>
@@ -574,32 +578,37 @@
     <object>objects\o_map_interaction</object>
     <object>objects\o_map_transition</object>
     <object>objects\o_dome</object>
-    <object>objects\o_dome_verdit</object>
+    <object>objects\o_dome_verdt</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\initialization_room</room>
-    <room>rooms\cutscene_verdt_festival</room>
     <room>rooms\overworld_main</room>
     <room>rooms\overworld_verdt_rm</room>
-    <room>rooms\town_test_room</room>
-    <room>rooms\cutscene_festival_end</room>
-    <room>rooms\cutscene_woodcutter_after_shrine</room>
-    <room>rooms\cutscene_woodcutter_before_shrine</room>
-    <room>rooms\cutscene_shrine_return</room>
     <room>rooms\cutscene_wyrm_return</room>
-    <room>rooms\cutscene_zoe_house</room>
-    <room>rooms\cutscene_bail</room>
-    <room>rooms\cutscene_huge_mistake</room>
+    <room>rooms\town_test_room</room>
+    <room>rooms\cutscene_witch_second</room>
     <room>rooms\cutscene_confronting_imposter</room>
     <room>rooms\cutscene_imposter_defeated</room>
     <room>rooms\cutscene_uncover_grave</room>
     <room>rooms\cutscene_witch_first</room>
-    <room>rooms\cutscene_witch_second</room>
     <room>rooms\cutscene_stone_dido</room>
     <room>rooms\cutscene_albard_forest</room>
-    <room>rooms\cutscene_portal</room>
     <room>rooms\cutscene_unpetrify</room>
     <room>rooms\cutscene_icarus</room>
+    <rooms name="Cutscenes">
+      <rooms name="Verdt">
+        <room>rooms\cutscene_portal</room>
+        <room>rooms\cutscene_portal_verdt</room>
+        <room>rooms\cutscene_verdt_festival</room>
+        <room>rooms\cutscene_huge_mistake</room>
+        <room>rooms\cutscene_bail</room>
+        <room>rooms\cutscene_zoe_house</room>
+        <room>rooms\cutscene_shrine_return</room>
+        <room>rooms\cutscene_woodcutter_before_shrine</room>
+        <room>rooms\cutscene_woodcutter_after_shrine</room>
+        <room>rooms\cutscene_festival_end</room>
+      </rooms>
+    </rooms>
     <rooms name="Game">
       <room>rooms\menu_room</room>
       <room>rooms\random_encounter</room>

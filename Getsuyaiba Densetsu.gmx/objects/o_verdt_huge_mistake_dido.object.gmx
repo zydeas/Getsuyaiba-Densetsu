@@ -37,12 +37,12 @@ tickerRunning = false;
 tickerFullString[0] = "Sen: Dido! We've got to get out of here! We're completely surrounded!";
 tickerFullString[1] = "Dido: Sen be reasonable! One has to keep their cool in situations such as these.";
 tickerFullString[2] = "Dido: They don't appear to be closing in on us and I shalln't give up the high ground.";
-tickerFullString[3] = "Sen: Agreed! We'll just fight them to the bitter end then? Isn't that kind of suicide?";
-tickerFullString[4] = "Dido: ... I think we won. At least, if there was something to win.";
+tickerFullString[3] = "Sen: Agreed! We'll just fight them to the bitter end then!";
+tickerFullString[4] = "Dido: ... I don't think we need to. I think we won. ...If there was something to win...?";
 tickerFullString[5] = "Upset Villager: HE RUINED IT!";
 tickerFullString[6] = "Director: My beautiful display! Oh my God... Oh my -God-!";
 tickerFullString[7] = "Director: Even the children's art pieces... All gone. All GONE.";
-tickerFullString[8] = "Upset Child: WAAAAAAAAAAAAH!!";
+tickerFullString[8] = "Child: WAAAAAAAAAAAAHAAAHAAAAAAAAA!!!!";
 tickerFullString[9] = "Sen: I'm... I'm pretty sure this is beyond all repair now.";
 tickerFullString[10] = "Dido: Quite right. I think we thoroughly ballsed this up. I do hope the jail cell has down pillows, but I highly doubt that.";
 tickerFullString[11] = "";
@@ -70,8 +70,12 @@ tickerDuration=220;
 tickerCountdown=tickerDuration;
 
 flick=0;
+prog=0;
 scroll_x=48;
 shake = irandom_range(-8,8)
+
+director_scroll=64;
+village_scroll=-64;
 </string>
           </argument>
         </arguments>
@@ -156,6 +160,9 @@ if lineIndex &lt; 4 {draw_sprite(s_huge_mistake,2,x+scroll_x,y) if scroll_x &gt;
 else if lineIndex &lt;= 11 {draw_sprite(s_huge_mistake,5,x,y);}
 
 if lineIndex &gt;=4 {draw_sprite(s_huge_mistake_fire,flick,x,y);}
+if lineIndex &gt;=5 {draw_sprite(s_huge_mistake_village,0,x+village_scroll,y); if village_scroll &lt;0 {village_scroll+=0.5;}}
+if lineIndex &gt;=6 {draw_sprite(s_huge_mistake_director,0,x+director_scroll,y);  if director_scroll &gt;0 {director_scroll-=0.5;}}
+if lineIndex &gt;=8 {draw_sprite(s_huge_mistake_child,prog,x,y); prog+=0.1;}
 draw_text_shadow(8,144,1,1,tickerString,c_white,c_blue,w);
 
 </string>

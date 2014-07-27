@@ -7,8 +7,8 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>0</bbox_left>
-  <bbox_right>255</bbox_right>
+  <bbox_left>187</bbox_left>
+  <bbox_right>246</bbox_right>
   <bbox_top>0</bbox_top>
   <bbox_bottom>71</bbox_bottom>
   <HTile>0</HTile>
@@ -20,13 +20,6 @@
   <width>256</width>
   <height>72</height>
   <frames>
-    <frame index="0">images\s_huge_mistake_0.png</frame>
-    <frame index="1">images\s_huge_mistake_1.png</frame>
-    <frame index="2">images\s_huge_mistake_2.png</frame>
-    <frame index="3">images\s_huge_mistake_3.png</frame>
-    <frame index="4">images\s_huge_mistake_4.png</frame>
-    <frame index="5">images\s_huge_mistake_5.png</frame>
-    <frame index="6">images\s_huge_mistake_6.png</frame>
-    <frame index="7">images\s_huge_mistake_7.png</frame>
+    <frame index="0">images\s_huge_mistake_director_0.png</frame>
   </frames>
 </sprite>

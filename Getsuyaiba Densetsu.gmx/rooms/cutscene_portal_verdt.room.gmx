@@ -10,7 +10,24 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code></code>
+  <code>if global.current_companion ==0
+    {
+    a=instance_create(0,64,o_portal_alone);
+    }
+else if global.current_companion ==1
+    {
+    a=instance_create(0,64,o_portal_dido);
+    }
+else if global.current_companion ==2
+    {
+    a=instance_create(0,64,o_portal_kasi);
+    }
+else if global.current_companion ==3
+    {
+    a=instance_create(0,64,o_portal_zoe);
+    }
+    
+    a.destination = overworld_verdt_rm;</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -50,9 +67,7 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="640" hview="480" xport="0" yport="0" wport="640" hport="480" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="640" hview="480" xport="0" yport="0" wport="640" hport="480" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
-  <instances>
-    <instance objName="o_bail_dido" x="0" y="64" name="inst_47206BF4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-  </instances>
+  <instances/>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

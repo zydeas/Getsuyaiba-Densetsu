@@ -9,6 +9,8 @@ else
 
 if get_input_pressed(INPUT_UP)
 {
+    o_menu_companion.stringIndex=0;
+    o_menu_companion.tickerState=0;
     if equipLineSelected > 0
     {
         equipLineSelected--;
@@ -20,7 +22,8 @@ if get_input_pressed(INPUT_UP)
 }
 if get_input_pressed(INPUT_DOWN)
 {
-
+    o_menu_companion.stringIndex=0;
+    o_menu_companion.tickerState=0;
     if equipLineSelected < selectEnd
     {
         equipLineSelected++;
@@ -33,6 +36,8 @@ if get_input_pressed(INPUT_DOWN)
 
 if get_input_pressed(INPUT_LEFT)
 {
+    o_menu_companion.stringIndex=0;
+    o_menu_companion.tickerState=0;
     if equipLineSelected != selectEnd
     {
         if equipSelected[equipLineSelected] > 0
@@ -68,6 +73,8 @@ if get_input_pressed(INPUT_LEFT)
 
 if get_input_pressed(INPUT_RIGHT)
 {
+    o_menu_companion.stringIndex=0;
+    o_menu_companion.tickerState=0;
     if equipLineSelected != selectEnd
     {
         if equipSelected[equipLineSelected] < equipSize
@@ -124,6 +131,8 @@ for(var k=0;k<selectEnd-1;k++)
 if equipLineSelected = selectEnd and get_input_pressed(INPUT_ATTACK)
 {
     screenOpen = false;
+    o_menu_companion.stringIndex=0;
+    o_menu_companion.tickerState=0;
 }
 
 if have_item(ds_list_find_value(equipLines[0],equipSelected[0]))

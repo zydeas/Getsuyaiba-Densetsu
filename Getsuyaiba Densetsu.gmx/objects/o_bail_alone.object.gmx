@@ -167,6 +167,7 @@ else if lineIndex ==9 {draw_sprite(s_bail_alone,3,x,y);}
 else if lineIndex ==10 {draw_sprite(s_bail_alone,2,x,y);}
 else if lineIndex &lt; 13 {draw_sprite(s_bail_alone,open,x,y); if open &lt;6 {open+=0.1;}}
 else if lineIndex &lt; 18 {draw_sprite(s_bail_alone,7,x,y);}
+if lineIndex ==17 {draw_sprite(s_bail_alone,8,x,y);}
 
 draw_text_shadow(8,144,1,1,tickerString,c_white,c_blue,w);
 

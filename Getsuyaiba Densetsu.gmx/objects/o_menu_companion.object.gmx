@@ -3,7 +3,7 @@
   <spriteName>s_zoe_default</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-5</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -35,6 +35,14 @@ blink_frame=0;
 alarm[0]=irandom_range(60,120);
 
 alarm[1]=irandom_range(30,60);
+comment="";
+
+
+tickerString="";
+stringIndex = 0;
+tickerState = 0;
+w = 256-28;
+spd=1.5;
 </string>
           </argument>
         </arguments>
@@ -81,10 +89,11 @@ alarm[1]=irandom_range(30,120);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>alarm[0]=irandom_range(5,10);
 idle=true;
 if global.current_companion ==1 {alarm[0]=irandom_range(120,240);}
 if global.current_companion ==3 {alarm[0]=irandom_range(15,120);}
+
 </string>
           </argument>
         </arguments>
@@ -107,7 +116,9 @@ if global.current_companion ==3 {alarm[0]=irandom_range(15,120);}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (idle ==true || sprite_index = s_kasi_default)
+            <string>menu_draw_companion_comments();
+
+if (idle ==true || sprite_index = s_kasi_default)
     {
     image_speed=0.2;
     }
@@ -141,6 +152,25 @@ if global.current_companion ==1 {sprite_index=s_dido_default;visible = true;}
 else if global.current_companion ==2 {sprite_index=s_kasi_default;visible = true;}
 else if global.current_companion ==3 {sprite_index=s_zoe_default;visible = true;}
 else if global.current_companion ==0 {visible = false;}
+
+
+
+
+if tickerState = 0
+{
+
+    if stringIndex &lt; string_length(comment)
+    {
+        stringIndex+=spd;
+        tickerString = string_copy(comment,1,floor(stringIndex));
+    }
+    else
+    {
+        tickerState = 1;
+    }
+}
+
+
 </string>
           </argument>
         </arguments>
@@ -188,9 +218,22 @@ image_speed=0;
           <argument>
             <kind>1</kind>
             <string>draw_self();
-if global.current_companion ==1 {draw_sprite(s_dido_blink,blink_frame,x,y);}
-if global.current_companion ==2 {draw_sprite(s_kasi_blink,blink_frame,x,y);}
-if global.current_companion ==3 {draw_sprite(s_zoe_blink,blink_frame,x,y);}
+
+if global.current_companion ==1 {draw_sprite(s_dido_blink,blink_frame,x,y);
+    if tickerState == 0 {draw_sprite(s_dido_talk,stringIndex*0.25,x,y);}
+    }
+if global.current_companion ==2 {draw_sprite(s_kasi_blink,blink_frame,x,y);
+    if tickerState == 0 {draw_sprite(s_kasi_talk,stringIndex*0.25,x,y);}
+    }
+if global.current_companion ==3 {draw_sprite(s_zoe_blink,blink_frame,x,y);
+
+    if tickerState == 0 {draw_sprite(s_zoe_talk,stringIndex*0.25,x,y);}
+    }
+
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_set_font(font);
+draw_text_shadow(16,186,1,1,tickerString,c_white,c_blue,w);
 </string>
           </argument>
         </arguments>

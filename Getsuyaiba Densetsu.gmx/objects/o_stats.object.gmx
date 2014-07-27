@@ -85,7 +85,7 @@ if get_input_pressed(INPUT_MENU)
     {
         room_goto(previousRoom);
     }
-    else if room = overworld_main
+    else if (room = overworld_main || room = overworld_verdt_rm)
     {
         previousRoom = room;
         room_goto(menu_room);
@@ -126,7 +126,10 @@ if room == random_encounter and spawning
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if room == random_encounter
+            <string>
+if room == overworld_verdt_rm {previousRoom= overworld_verdt_rm;}
+
+if room == random_encounter
     {
     spawning = true;
     if global.current_companion==3 {instance_create(0,0,o_zoe);}
