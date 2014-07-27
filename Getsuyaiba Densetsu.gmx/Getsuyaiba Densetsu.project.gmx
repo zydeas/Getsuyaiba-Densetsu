@@ -280,7 +280,7 @@
     <background>background\background3</background>
     <background>background\background2</background>
     <backgrounds name="grp_dungeon_backgrounds">
-      <background>background\bck_woods</background>
+      <background>background\bck_woods_tiles</background>
     </backgrounds>
   </backgrounds>
   <paths name="paths">
