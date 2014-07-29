@@ -12,6 +12,6 @@ col2 = argument6
 w = argument7
 
 draw_set_color(col2);
-draw_text_ext(xx+xx2,yy+yy2,str,-1,w);
+draw_text_ext(xx+xx2,yy+yy2,str,14,w);
 draw_set_color(col1);
-draw_text_ext(xx,yy,str,-1,w);
+draw_text_ext(xx,yy,str,14,w);

@@ -314,11 +314,11 @@
       <script>scripts\menu_draw_companion.gml</script>
       <script>scripts\menu_step_companion.gml</script>
       <script>scripts\menu_draw_main.gml</script>
+      <script>scripts\menu_draw_companion_comments.gml</script>
       <script>scripts\menu_box_draw.gml</script>
       <scripts name="menu_equip">
         <script>scripts\menu_step_equipment.gml</script>
         <script>scripts\menu_draw_equipment.gml</script>
-        <script>scripts\menu_draw_companion_comments.gml</script>
       </scripts>
       <scripts name="menu_option">
         <script>scripts\menu_draw_option.gml</script>

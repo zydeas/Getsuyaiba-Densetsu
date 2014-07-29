@@ -33,6 +33,8 @@ em = part_emitter_create(sys);
 part_system_depth(sys,-10);
 part_emitter_region(sys,em,x-210,x+210,y-64,y+64,ps_shape_ellipse,ps_distr_invgaussian);
 part_emitter_stream(sys,em,type,5);
+
+targetRoom = cutscene_portal_verdt;
 </string>
           </argument>
         </arguments>

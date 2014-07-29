@@ -29,7 +29,9 @@
 hor=0;
 use_attack = get_input(INPUT_ATTACK);
 state=0; //Attacking or no Attacking
-rate=1+(global.spd*0.3);
+speed_modifier =global.spd*0.3;
+if speed_modifier &lt;0 {speed_modifier =0;}
+rate=1+speed_modifier;
 border=24;
 
 

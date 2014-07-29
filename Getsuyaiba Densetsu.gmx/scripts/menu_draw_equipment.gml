@@ -100,4 +100,4 @@ draw_set_halign(fa_right);
 
 menu_box_draw(128,16,248-16,144,false,c_black);
 
-menu_box_draw(16,172,room_width-16,room_height-20,false,c_black);
+menu_box_draw(16,172,room_width-16,room_height-8,false,c_black);
