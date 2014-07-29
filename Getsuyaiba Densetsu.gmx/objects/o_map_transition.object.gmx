@@ -101,7 +101,8 @@ squareFactor = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if room_exists(targetroom)
+            <string>if instance_exists(o_plr) o_plr.transition = false;
+if room_exists(targetroom)
 {
     room_goto(targetroom);
 }

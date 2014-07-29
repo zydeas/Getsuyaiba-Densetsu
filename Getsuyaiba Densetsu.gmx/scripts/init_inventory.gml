@@ -13,6 +13,9 @@ global.statMods = ds_map_create();
 
 global.itemValue = ds_map_create();
 
+//The array that holds the comment maps for the items.
+global.itemComments[0] = 0;
+
 //Armor
 
 inventory_add_item("royal_cloak","Royal Cloak",true);
@@ -28,6 +31,8 @@ item_set_stats("training_chest",0,6,0,-4,10,20);
 item_set_stats("nomad_vest",-2,1,4,2,0,20);
 item_set_stats("warrior_garb",5,-6,5,-2,0,20);
 item_set_stats("meteor_plate",5,5,5,2,10,20);
+
+
 
 //Bracer
 

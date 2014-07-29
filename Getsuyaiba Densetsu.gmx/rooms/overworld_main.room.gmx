@@ -52,7 +52,7 @@ show_debug_message(string(have_item(item("royal_cloak"))))</code>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="640" hview="480" xport="0" yport="0" wport="640" hport="480" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="o_dome" x="1280" y="1200" name="inst_E2ACD61B" locked="0" code="targetroom = overworld_verdt_rm;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_dome" x="1280" y="1200" name="inst_E2ACD61B" locked="0" code="targetroom = cutscene_portal_verdt;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_encounter" x="256" y="0" name="inst_440643EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_music" x="0" y="0" name="inst_3FF22A29" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_overworld_ocean" x="512" y="0" name="inst_65D027D3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

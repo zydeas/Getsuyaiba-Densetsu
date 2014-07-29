@@ -353,6 +353,7 @@
       <script>scripts\towns_init.gml</script>
     </scripts>
     <script>scripts\part_portal.gml</script>
+    <script>scripts\dido_item_comments.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font</font>
@@ -677,7 +678,7 @@
       </rooms>
     </rooms>
   </rooms>
-  <constants number="24">
+  <constants number="28">
     <constant name="DEVICE_KEYBOARD">0</constant>
     <constant name="DEVICE_PAD">1</constant>
     <constant name="NAME">2</constant>
@@ -702,6 +703,10 @@
     <constant name="TOWN_VERDT">4</constant>
     <constant name="TOWN_HORNES">5</constant>
     <constant name="TOWN_WITCH">6</constant>
+    <constant name="COMPANION_NONE">0</constant>
+    <constant name="COMPANION_DIDO">1</constant>
+    <constant name="COMPANION_KASI">2</constant>
+    <constant name="COMPANION_ZOE">3</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
