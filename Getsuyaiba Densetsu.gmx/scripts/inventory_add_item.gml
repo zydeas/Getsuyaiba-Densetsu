@@ -13,13 +13,6 @@ var index = ds_map_size(global.itemMap);
 ds_map_add(global.itemMap,str,index);
 ds_map_add(global.itemNames,index,name);
 
-global.itemComments[index] = ds_map_create();
-
-ds_map_add(global.itemComments[index],COMPANION_NONE,"");
-ds_map_add(global.itemComments[index],COMPANION_ZOE,"");
-ds_map_add(global.itemComments[index],COMPANION_KASI,"");
-ds_map_add(global.itemComments[index],COMPANION_DIDO,"");
-
 global.inventory[? index] = have;
 
 ds_map_add(global.statMods,index,ds_map_create());

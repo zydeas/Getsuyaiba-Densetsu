@@ -14,7 +14,10 @@ global.statMods = ds_map_create();
 global.itemValue = ds_map_create();
 
 //The array that holds the comment maps for the items.
-global.itemComments[0] = 0;
+global.itemComments[COMPANION_NONE] = ds_map_create();
+global.itemComments[COMPANION_DIDO] = ds_map_create();
+global.itemComments[COMPANION_KASI] = ds_map_create();
+global.itemComments[COMPANION_ZOE]  = ds_map_create();
 
 //Armor
 
@@ -102,3 +105,8 @@ global.relicSelected = item("fireball");
 global.didotrinketSelected = item("fireball");
 global.kasitrinketSelected = item("glide");
 global.zoetrinketSelected = item("cannonball");
+
+default_item_comments();
+dido_item_comments();
+kasi_item_comments();
+zoe_item_comments();

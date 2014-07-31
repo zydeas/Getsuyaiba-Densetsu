@@ -335,6 +335,13 @@
       <script>scripts\get_stat.gml</script>
       <script>scripts\step_stats.gml</script>
       <script>scripts\item_name.gml</script>
+      <scripts name="Comments">
+        <script>scripts\dido_item_comments.gml</script>
+        <script>scripts\kasi_item_comments.gml</script>
+        <script>scripts\zoe_item_comments.gml</script>
+        <script>scripts\default_item_comments.gml</script>
+      </scripts>
+      <script>scripts\item_get_comment.gml</script>
     </scripts>
     <scripts name="zmenu">
       <script>scripts\zmenu_init.gml</script>
@@ -353,7 +360,6 @@
       <script>scripts\towns_init.gml</script>
     </scripts>
     <script>scripts\part_portal.gml</script>
-    <script>scripts\dido_item_comments.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font</font>
@@ -583,6 +589,7 @@
     <object>objects\o_map_transition</object>
     <object>objects\o_dome</object>
     <object>objects\o_dome_verdt</object>
+    <object>objects\o_ocean_effect_new</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\initialization_room</room>
@@ -599,6 +606,7 @@
     <room>rooms\cutscene_albard_forest</room>
     <room>rooms\cutscene_unpetrify</room>
     <room>rooms\cutscene_icarus</room>
+    <room>rooms\ocean_tests</room>
     <rooms name="Cutscenes">
       <rooms name="Verdt">
         <room>rooms\cutscene_portal</room>
@@ -678,7 +686,7 @@
       </rooms>
     </rooms>
   </rooms>
-  <constants number="28">
+  <constants number="32">
     <constant name="DEVICE_KEYBOARD">0</constant>
     <constant name="DEVICE_PAD">1</constant>
     <constant name="NAME">2</constant>
@@ -707,6 +715,10 @@
     <constant name="COMPANION_DIDO">1</constant>
     <constant name="COMPANION_KASI">2</constant>
     <constant name="COMPANION_ZOE">3</constant>
+    <constant name="GM_build_date">41851.8539557407</constant>
+    <constant name="GM_version">'100'</constant>
+    <constant name="SCALE">1</constant>
+    <constant name="HOR">2</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

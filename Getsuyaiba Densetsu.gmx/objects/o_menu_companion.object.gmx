@@ -37,6 +37,8 @@ alarm[0]=irandom_range(60,120);
 alarm[1]=irandom_range(30,60);
 comment="";
 
+drawCompanion = false;
+
 
 tickerString="";
 stringIndex = 0;
@@ -116,9 +118,7 @@ if global.current_companion ==3 {alarm[0]=irandom_range(15,120);}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>menu_draw_companion_comments();
-
-if (idle ==true || sprite_index = s_kasi_default)
+            <string>if (idle ==true || sprite_index = s_kasi_default)
     {
     image_speed=0.2;
     }
@@ -148,10 +148,10 @@ else visible=true;
 
 
 
-if global.current_companion ==1 {sprite_index=s_dido_default;visible = true;}
-else if global.current_companion ==2 {sprite_index=s_kasi_default;visible = true;}
-else if global.current_companion ==3 {sprite_index=s_zoe_default;visible = true;}
-else if global.current_companion ==0 {visible = false;}
+if global.current_companion ==1 {sprite_index=s_dido_default; drawCompanion = true;}
+else if global.current_companion ==2 {sprite_index=s_kasi_default; drawCompanion = true;}
+else if global.current_companion ==3 {sprite_index=s_zoe_default; drawCompanion = true;}
+else if global.current_companion = 0 { drawCompanion = false;}
 
 
 
@@ -217,18 +217,21 @@ image_speed=0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self();
-
-if global.current_companion ==1 {draw_sprite(s_dido_blink,blink_frame,x,y);
-    if tickerState == 0 {draw_sprite(s_dido_talk,stringIndex*0.25,x,y);}
-    }
-if global.current_companion ==2 {draw_sprite(s_kasi_blink,blink_frame,x,y);
-    if tickerState == 0 {draw_sprite(s_kasi_talk,stringIndex*0.25,x,y);}
-    }
-if global.current_companion ==3 {draw_sprite(s_zoe_blink,blink_frame,x,y);
-
-    if tickerState == 0 {draw_sprite(s_zoe_talk,stringIndex*0.25,x,y);}
-    }
+            <string>if drawCompanion
+{
+    draw_self();
+    
+    if global.current_companion ==1 {draw_sprite(s_dido_blink,blink_frame,x,y);
+        if tickerState == 0 {draw_sprite(s_dido_talk,stringIndex*0.25,x,y);}
+        }
+    if global.current_companion ==2 {draw_sprite(s_kasi_blink,blink_frame,x,y);
+        if tickerState == 0 {draw_sprite(s_kasi_talk,stringIndex*0.25,x,y);}
+        }
+    if global.current_companion ==3 {draw_sprite(s_zoe_blink,blink_frame,x,y);
+    
+        if tickerState == 0 {draw_sprite(s_zoe_talk,stringIndex*0.25,x,y);}
+        }
+}
 
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);

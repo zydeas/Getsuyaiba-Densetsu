@@ -7,10 +7,10 @@ else
     selectEnd = 3;
 }
 
+equipLines[3] = trinketList[global.current_companion];
+
 if get_input_pressed(INPUT_UP)
 {
-    o_menu_companion.stringIndex=0;
-    o_menu_companion.tickerState=0;
     if equipLineSelected > 0
     {
         equipLineSelected--;
@@ -19,11 +19,20 @@ if get_input_pressed(INPUT_UP)
     {
         equipLineSelected = selectEnd;
     }
+    o_menu_companion.stringIndex=0;
+    o_menu_companion.tickerState=0;
+    o_menu_companion.tickerString = "";
+    if equipLineSelected != selectEnd
+    {
+        o_menu_companion.comment = item_get_comment(ds_list_find_value(equipLines[equipLineSelected],equipSelected[equipLineSelected]),global.current_companion);
+    }
+    else
+    {
+        o_menu_companion.comment = "";
+    }
 }
 if get_input_pressed(INPUT_DOWN)
 {
-    o_menu_companion.stringIndex=0;
-    o_menu_companion.tickerState=0;
     if equipLineSelected < selectEnd
     {
         equipLineSelected++;
@@ -32,12 +41,21 @@ if get_input_pressed(INPUT_DOWN)
     { 
         equipLineSelected = 0;
     }
+    o_menu_companion.stringIndex=0;
+    o_menu_companion.tickerState=0;
+    o_menu_companion.tickerString = "";
+    if equipLineSelected != selectEnd
+    {
+        o_menu_companion.comment = item_get_comment(ds_list_find_value(equipLines[equipLineSelected],equipSelected[equipLineSelected]),global.current_companion);
+    }
+    else
+    {
+        o_menu_companion.comment = "";
+    }
 }
 
 if get_input_pressed(INPUT_LEFT)
 {
-    o_menu_companion.stringIndex=0;
-    o_menu_companion.tickerState=0;
     if equipLineSelected != selectEnd
     {
         if equipSelected[equipLineSelected] > 0
@@ -69,12 +87,23 @@ if get_input_pressed(INPUT_LEFT)
             }
         }
     }
+    
+    o_menu_companion.stringIndex=0;
+    o_menu_companion.tickerState=0;
+    o_menu_companion.tickerString = "";
+    if equipLineSelected != selectEnd
+    {
+        o_menu_companion.comment = item_get_comment(ds_list_find_value(equipLines[equipLineSelected],equipSelected[equipLineSelected]),global.current_companion);
+    }
+    else
+    {
+        o_menu_companion.comment = "";
+    }
 }
 
 if get_input_pressed(INPUT_RIGHT)
 {
-    o_menu_companion.stringIndex=0;
-    o_menu_companion.tickerState=0;
+    
     if equipLineSelected != selectEnd
     {
         if equipSelected[equipLineSelected] < equipSize
@@ -103,6 +132,18 @@ if get_input_pressed(INPUT_RIGHT)
                i++;
             }
         }
+    }
+    
+    o_menu_companion.stringIndex=0;
+    o_menu_companion.tickerState=0;
+    o_menu_companion.tickerString = "";
+    if equipLineSelected != selectEnd
+    {
+        o_menu_companion.comment = item_get_comment(ds_list_find_value(equipLines[equipLineSelected],equipSelected[equipLineSelected]),global.current_companion);
+    }
+    else
+    {
+        o_menu_companion.comment = "";
     }
 }
 
@@ -133,6 +174,8 @@ if equipLineSelected = selectEnd and get_input_pressed(INPUT_ATTACK)
     screenOpen = false;
     o_menu_companion.stringIndex=0;
     o_menu_companion.tickerState=0;
+    o_menu_companion.tickerString = "";
+    o_menu_companion.comment="";
 }
 
 if have_item(ds_list_find_value(equipLines[0],equipSelected[0]))
