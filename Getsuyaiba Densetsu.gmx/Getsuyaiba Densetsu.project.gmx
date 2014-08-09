@@ -182,6 +182,10 @@
           <sprite>sprites\s_encounter_valimos</sprite>
         </sprites>
       </sprites>
+      <sprites name="grp_zoe_personal_cutscene">
+        <sprite>sprites\s_zoe_bridge</sprite>
+        <sprite>sprites\s_zoe_flashback</sprite>
+      </sprites>
     </sprites>
     <sprites name="grp_continents">
       <sprite>sprites\s_albard</sprite>
@@ -573,6 +577,11 @@
           <object>objects\o_encounter_valimos</object>
         </objects>
       </objects>
+      <objects name="grp_personal_cutscenes">
+        <objects name="grp_zoe_specific_cutscenes">
+          <object>objects\o_zoe_ondeck</object>
+        </objects>
+      </objects>
     </objects>
     <object>objects\o_dungeon_teleport</object>
     <object>objects\o_dungeon_transition</object>
@@ -585,10 +594,11 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\initialization_room</room>
+    <room>rooms\cutscene_zoe_bridge</room>
     <room>rooms\overworld_main</room>
     <room>rooms\overworld_verdt_rm</room>
-    <room>rooms\cutscene_wyrm_return</room>
     <room>rooms\town_test_room</room>
+    <room>rooms\cutscene_wyrm_return</room>
     <room>rooms\cutscene_witch_second</room>
     <room>rooms\cutscene_confronting_imposter</room>
     <room>rooms\cutscene_imposter_defeated</room>

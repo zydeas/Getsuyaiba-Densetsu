@@ -50,7 +50,7 @@ tickerFullString[12] = "Father: Ah yes, the Shrine. It is crucial that the bell 
 tickerFullString[13] = "Father: But with the recent infestations and lurking creatures in the shrine, this has become...";
 tickerFullString[14] = "Zoe: Impossible, basically! Without the bell ringing out the festivities can't truely start.";
 tickerFullString[15] = "Dido: So one must ring this bell before the ceremony can begin? Why is that?";
-tickerFullString[16] = "Father: It is a signal for the lambs of the Protector, to embrace his watchful eye and listen to his voice.";
+tickerFullString[16] = "Father: It is a signal for us, the children of the Protector, to embrace his watchful eye and listen to his voice.";
 tickerFullString[17] = "Zoe: If you wanna go on the formalities then yeah, but honestly it's just part of the tradition.";
 tickerFullString[18] = "Sen: So you're saying you need me to ring this bell? ...Well... If it helps, I'll do it.";
 tickerFullString[19] = "Father: May God be with you, young one. May his light guide your path.";
@@ -162,7 +162,7 @@ if tickerCountdown &gt;0 {tickerCountdown--;}
             <kind>1</kind>
             <string>draw_set_font(textFont);
 
-if lineIndex &lt; 20 {draw_sprite(s_zoe_house_alone,0,x,y);
+if lineIndex &lt; 11 {draw_sprite(s_zoe_house_alone,0,x,y);
     draw_sprite(s_wyrm_return,frame,x+scroll_x,y) if scroll_x &gt;0 {scroll_x-=0.1;};
     }
     
@@ -170,6 +170,7 @@ if lineIndex &lt; 20 {draw_sprite(s_zoe_house_alone,0,x,y);
 if lineIndex ==3 {if frame &lt;3 {frame+=0.2;}}
 if lineIndex ==4 {frame=4;}
 if lineIndex &gt;=5 {frame=3;}
+if lineIndex &gt;=11 {frame=5; draw_sprite(s_wyrm_return,frame,x,y);}
 
 draw_text_shadow(8,144,1,1,tickerString,c_white,c_blue,w);
 
