@@ -185,6 +185,7 @@
       <sprites name="grp_zoe_personal_cutscene">
         <sprite>sprites\s_zoe_bridge</sprite>
         <sprite>sprites\s_zoe_flashback</sprite>
+        <sprite>sprites\s_zoe_flashback_itbegins</sprite>
       </sprites>
     </sprites>
     <sprites name="grp_continents">

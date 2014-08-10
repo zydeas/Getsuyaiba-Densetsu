@@ -38,7 +38,7 @@ tickerFullString[0] = "Zoe: ...";
 tickerFullString[1] = "Zoe: ...Well, you really gone and messed up there, Zoe...";
 tickerFullString[2] = "???: Heeeeyoooooooo!";
 tickerFullString[3] = "Zoe: ...Sen?";
-tickerFullString[4] = "Sen: I don't know about you but you're looking at that ocean mighty deep.,you thinking about going on a swim Zoe?";
+tickerFullString[4] = "Sen: I don't know about you but you're looking at that ocean mighty deep. You thinking about going on a swim Zoe?";
 tickerFullString[5] = "Zoe: Sensy! What're yer doing there?";
 tickerFullString[6] = "Sen: I just wanted to check on you since you seemed kinda mad about this hunk of metal. What's up with it?";
 tickerFullString[7] = "Zoe: Sen it's... Look, just get down from there yer dipstick! What are you even doing there?!";
@@ -51,7 +51,7 @@ tickerFullString[13] = "Zoe: They ain't all bad I guess... For a while, it was j
 tickerFullString[14] = "Zoe: He had these big, broad arms, like he could pick up mountains with 'em... Big fellah, that's for sure.";
 tickerFullString[15] = "Zoe: And he had a kind heart too... He just seemed to be smitten with everything. Goofy grin plastered over his face constantly.";
 tickerFullString[16] = "Zoe: He'd spend most of his days tinkerin' outside on these ships... No one could figure out how he got 'em to fly but, he did.";
-tickerFullString[17] = "Zoe: Every once a while we'd both go out on them... He was kind of obsessed with finding new land waiting out there...";
+tickerFullString[17] = "Zoe: Every once a while we'd both go out on them... He was a passionate explorer, looking for new horizons...";
 tickerFullString[18] = "Zoe: I guess that was the thing huh. He wanted to stretch his wings, to show Verdt what the world had to offer but...";
 tickerFullString[19] = "Zoe: No matter how many times he tried, he just ended up back where he started. Yet even that didn't stop him!";
 tickerFullString[20] = "Zoe: One day, he just... Vanished. No one knew where he went or what happened to him...";
@@ -61,11 +61,11 @@ tickerFullString[23] ="Zoe: But he was still as kind as his brother, he just did
 tickerFullString[24] ="Zoe: Spending the rest of my childhood alone did a number on me... I needed to get out, I needed to return to Verdt to do something worth while!";
 tickerFullString[25] ="Zoe: I needed something to strive for. We had a huge argument one day and I just... Well I just left. I went back to Verdt.";
 tickerFullString[26] ="Zoe: When I got to my old house, it was as if nothing had changed... If anything, nothing seemed to have even mattered in the first place.";
-tickerFullString[27] ="Zoe: The other ships my Father built were just lying disused... I don't know how to explain it but it was like the old dream was just that, a dream.";
+tickerFullString[27] ="Zoe: The other ship my Father built was just lying there. I don't know how to explain it but it was like the old dream was just that... A dream...";
 tickerFullString[28] ="Zoe: I was an adult and I knew what I wanted, or so I thought... I didn't just want to belong... I kind of wanted to stand out. Selfish right?";
 tickerFullString[29] ="Zoe: Maybe I'm sayin' it strange but what I mean is, I wanted to be recognized as something Verdt needed! ...I needed to feel like part of a bigger picture.";
-tickerFullString[30] ="Zoe: So. I heard about this Festival, this -thing- that was held every 20 years. I just, dived in. It was perfect. Something out of the ordinary. Unique. Special?";
-tickerFullString[31] ="Zoe: Whatever it was, it kind of gave me something to go for! It was always something that was... mysterious? I only heard little bits as a child, so I wanted in.";
+tickerFullString[30] ="Zoe: So. I heard about this Festival that was held every 20 years or so. I dived in. It was perfect. Something out of the ordinary. Unique. Special?";
+tickerFullString[31] ="Zoe: Whatever it was it kind of gave me something to go for! It was always something... mysterious? I only heard little bits as a child, so I wanted in.";
 tickerFullString[32] ="Zoe: Curious, I consulted the church about it. They spoke in metaphors, said it was something to do with passing from autumn into winter, all very important.";
 tickerFullString[33] ="Zoe: It was all about showing how prosperous Verdt was. We were chosen as representations of that kind of thing...";
 tickerFullString[34] ="Zoe: I jumped at the chance. It was something rare, something special that happened only once or twice in a lifetime, I had to do it! I just had to...";
@@ -101,7 +101,7 @@ tickerFullString[63] ="Sen: ...We just gotta keep looking."
 
 tickerString = "";
 stringIndex = 0;
-lineIndex = 0;
+lineIndex = 28;
 spd = 1.5;
 finished = false;
 lineFinished = false;
@@ -117,12 +117,15 @@ textFont = menu_font;
 cutscene_progress=0; //The frame to show
 
 
-tickerDuration=220;
+tickerDuration=280;
 tickerCountdown=tickerDuration;
 
 flick=3;
+flicker=0;
 anim=0;
 fade_out=5;
+offset_x=64;
+anim_begins=0;
 </string>
           </argument>
         </arguments>
@@ -203,13 +206,24 @@ if tickerCountdown &gt;0 {tickerCountdown--;}
             <kind>1</kind>
             <string>draw_set_font(textFont);
 if anim &gt;=1.9 {anim=0;} else anim+=0.05;;
+if flicker &lt;2 {flicker+=0.2} else {flicker=0;}
 if lineIndex &lt;2 {draw_sprite(s_zoe_bridge,0,x,y);}
 else if lineIndex &lt;3 {draw_sprite(s_zoe_bridge,1,x,y);}
 else if lineIndex &lt;7 {draw_sprite(s_zoe_bridge,2+anim,x,y);}
-else if lineIndex &lt;8 {draw_sprite(s_zoe_bridge,4,x,y);}
+else if lineIndex &lt;9 {draw_sprite(s_zoe_bridge,4,x,y);}
 else if lineIndex &lt;11 {draw_sprite(s_zoe_bridge,5,x,y);}
-else if lineIndex &lt;12 {draw_sprite(s_zoe_bridge,fade_out,x,y); if fade_out &lt;10 {fade_out+=0.05;}}
-draw_text_shadow(8,144,1,1,tickerString,c_white,c_blue,w);
+else if lineIndex &lt;13 {draw_sprite(s_zoe_bridge,fade_out,x,y); if fade_out &lt;10 {fade_out+=0.05;}}
+else if lineIndex &lt;16 {draw_sprite(s_zoe_flashback,0,x,y); draw_sprite(s_zoe_flashback,1,x+offset_x,y); offset_x-=0.1;}
+else if lineIndex &lt;19 {draw_sprite(s_zoe_flashback,2,x,y); offset_x=80;}
+else if lineIndex &lt;21 {draw_sprite(s_zoe_flashback,3+flicker,x+irandom_range(-4,4),y);}
+else if lineIndex &lt;22 {draw_sprite(s_zoe_flashback,5,x,y);}
+else if lineIndex &lt;25 {draw_sprite(s_zoe_flashback,6,x,y);}
+else if lineIndex &lt;29 {draw_sprite(s_zoe_flashback,7,x,y); draw_sprite(s_zoe_flashback,8,x+offset_x,y); if offset_x &gt;-20 {offset_x-=0.1;}}
+else if lineIndex &lt;32 {draw_sprite(s_zoe_flashback,9,x,y);}
+else if lineIndex &lt;34 {draw_sprite(s_zoe_flashback,10,x,y);}
+else if lineIndex &lt;35 {draw_sprite(s_zoe_flashback,5,x,y);}
+else if lineIndex &lt;37 {draw_sprite(s_zoe_flashback_itbegins,anim_begins,x,y); if anim_begins &lt;31{anim_begins+=0.08;}}
+draw_text_shadow(8,140,1,1,tickerString,c_white,c_blue,w);
 
 </string>
           </argument>
